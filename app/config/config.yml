@@ -2,6 +2,15 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
+    - { resource: "@BsBussBundle/Resources/config/services.yml" }
+    - { resource: "@BsDriverBundle/Resources/config/services.yml" }
+    - { resource: "@BsPaymentBundle/Resources/config/services.yml" }
+    - { resource: "@BsUserBundle/Resources/config/services.yml" }
+    - { resource: "@BsItemRouteBundle/Resources/config/services.yml" }
+    - { resource: "@BsRouteBundle/Resources/config/services.yml" }
+    - { resource: "@BsTicketBundle/Resources/config/services.yml" }
+    - { resource: "@BsStationBundle/Resources/config/services.yml" }
+    - { resource: "@BsCityBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration

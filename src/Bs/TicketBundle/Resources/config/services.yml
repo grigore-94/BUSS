@@ -1,0 +1,4 @@
+services:
+#    bs_ticket.example:
+#        class: Bs\TicketBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

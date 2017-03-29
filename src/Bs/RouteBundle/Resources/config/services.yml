@@ -1,0 +1,4 @@
+services:
+#    bs_route.example:
+#        class: Bs\RouteBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

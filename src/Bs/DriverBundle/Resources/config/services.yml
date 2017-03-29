@@ -1,0 +1,4 @@
+services:
+#    bs_driver.example:
+#        class: Bs\DriverBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

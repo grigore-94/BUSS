@@ -1,5 +1,6 @@
 <?php
 
+use PaymentBundle\Entity\Payment;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
@@ -15,7 +16,15 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new AppBundle\AppBundle(),
+            new Bs\BussBundle\BsBussBundle(),
+            new Bs\DriverBundle\BsDriverBundle(),
+            new Bs\PaymentBundle\BsPaymentBundle(),
+            new Bs\UserBundle\BsUserBundle(),
+            new Bs\ItemRouteBundle\BsItemRouteBundle(),
+            new Bs\RouteBundle\BsRouteBundle(),
+            new Bs\TicketBundle\BsTicketBundle(),
+            new Bs\StationBundle\BsStationBundle(),
+            new Bs\CityBundle\BsCityBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

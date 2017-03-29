@@ -1,0 +1,4 @@
+services:
+#    bs_buss.example:
+#        class: Bs\BussBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

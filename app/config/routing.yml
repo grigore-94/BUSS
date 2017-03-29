@@ -1,3 +1,48 @@
+bs_city:
+    resource: "@BsCityBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+bs_station:
+    resource: "@BsStationBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+bs_ticket:
+    resource: "@BsTicketBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+bs_route:
+    resource: "@BsRouteBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+bs_item_route:
+    resource: "@BsItemRouteBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+bs_user:
+    resource: "@BsUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+bs_payment:
+    resource: "@BsPaymentBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+bs_driver:
+    resource: "@BsDriverBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+bs_buss:
+    resource: "@BsBussBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 app:
-    resource: '@AppBundle/Controller/'
+    resource: '@Sr/AppBundle/Controller/'
     type: annotation
