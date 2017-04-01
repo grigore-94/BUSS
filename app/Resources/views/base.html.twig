@@ -5,7 +5,7 @@
     <script src={{ asset('js/bootstrap.js') }}></script>
     <script src={{ asset('js/placeholder.js') }}></script>
     <script src={{ asset('js/imagesloaded.pkgd.min.js') }}></script>
-    <script src={{ asset('js/masonry.pkgd.js') }}""></script>
+    <script src={{ asset('js/masonry.pkgd.js') }}></script>
     <script src={{ asset('js/jquery.swipebox.min.js') }}></script>
     <script src={{ asset('js/countdown.js') }}></script>
     <script src={{ asset('js/options.js') }}></script>
@@ -23,19 +23,26 @@
     <meta charset="utf-8"/>
     <title>BUSS</title>
     <meta name="description" content="Here goes description"/>
-    <meta name="author" content="author name"/>
-    <link rel="shortcut icon" href={{ asset('favicon.ico') }}/>
+    <meta name="author" content="Grigore Brodicico"/>
+    <link rel="shortcut icon" href={{ asset('images/elements/favicon.png') }}/>
     <!-- ====================== Mobile Specific Meta ====================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <!-- ====================== Style CSS + Google Fonts =================== -->
     <link rel="stylesheet" href="{{ asset('css/start-style.css') }}"/>
     <link rel="stylesheet" href="{{ asset('css/swipebox.css') }}"/>
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}"/>
+
+
     <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
     <link rel="stylesheet" href="{{ asset('css/datetimepicker.css') }}"/>
     <link rel="stylesheet" href="{{ asset('color-box/color-style.css') }}"/>
     <link rel="stylesheet" href="{{ asset('color-box/farbtastic/farbtastic.css') }}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
 </head>
 <body class="home-page">
 <!-- ========================= START COLOR BOX ======================== -->
@@ -63,7 +70,10 @@
                 </div>
                 <div class="col-md-4">
                     <div class="logo">
-                        <a href="index.html" class="d-text-c">magellan <i class="fa fa-plane"></i></a>
+                        <a href="{{ path('homepage') }}" class="d-text-c">Buss Md
+                            <img src="{{ asset('images/photos/title-logo.png') }}" class="fa fa-plane" alt="Buss" height="42" width="42">
+                            </a>
+
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -208,7 +218,7 @@
                     </div>
                     <div class="col-md-5">
                         <div class="widget">
-                            <a href="#"><img src="images/photos/adds.jpg" alt="Images adds"/></a>
+                            <a href="#"><img src="{{ asset('images/photos/adds.jpg') }}" alt="Images adds"/></a>
                         </div>
                     </div>
                 </div>

@@ -16,7 +16,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Table(name="user")
- * @ORM\Entity(repositoryClass="")
+ * @ORM\Entity(repositoryClass="BsUserBundle\Repository\UserRepository")
  */
 class User implements UserInterface, \Serializable
 {
@@ -31,7 +31,10 @@ class User implements UserInterface, \Serializable
      * @ORM\Column(type="string", length=25, unique=true)
      */
     private $username;
-
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $name;
     /**
      * @ORM\Column(type="string", length=64)
      */
@@ -61,6 +64,7 @@ class User implements UserInterface, \Serializable
      * @ORM\OneToMany(targetEntity="Bs\PaymentBundle\Entity\Card", mappedBy="user" )
      */
     private $cards;
+
     /**
      * @return mixed
      */
@@ -90,6 +94,22 @@ class User implements UserInterface, \Serializable
         $this->isActive = true;
         // may not be needed, see section on salt below
         // $this->salt = md5(uniqid(null, true));
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
     }
 
     public function getUsername()

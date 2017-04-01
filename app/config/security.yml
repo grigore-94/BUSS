@@ -3,7 +3,7 @@ security:
     providers:
         our_db_provider:
                     entity:
-                        class: AppBundle:User
+                        class: BsUserBundle:User
 
 
 
