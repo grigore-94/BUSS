@@ -1,13 +1,239 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+{% block javascripts %}
+    <script src={{ asset('js/modernizr.custom.63321.js') }}></script>
+    <script src={{ asset('js/jquery-1.10.0.min.js') }}></script>
+    <script src={{ asset('js/jquery-ui.min.js') }}></script>
+    <script src={{ asset('js/bootstrap.js') }}></script>
+    <script src={{ asset('js/placeholder.js') }}></script>
+    <script src={{ asset('js/imagesloaded.pkgd.min.js') }}></script>
+    <script src={{ asset('js/masonry.pkgd.js') }}""></script>
+    <script src={{ asset('js/jquery.swipebox.min.js') }}></script>
+    <script src={{ asset('js/countdown.js') }}></script>
+    <script src={{ asset('js/options.js') }}></script>
+    <script src={{ asset('js/plugins.js') }}></script>
+    <script src={{ asset('js/jquery.datetimepicker.js') }}></script>
+    <script src={{ asset('color-box/color-js.js') }}></script>
+    <script src={{ asset('color-box/farbtastic/farbtastic.js') }}></script>
+
+
+
+{% endblock %}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>BUSS</title>
+    <meta name="description" content="Here goes description"/>
+    <meta name="author" content="author name"/>
+    <link rel="shortcut icon" href={{ asset('favicon.ico') }}/>
+    <!-- ====================== Mobile Specific Meta ====================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <!-- ====================== Style CSS + Google Fonts =================== -->
+    <link rel="stylesheet" href="{{ asset('css/start-style.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/swipebox.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/datetimepicker.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('color-box/color-style.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('color-box/farbtastic/farbtastic.css') }}"/>
+</head>
+<body class="home-page">
+<!-- ========================= START COLOR BOX ======================== -->
+<!-- ========================= END COLOR BOX ======================== -->
+
+
+<!-- ========================= START COLOR BOX CLASS ======================== -->
+<div class="boxed-fluid">
+    <!-- ========================= START COLOR BOX CLASS ======================== -->
+
+
+    <!-- ========================= START HEADER ======================== -->
+    <header class="main-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <ul class="socials">
+                        <li><a class="d-text-c" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="d-text-c" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="d-text-c" href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a class="d-text-c" href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a class="d-text-c" href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a class="d-text-c" href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <div class="logo">
+                        <a href="index.html" class="d-text-c">magellan <i class="fa fa-plane"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <form method="get" role="search" class="search-it d-bg-c-h">
+                        <i class="fa fa-search"></i>
+                        <input type="submit" value="" class="search-button">
+                        <input type="text" class="search-line" placeholder="Search">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- MENU -->
+        <div class="container">
+            <div class="main-header-bottom">
+                <nav class="main-nav d-bg-c">
+                    <div class="responsive-menu"><i class="fa fa-align-justify"></i> Menu</div>
+                    <ul class="clean-list clearfix">
+                        <li class="current-menu-item"><a href="index.html">Home</a></li>
+                        <li><a href="#">Pages</a>
+                            <ul>
+                                <li><a href="about-us.html">About us</a></li>
+                                <li><a href="error-404.html">Error 404</a></li>
+                                <li><a href="our-team.html">Our team</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li class="menu-item-has-children"><a href="#">Dropdown</a>
+                                    <ul>
+                                        <li><a href="#">nephew</a></li>
+                                        <li><a href="#">nephew</a></li>
+                                        <li class="menu-item-has-children"><a href="#">nephew</a>
+                                            <ul>
+                                                <li><a href="#">nephew</a></li>
+                                                <li><a href="#">nephew</a></li>
+                                                <li><a href="#">nephew</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="tours.html">Tours</a>
+                            <ul>
+                                <li><a href="single-tour.html">Single tour</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children"><a href="blog.html">Blog</a>
+                            <ul>
+                                <li><a href="post.html">Single post</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href={{ path('login') }}>Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- MENU -->
+    </header>
+    <div class="header-space"></div>
+    <!-- ========================= END HEADER ======================== -->
+
+
+    <!-- ========================= START CONTENT ======================== -->
+    <div class="content">
+        <div class="container">
+            <div class="order-tour">
+                <div class="row">
+                    <!-- ========================= START ORDER TOUR ======================== -->
+                    {% block body %}{% endblock %}
+                    <!-- ========================= END ORDER TOUR ======================== -->
+
+                </div>
+            </div>
+        </div>
+        <!-- ========================= START SERVICES ======================== -->
+
+        <!-- ========================= END SERVICES ======================== -->
+
+
+        <!-- ========================= START CHOOSE TOURS ======================== -->
+
+        <!-- ========================= END CHOOSE TOURS ======================== -->
+
+
+        <!-- ========================= START POPULAR TOURS ======================== -->
+
+        <!-- ========================= START POPULAR TOURS ======================== -->
+
+    </div>
+    <!-- ========================= END CONTENT ======================== -->
+
+
+    <!-- ========================= START FOOTER ======================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-box">
+                <!-- START FOOTER CUSTOM MENU -->
+                <ul class="custom-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Write a review</a></li>
+                    <li><a href="#">Popular tours</a></li>
+                    <li><a href="#">Early booking</a></li>
+                    <li><a href="#">contacts</a></li>
+                </ul>
+                <!-- END FOOTER CUSTOM MENU -->
+
+                <!-- START NEWSLETTER FORM -->
+                <form class="newsletter-form" id="newsletter" method="post">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h3>Newsletter subscribe <i class="fa fa-envelope-o"></i></h3>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="email" placeholder="E-mail" class="subscription-line"
+                                   data-tt-subscription-required="" data-tt-subscription-type="email">
+                            <div class="result_container"></div>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="submit" value="Subscribe" class="subscription-button">
+                        </div>
+                    </div>
+                </form>
+                <!-- END NEWSLETTER FORM -->
+
+                <!-- START FOOTER SIDEBAR -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="widget">
+                            <h3 class="widget-title">Last Tweets</h3>
+                            <ul class="twitter_widget" data-user="teslathemes" data-posts="2"></ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="widget">
+                            <h3 class="widget-title">Contacts</h3>
+                            <h6>Address :</h6>
+                            <p>New York lost bridge street-music boulevard 15 off 9</p>
+                            <h6>Phone :</h6>
+                            <p>(099) 558 458 458 687<br/>(099) 558 455 455 455</p>
+                            <h6>Mail :</h6>
+                            <p><a href="mailto:magellan@gmail.com">magellan@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="widget">
+                            <a href="#"><img src="images/photos/adds.jpg" alt="Images adds"/></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- END FOOTER SIDEBAR -->
+
+                <!-- START BOTTOM FOOTER -->
+                <div class="bottom-footer">
+                    <p>copyright magellan 2014 &nbsp; &nbsp; &nbsp; designed by <a class="d-text-c-h"
+                                                                                   href="http://www.teslathemes.com">tt</a>
+                    </p>
+                </div>
+                <!-- END BOTTOM FOOTER -->
+            </div>
+        </div>
+    </footer>
+    <!-- ========================= END FOOTER ======================== -->
+
+
+    <!-- ========================= END COLOR BOX CLASS ======================== -->
+</div>
+<!-- ========================= END COLOR BOX CLASS ======================== -->
+
+
+<!-- ========================= START SCRIPTS ======================== -->
+
+<!-- ========================== END SCRIPTS ========================== -->
+</body>
 </html>
