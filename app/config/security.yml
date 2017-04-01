@@ -26,4 +26,4 @@ security:
 
 
     encoders:
-            UserBundle\Entity\User: bcrypt
+            Bs\UserBundle\Entity\User: bcrypt

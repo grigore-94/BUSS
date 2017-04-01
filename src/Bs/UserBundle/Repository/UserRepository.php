@@ -1,6 +1,6 @@
 <?php
 
-namespace BsUserBundle\Repository;
+namespace Bs\UserBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
