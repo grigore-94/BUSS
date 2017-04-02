@@ -11,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @ORM\Table(name="city")
  */
-class City
+class Location
 {
     /**
      * @ORM\Id
@@ -20,9 +20,46 @@ class City
      */private $id;
     /**
      * @ORM\Column(type="string")
-     */private $name;
+     */private $city;
+
     /**
-     * @ORM\OneToMany(targetEntity="Bs\StationBundle\Entity\Station", mappedBy="city")
+     * @ORM\Column(type="string")
+     */
+    private $region;
+
+    /**
+     * @return mixed
+     */
+    public function getRegion()
+    {
+        return $this->region;
+    }
+
+    /**
+     * @param mixed $region
+     */
+    public function setRegion($region)
+    {
+        $this->region = $region;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * @param mixed $city
+     */
+    public function setCity($city)
+    {
+        $this->city = $city;
+    }
+    /**
+     * @ORM\OneToMany(targetEntity="Bs\StationBundle\Entity\Station", mappedBy="location")
      */private $stations;
     /**
      * Constructor
@@ -42,29 +79,7 @@ class City
         return $this->id;
     }
 
-    /**
-     * Set name
-     *
-     * @param string $name
-     *
-     * @return City
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
 
-        return $this;
-    }
-
-    /**
-     * Get name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
 
     /**
      * Add station

@@ -19,9 +19,9 @@ class Station
      * @ORM\Column(type="integer")
      */private $id;
     /**
-     * @ORM\ManyToOne(targetEntity="Bs\CityBundle\Entity\City", inversedBy="stations")
+     * @ORM\ManyToOne(targetEntity="Bs\CityBundle\Entity\Location", inversedBy="stations")
      * @ORM\JoinColumn(name="city_id", referencedColumnName="id")
-     */private $city;
+     */private $location;
     /**
      * @ORM\OneToMany(targetEntity="Bs\RouteBundle\Entity\RouteStation", mappedBy="station")
      */private $routeStations;
@@ -44,28 +44,23 @@ class Station
     }
 
     /**
-     * Set city
-     *
-     * @param \Bs\CityBundle\Entity\City $city
-     *
-     * @return Station
+     * @return mixed
      */
-    public function setCity(\Bs\CityBundle\Entity\City $city = null)
+    public function getLocation()
     {
-        $this->city = $city;
-
-        return $this;
+        return $this->location;
     }
 
     /**
-     * Get city
-     *
-     * @return \Bs\CityBundle\Entity\City
+     * @param mixed $location
      */
-    public function getCity()
+    public function setLocation($location)
     {
-        return $this->city;
+        $this->location = $location;
     }
+
+
+
 
     /**
      * Add routeStation
