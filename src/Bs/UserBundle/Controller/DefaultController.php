@@ -14,4 +14,6 @@ class DefaultController extends Controller
     {
         return $this->render('BsUserBundle:Default:index.html.twig');
     }
+
+
 }

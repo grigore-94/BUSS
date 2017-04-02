@@ -1,5 +1,100 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
+    <div class="container">
+        <div class="order-tour">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="mini-slider" data-tesla-plugin="slider" data-tesla-item=".slide" data-tesla-next=".slide-right" data-tesla-prev=".slide-left" data-tesla-container=".slide-wrapper">
+                        <ul class="slide-arrows">
+                            <li class="slide-left"><i class="fa d-bg-c-h fa-caret-left"></i></li>
+                            <li class="slide-right"><i class="fa d-bg-c-h fa-caret-right"></i></li>
+                        </ul>
+                        <ul class="slide-wrapper">
+                            <li class="slide">
+                                <img src="{{ asset('images/photos/tour-1.jpg') }}" alt="slider image" />
+                            </li>
+                            <li class="slide">
+                                <img src="{{ asset('images/photos/tour-2.jpg') }}" alt="slider image" />
+                            </li>
+                            <li class="slide">
+                                <img src="{{ asset('images/photos/tour-3.jpg') }}" alt="slider image" />
+                            </li>
+                        </ul>
+                        <ul class="slider-dots" data-tesla-plugin="bullets">
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="order-now s-bg-c">
+                        <h1>Order your tour</h1>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="tour-drop">
+                                        <i class="fa d-bg-c fa-caret-down"></i>
+                                        <input type="text" readonly class="drop-select" placeholder="Destination">
+                                        <ul>
+                                            <li>Costa Rica</li>
+                                            <li>Monaco</li>
+                                            <li>Barcelona</li>
+                                            <li>Thailand</li>
+                                            <li>Mirihi</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="tour-drop">
+                                        <i class="fa d-bg-c fa-calendar"></i>
+                                        <input id="check-in" readonly type="text" placeholder="Check-in" >
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="tour-drop">
+                                        <i class="fa d-bg-c fa-calendar"></i>
+                                        <input id="check-out" readonly type="text" placeholder="Check-out" >
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="tour-drop">
+                                        <i class="fa d-bg-c fa-caret-down"></i>
+                                        <input type="text" readonly class="drop-select" placeholder="Price">
+                                        <ul>
+                                            <li>0-100$</li>
+                                            <li>100-300$</li>
+                                            <li>300-700$</li>
+                                            <li>700-1000$</li>
+                                            <li>1000$ +</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="tour-drop">
+                                        <i class="fa d-bg-c fa-caret-down"></i>
+                                        <input type="text" readonly class="drop-select" placeholder="Rooms">
+                                        <ul>
+                                            <li>1</li>
+                                            <li>2</li>
+                                            <li>3</li>
+                                            <li>4</li>
+                                            <li>5 +</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-bg-c submit-search">
+                                <div class="relative inline-block">
+                                    <i class="fa fa-chevron-circle-right"></i>
+                                    <input type="submit" value="Submit" class="form-send">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

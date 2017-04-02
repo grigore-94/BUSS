@@ -26,6 +26,7 @@
 
 </head>
 <body class="home-page">
+{#
 <!-- ========================= START COLOR BOX ======================== -->
 <div class="color-box">
     <div class="color-box_settings"><i class="fa fa-cogs"></i></div>
@@ -80,6 +81,7 @@
         <li><img src="{{ asset('color-box/background/back_5.jpg') }}" alt="background"></li>
     </ul>
 </div>
+#}
 
 <!-- ========================= END COLOR BOX ======================== -->
 
@@ -111,13 +113,22 @@
 
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <form method="get" role="search" class="search-it d-bg-c-h">
                         <i class="fa fa-search"></i>
                         <input type="submit" value="" class="search-button">
                         <input type="text" class="search-line" placeholder="Search">
                     </form>
                 </div>
+                    <div class="col-md-1">
+                    {% if app.user %}
+                        <a href="{{ path('logout')}}" class="form-send">LogOut</a>
+
+                    {% else %}
+                        <a href="{{ path('login') }}" class="form-send">LogIn</a>
+                    {% endif %}
+                    </div>
+
             </div>
         </div>
         <!-- MENU -->
@@ -126,7 +137,7 @@
                 <nav class="main-nav d-bg-c">
                     <div class="responsive-menu"><i class="fa fa-align-justify"></i> Menu</div>
                     <ul class="clean-list clearfix">
-                        <li class="current-menu-item"><a href="index.html">Home</a></li>
+                        <li class="current-menu-item"><a href="{{ path('homepage') }}">Home</a></li>
                         <li><a href="#">Pages</a>
                             <ul>
                                 <li><a href="about-us.html">About us</a></li>
@@ -158,8 +169,16 @@
                                 <li><a href="post.html">Single post</a></li>
                             </ul>
                         </li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href={{ path('login') }}>Login</a></li>
+                        <li><a href="{{ path('contact') }}">Contact</a></li>
+
+                            {% if app.user %}
+                                <li><a href="{{ path('logout')}}">LogOut</a></li>
+                            {% else %}
+                                <li><a href="{{ path('login') }}">LogIn</a></li>
+                            {% endif %}
+
+
+
                     </ul>
                 </nav>
             </div>
@@ -261,8 +280,7 @@
 
                 <!-- START BOTTOM FOOTER -->
                 <div class="bottom-footer">
-                    <p>copyright magellan 2014 &nbsp; &nbsp; &nbsp; designed by <a class="d-text-c-h"
-                                                                                   href="http://www.teslathemes.com">tt</a>
+                    <p>Creayed by Grigore Brodicico
                     </p>
                 </div>
                 <!-- END BOTTOM FOOTER -->
