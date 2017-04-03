@@ -16,7 +16,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Table(name="user")
- * @ORM\Entity(repositoryClass="")
+ * @ORM\Entity(repositoryClass="Bs\UserBundle\Repository\UserRepository")
  */
 class User implements UserInterface, \Serializable
 {
@@ -85,7 +85,7 @@ class User implements UserInterface, \Serializable
     /**
      * @Assert\NotBlank()
      * @Assert\Length(max=4096)
-     * @ORM\Column(type="string")
+     *
      */
     private $plainPassword;
 

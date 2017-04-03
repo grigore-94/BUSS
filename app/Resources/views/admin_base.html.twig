@@ -1,0 +1,319 @@
+<head>
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src={{ asset('js/jquery-3.2.0.min.js') }}></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <script src={{ asset('js/adminPage.js') }}></script>
+    <script >
+
+    </script>
+
+</head>
+<html>
+<<div class="wrap">
+    <nav class="nav-bar navbar-inverse" role="navigation">
+        <div id ="top-menu" class="container-fluid active">
+            <a class="navbar-brand" href="#">Brand</a>
+            <ul class="nav navbar-nav">
+                <form id="qform" class="navbar-form pull-left" role="search">
+                    <input type="text" class="form-control" placeholder="Search" />
+                </form>
+                <li class="dropdown movable">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span><span class="fa fa-4x fa-child"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><span class="fa fa-user"></span>My Profile</a></li>
+                        <li><a href="#"><span class="fa fa-gear"></span>Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><span class="fa fa-power-off"></span>Logout</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <aside id="side-menu" class="aside" role="navigation">
+        <ul class="nav nav-list accordion">
+            <li class="nav-header">
+                <div class="link"><i class="fa fa-lg fa-globe"></i>Portal<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Administration</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-header">
+                <div class="link"><i class="fa fa-lg fa-users"></i>Users<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li><a href="#">Users</a></li>
+                    <li><a href="#">New User</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-header">
+                <div class="link"><i class="fa fa-cloud"></i>Sites<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li><a href="#">Search Sites</a></li>
+                    <li><a href="#">New Site</a></li>
+                    <li><a href="#">Jobs</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-header">
+                <div class="link"><i class="fa fa-lg fa-map-marker"></i>Zones<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li><a href="#">Search Zones</a></li>
+                    <li><a href="#">New Zone</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-header">
+                <div class="link"><i class="fa fa-lg fa-file-image-o"></i>Reports<i class="fa fa-chevron-down"></i></div>
+                <ul class="submenu">
+                    <li><a href="#">Entries</a></li>
+                    <li><a href="#">Redirects</a></li>
+                    <li><a href="#">Pingbacks</a></li>
+                    <li><a href="#">Tags</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </aside>
+
+    <!--Body content-->
+    <div class="content">
+        <div class="top-bar">
+            <a href="#menu" class="side-menu-link burger">
+                <span class='burger_inside' id='bgrOne'></span>
+                <span class='burger_inside' id='bgrTwo'></span>
+                <span class='burger_inside' id='bgrThree'></span>
+            </a>
+        </div>
+        <section class="content-inner">
+            <h2>Sample</h2>
+            <h3>A responsive Top and Side Menu, resize your browser to find out</h3>
+        </section>
+    </div>
+
+</div>
+<style>
+
+    .wrap {
+        position: relative;
+    }
+    .wrap .nav-bar .navbar-brand {
+        margin-top: 15px;
+    }
+    .wrap .nav-bar .navbar-form {
+        margin-top: 25px;
+    }
+    .wrap .nav-bar .nav {
+        float: right !important;
+    }
+    .wrap .nav-bar .nav .dropdown span.fa,
+    .wrap .nav-bar .nav .dropdown span.caret {
+        margin-right: 10px;
+    }
+    .wrap .nav-bar .nav .dropdown-menu {
+        background: #222;
+        left: auto;
+        width: 200px;
+        right: 0;
+    }
+    .wrap .nav-bar .nav .dropdown-menu > li > a {
+        color: #ddd;
+        padding: 8px;
+    }
+    .wrap .nav-bar .nav .dropdown-menu > li > a:hover {
+        background: #3355ff;
+    }
+    .wrap .side-menu-link {
+        left: 21em;
+    }
+    .wrap .burger {
+        position: relative;
+        width: 35px;
+        height: 30px;
+        left: 10px;
+        top: 5px;
+        z-index: 500000;
+    }
+    .wrap .burger .burger_inside {
+        position: absolute;
+        background-color: #222;
+        width: 30px;
+        height: 5px;
+        left: 2.5px;
+        -webkit-transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease-out;
+        -ms-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+    }
+    .wrap .burger #bgrOne {
+        top: 0;
+    }
+    .wrap .burger #bgrTwo {
+        top: 10px;
+    }
+    .wrap .burger #bgrThree {
+        top: 20px;
+    }
+    .wrap #side-menu {
+
+        background: #404040;
+        width: 22em;
+        padding-top: 40px;
+        padding-right: 20px;
+        padding-left: 10px;
+        float: left;
+        display: block;
+        left: 0;
+        height: 900px;
+    }
+    .wrap .content {
+        position: absolute;
+        right: 0;
+        min-width: 400px;
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+    }
+    .wrap .content .top-bar {
+        height: 40px;
+        background: #ddd;
+    }
+    .wrap .content .content-inner {
+        padding: 0;
+        margin: 0;
+        background: #fff;
+        padding-left: 20px;
+        display: block;
+        position: absolute;
+        height: 900px;
+        width: 100%;
+    }
+    .wrap ul.accordion {
+        width: 100%;
+        background: transparent;
+    }
+    .wrap ul.accordion .link {
+        cursor: pointer;
+        display: block;
+        padding: 15px 15px 15px 42px;
+        color: #9D9D9D;
+        font-size: 14px;
+        font-weight: 700;
+        border-bottom: 1px solid #303030;
+        position: relative;
+        -webkit-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+    .wrap ul.accordion li:not(open) last-child .link {
+        border-bottom: 0;
+    }
+    .wrap ul.accordion li i {
+        position: absolute;
+        top: 16px;
+        left: 12px;
+        font-size: 18px;
+        color: #999;
+        -webkit-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+    .wrap ul.accordion li i.fa-chevron-down {
+        right: 12px;
+        left: auto;
+        font-size: 16px;
+    }
+    .wrap ul.accordion li.open .link {
+        color: #FFB266;
+    }
+    .wrap ul.accordion li.open i {
+        color: #FFB266;
+    }
+    .wrap ul.accordion li.open i.fa-chevron-down {
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    .wrap ul.accordion ul.submenu {
+        display: none;
+        background: transparent;
+        font-size: 14px;
+        padding: 0;
+    }
+    .wrap ul.accordion ul.submenu li {
+        border-bottom: 1px solid #4b4a5e;
+        list-style: none;
+    }
+    .wrap ul.accordion ul.submenu li a {
+        display: block;
+        text-decoration: none;
+        color: #d9d9d9;
+        padding: 12px;
+        padding-left: 42px;
+        -webkit-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+    }
+    .wrap ul.accordion ul.submenu li a:hover {
+        background: rgba(240, 128, 128, 0.8);
+        color: #ffb266;
+    }
+    @media screen and (max-width: 768px) {
+        .wrap .nav-bar .navbar-brand {
+            margin-top: 0;
+            padding-left: 0;
+        }
+        .wrap .side-menu-link {
+            display: inline-block;
+        }
+        .wrap #side-menu #qform {
+            position: absolute;
+            top: 10px;
+        }
+        .wrap .content {
+            left: 0;
+        }
+        .wrap.active .content {
+            left: 21em;
+        }
+        .wrap.active .content #bgrOne {
+            top: 10px;
+            transform: rotate(225deg);
+        }
+        .wrap.active .content #bgrTwo {
+            opacity: 0;
+        }
+        .wrap.active .content #bgrThree {
+            top: 10px;
+            transform: rotate(315deg);
+        }
+    }
+    @media screen and (min-width: 769px) {
+        .side-menu-link {
+            display: none;
+        }
+        .wrap {
+            position: relative;
+        }
+        .wrap .content {
+            left: 21em;
+            right: 0;
+        }
+    }
+
+
+</style>
+</html>

@@ -1,6 +1,7 @@
 <?php
 
 namespace Bs\StationBundle\Entity;
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -17,19 +18,30 @@ class Station
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
-     */private $id;
+     */
+    private $id;
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $name;
     /**
      * @ORM\ManyToOne(targetEntity="Bs\CityBundle\Entity\Location", inversedBy="stations")
      * @ORM\JoinColumn(name="city_id", referencedColumnName="id")
-     */private $location;
+     */
+    private $location;
     /**
      * @ORM\OneToMany(targetEntity="Bs\RouteBundle\Entity\RouteStation", mappedBy="station")
-     */private $routeStations;
+     */
+    private $routeStations;
+
+
+
     /**
      * Constructor
      */
     public function __construct()
     {
+
         $this->routeStations = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
@@ -58,8 +70,6 @@ class Station
     {
         $this->location = $location;
     }
-
-
 
 
     /**
@@ -94,5 +104,21 @@ class Station
     public function getRouteStations()
     {
         return $this->routeStations;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
     }
 }
