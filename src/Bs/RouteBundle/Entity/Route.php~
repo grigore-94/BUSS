@@ -8,6 +8,7 @@
  */
 namespace Bs\RouteBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -24,23 +25,25 @@ class Route
      */
     private $id;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="array")
      */
     private $activeDays;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\ManyToOne(targetEntity="Bs\CityBundle\Entity\Location")
+     * @ORM\JoinColumn(name="location_from_id", referencedColumnName="id")
      */
     private $from;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\ManyToOne(targetEntity="Bs\CityBundle\Entity\Location")
+     * @ORM\JoinColumn(name="location_to_id", referencedColumnName="id")
      */
     private $to;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="datetime")
      */
     private $hourDeparture;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="datetime")
      */
     private $hourArive;
     /**
@@ -68,10 +71,10 @@ class Route
      */
     public function __construct()
     {
-        $this->routeStations = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->busses = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->drivers = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->itemRoutes = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->routeStations = new ArrayCollection();
+        $this->busses = new ArrayCollection();
+        $this->drivers = new ArrayCollection();
+        $this->itemRoutes = new ArrayCollection();
     }
 
     /**

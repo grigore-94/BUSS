@@ -18,7 +18,9 @@ class StationType extends AbstractType
                 EntityType::class,
                 array(
                     'class' => 'BsCityBundle:Location',
-                    'choice_label' => 'uniqueName'
+                    'choice_label' => 'uniqueName',
+                    'multiple'=>true,
+                    'expanded' => true,
 
                 )
             );

@@ -32,10 +32,7 @@ class RouteStation
      * @ORM\Column(type="string")
      */
     private $distanceFromBackStation;
-    /**
-     * @ORM\Column(type="string")
-     */
-    private $name;
+
     /**
      * @ORM\Column(type="string")
      */
