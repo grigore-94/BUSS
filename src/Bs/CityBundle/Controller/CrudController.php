@@ -19,7 +19,7 @@ class CrudController extends Controller
 {
 
     /**
-     * @Route("/add/location", name="add_location")
+     * @Route("/admin/add/location", name="add_location")
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
@@ -48,4 +48,34 @@ class CrudController extends Controller
             array('form' => $form->createView())
         );
     }
+
+    /**
+     * @Route("admin/delete/location/{id}/{filter}", name="delete_location")
+     * @param Location $location
+     * @param string $filter
+     * @return RedirectResponse
+     */
+    public function removeCategory(Location $location, $filter=null)
+    {
+        $em = $this->getEntityManager();
+        $em->remove($location);
+        $em->flush();
+        $this->get('session')->getFlashBag()->add(
+            'success',
+            'The Location was successfully deleted.'
+        );
+
+        return $this->redirectToRoute('view_locations',['filter'=>$filter]);
+    }
+
+    /**
+     * @return \Doctrine\Common\Persistence\ObjectManager
+     */
+    protected function getEntityManager()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        return $em;
+    }
+
 }

@@ -1,0 +1,54 @@
+{% extends '::admin_base.html.twig' %}
+{% block body %}
+    <script type="text/javascript">
+        var lolz;
+        function onload() {
+            lolz = document.getElementById('lolz');
+        }
+
+        function kk() {
+            if (lolz.value != "") {
+                window.location.assign("http://buss.md/app_dev.php/admin/view/location/" + lolz.value);
+            }else
+            { window.location.assign("http://buss.md/app_dev.php/admin/view/location");}
+        }
+    </script>
+
+    <body onload="onload();">
+    <h2>Filter:</h2>
+    <input type="text" name="enter" class="" value="" id="lolz" style="width:20%"/>
+
+    <i class="fa fa-search" onclick="kk();"></i>
+
+    </body>
+
+    <table class="table table-inverse">
+        <thead>
+        <tr>
+            <th>Operations</th>
+            <th>City</th>
+            <th>Region</th>
+            <th>Stations</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for location in locations %}
+            <tr>
+                <td>
+                    <a class="fa fa-edit" href="#"> </a>
+                    <a class="fa fa-trash-o" href="{{ path('delete_location',{'id':location.id}) }}"
+                       onclick="return confirm('Do you want to delete this location?')"></a>
+
+                </td>
+                <td>{{ location.city }}</td>
+                <td>{{ location.region }}</td>
+                <td>
+                    <a class="btn btn-default btn-block" href="#">{{ location.stations|length }}</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

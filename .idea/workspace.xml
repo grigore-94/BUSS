@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e34b1ac5-d3e5-4983-8501-907c82e8d6ab" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Controller/CrudController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Form/RouteType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/add.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/form_add.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bs/CityBundle/Controller/LocationController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bs/CityBundle/Repository/LocationRepository.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bs/CityBundle/Resources/views/listLocation.html.twig" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Bs/CityBundle/Controller/DefaultController.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/admin_base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/admin_base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/RouteBundle/Entity/Route.php" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Entity/Route.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/RouteBundle/Entity/RouteStation.php" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Entity/RouteStation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/StationBundle/Form/StationType.php" afterPath="$PROJECT_DIR$/src/Bs/StationBundle/Form/StationType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/adminPage.css" afterPath="$PROJECT_DIR$/web/css/adminPage.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/CityBundle/Controller/CrudController.php" afterPath="$PROJECT_DIR$/src/Bs/CityBundle/Controller/CrudController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/CityBundle/Entity/Location.php" afterPath="$PROJECT_DIR$/src/Bs/CityBundle/Entity/Location.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/CityBundle/Resources/views/CRUD/add.html.twig" afterPath="$PROJECT_DIR$/src/Bs/CityBundle/Resources/views/CRUD/add.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/add.html.twig" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/add.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/form_add.html.twig" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/form_add.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/add.html.twig" afterPath="$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/add.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,23 +40,16 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RouteStation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Entity/RouteStation.php">
+      <file leaf-file-name="admin_base.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/admin_base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Route.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Entity/Route.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+            <state relative-caret-position="138">
+              <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
               <folding>
-                <element signature="e#123#171#0#PHP" expanded="true" />
+                <element signature="e#2112#2126#0#Twig" expanded="true" />
+                <element signature="e#2477#2488#0#Twig" expanded="true" />
+                <element signature="e#2550#2564#0#Twig" expanded="true" />
+                <element signature="e#2848#2857#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,8 +58,8 @@
       <file leaf-file-name="add.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/add.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+            <state relative-caret-position="51">
+              <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -73,28 +68,8 @@
       <file leaf-file-name="form_add.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/form_add.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/add.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form_add.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/form_add.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+            <state relative-caret-position="119">
+              <caret line="7" column="59" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="59" />
               <folding>
                 <element signature="e#20#59#0#Twig" expanded="false" />
               </folding>
@@ -102,51 +77,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CrudController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bs/StationBundle/Controller/CrudController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="48" column="5" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="48" selection-end-column="5" />
-              <folding>
-                <element signature="e#130#166#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CrudController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Controller/CrudController.php">
+      <file leaf-file-name="listLocation.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Bs/CityBundle/Resources/views/listLocation.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="27" column="56" lean-forward="false" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
+              <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
               <folding>
-                <element signature="e#129#163#0#PHP" expanded="true" />
-                <element signature="e#1113#1129#1#PHP" expanded="true" />
-                <element signature="e#1185#1209#0#PHP" expanded="true" />
+                <element signature="e#12#34#0#Twig" expanded="true" />
+                <element signature="e#612#629#0#HTML" expanded="true" />
+                <element signature="e#1123#1138#0#Twig" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RouteType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Form/RouteType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="53" column="119" lean-forward="false" selection-start-line="53" selection-start-column="119" selection-end-line="53" selection-end-column="119" />
-              <folding>
-                <element signature="e#7#87#0#PHP" expanded="true" />
-                <element signature="e#121#153#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StationType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bs/StationBundle/Form/StationType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="22" selection-end-column="39" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -155,9 +95,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>280f46</find>
-      <find>22948f</find>
-      <find>.send</find>
       <find>twitter.php</find>
       <find>colo</find>
       <find>tw</find>
@@ -185,6 +122,9 @@
       <find>routeStations</find>
       <find>route</find>
       <find>itemRoutes</find>
+      <find>un</find>
+      <find>searc</find>
+      <find>sear</find>
     </findStrings>
     <replaceStrings>
       <replace>asset</replace>
@@ -201,10 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Bs/PaymentBundle/Entity/Card.php" />
-        <option value="$PROJECT_DIR$/src/Bs/PaymentBundle/Entity/Payment.php" />
-        <option value="$PROJECT_DIR$/src/Bs/ItemRouteBundle/Entity/ItemRoute.php" />
-        <option value="$PROJECT_DIR$/src/Bs/DriverBundle/Entity/Driver.php" />
         <option value="$PROJECT_DIR$/src/Bs/BussBundle/Entity/Buss.php" />
         <option value="$PROJECT_DIR$/src/Bs/TicketBundle/Entity/Ticket.php" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
@@ -229,16 +165,12 @@
         <option value="$PROJECT_DIR$/src/Bs/StationBundle/Controller/CrudController.php" />
         <option value="$PROJECT_DIR$/src/Bs/CityBundle/Entity/City.php" />
         <option value="$PROJECT_DIR$/src/Bs/CityBundle/Form/LocationType.php" />
-        <option value="$PROJECT_DIR$/src/Bs/CityBundle/Controller/CrudController.php" />
         <option value="$PROJECT_DIR$/web/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/src/Bs/UserBundle/Resources/views/registration/register.html.twig" />
         <option value="$PROJECT_DIR$/src/Bs/CityBundle/Resources/views/CRUD/form_type_location.html.twig" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/form_add.html.twig" />
         <option value="$PROJECT_DIR$/src/Bs/StationBundle/Entity/Station.php" />
-        <option value="$PROJECT_DIR$/src/Bs/CityBundle/Entity/Location.php" />
-        <option value="$PROJECT_DIR$/src/Bs/CityBundle/Resources/views/CRUD/add.html.twig" />
-        <option value="$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/add.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/default/admin_index.html.twig" />
         <option value="$PROJECT_DIR$/src/Bs/AppBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
@@ -246,12 +178,20 @@
         <option value="$PROJECT_DIR$/web/css/adminPage.css" />
         <option value="$PROJECT_DIR$/src/Bs/RouteBundle/Entity/RouteStation.php" />
         <option value="$PROJECT_DIR$/src/Bs/StationBundle/Form/StationType.php" />
-        <option value="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/add.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/admin_base.html.twig" />
         <option value="$PROJECT_DIR$/src/Bs/RouteBundle/Controller/CrudController.php" />
         <option value="$PROJECT_DIR$/src/Bs/RouteBundle/Form/RouteType.php" />
-        <option value="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/form_add.html.twig" />
         <option value="$PROJECT_DIR$/src/Bs/RouteBundle/Entity/Route.php" />
+        <option value="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/form_add.html.twig" />
+        <option value="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/add.html.twig" />
+        <option value="$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/add.html.twig" />
+        <option value="$PROJECT_DIR$/src/Bs/CityBundle/Resources/views/CRUD/add.html.twig" />
+        <option value="$PROJECT_DIR$/src/Bs/CityBundle/Entity/Location.php" />
+        <option value="$PROJECT_DIR$/src/Bs/CityBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/admin_base.html.twig" />
+        <option value="$PROJECT_DIR$/src/Bs/CityBundle/Controller/CrudController.php" />
+        <option value="$PROJECT_DIR$/src/Bs/CityBundle/Controller/LocationController.php" />
+        <option value="$PROJECT_DIR$/src/Bs/CityBundle/Repository/LocationRepository.php" />
+        <option value="$PROJECT_DIR$/src/Bs/CityBundle/Resources/views/listLocation.html.twig" />
       </list>
     </option>
   </component>
@@ -839,7 +779,115 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Form" />
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CityBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CityBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Repository" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CityBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CityBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -939,11 +987,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\BUSS\src\Bs\CityBundle\Repository" />
       <recent name="E:\BUSS\src\Bs\RouteBundle\Resources\views" />
       <recent name="E:\BUSS\src\Bs\StationBundle\Resources\views" />
       <recent name="E:\BUSS\src\Bs\UserBundle\Repository" />
       <recent name="E:\BUSS\src\Bs\RouteBundle\Entity" />
-      <recent name="E:\BUSS\src\Bs\TicketBundle" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\BUSS\src\Bs\UserBundle\Form" />
@@ -1059,35 +1107,35 @@
       <workItem from="1491240195814" duration="1326000" />
       <workItem from="1491241546616" duration="11567000" />
       <workItem from="1491329172159" duration="3184000" />
-      <workItem from="1491332385963" duration="5016000" />
+      <workItem from="1491332385963" duration="15670000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82493000" />
+    <option name="totallyTimeSpent" value="93147000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2718509" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2332905" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969153" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34454912" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34454912" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39973083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1628533" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39973083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1153,64 +1201,40 @@
           <line>26</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Bs/CityBundle/Repository/LocationRepository.php</url>
+          <line>23</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Bs/CityBundle/Controller/LocationController.php</url>
+          <line>17</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Bs/CityBundle/Repository/LocationRepository.php</url>
+          <line>24</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Bs/CityBundle/Repository/LocationRepository.php</url>
+          <line>29</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Bs/CityBundle/Repository/LocationRepository.php</url>
+          <line>28</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="7" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/var/cache/dev/classes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="4217" column="0" lean-forward="false" selection-start-line="4217" selection-start-column="0" selection-end-line="4217" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/UserBundle/Controller/LogInController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="13" column="57" lean-forward="false" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
-          <folding>
-            <element signature="e#133#179#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-101">
-          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/UserBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-          <folding>
-            <element signature="e#129#161#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/color-box/color-js.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="161" column="46" lean-forward="false" selection-start-line="161" selection-start-column="46" selection-end-line="161" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/imagick.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="61" column="36" lean-forward="true" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/gmagick.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1850">
@@ -1315,13 +1339,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/CityBundle/Controller/CrudController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Bs/UserBundle/Resources/views/login.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1379,14 +1396,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/CityBundle/Entity/Location.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="75" column="62" lean-forward="false" selection-start-line="75" selection-start-column="62" selection-end-line="75" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/default/admin_index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1407,6 +1416,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34612">
           <caret line="2036" column="7" lean-forward="false" selection-start-line="2036" selection-start-column="7" selection-end-line="2036" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1434,14 +1444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/CityBundle/Resources/views/CRUD/add.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/font-awesome.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1463,16 +1465,6 @@
         <state relative-caret-position="391">
           <caret line="31" column="24" lean-forward="false" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/admin_base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="67" column="17" lean-forward="false" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
-          <folding>
-            <element signature="e#2802#2811#0#Twig" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1514,57 +1506,160 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Form/RouteType.php">
+    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Entity/Route.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="53" column="119" lean-forward="false" selection-start-line="53" selection-start-column="119" selection-end-line="53" selection-end-column="119" />
+        <state relative-caret-position="221">
+          <caret line="36" column="67" lean-forward="false" selection-start-line="36" selection-start-column="67" selection-end-line="36" selection-end-column="67" />
           <folding>
-            <element signature="e#7#87#0#PHP" expanded="true" />
-            <element signature="e#121#153#0#PHP" expanded="true" />
+            <element signature="e#123#171#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/add.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Form/RouteType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/add.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/form_add.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="442">
+          <caret line="53" column="119" lean-forward="false" selection-start-line="53" selection-start-column="119" selection-end-line="53" selection-end-column="119" />
+          <folding>
+            <element signature="e#7#87#0#PHP" expanded="false" />
+            <element signature="e#121#153#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/form_add.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+        <state relative-caret-position="170">
+          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
           <folding>
             <element signature="e#20#59#0#Twig" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Entity/Route.php">
+    <entry file="file://$PROJECT_DIR$/src/Bs/CityBundle/Entity/Location.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+        <state relative-caret-position="-1649">
+          <caret line="11" column="65" lean-forward="false" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/add.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
           <folding>
-            <element signature="e#123#171#0#PHP" expanded="true" />
+            <element signature="e#101#128#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/CityBundle/Resources/views/CRUD/add.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="26" lean-forward="false" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#987#0#PHP" expanded="false" />
+            <element signature="e#1014#1061#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="333" column="0" lean-forward="false" selection-start-line="333" selection-start-column="0" selection-end-line="333" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/QueryBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="1131" column="0" lean-forward="false" selection-start-line="1131" selection-start-column="0" selection-end-line="1131" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/CityBundle/Controller/LocationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#44#101#0#PHP" expanded="true" />
+            <element signature="e#540#563#1#PHP" expanded="true" />
+            <element signature="e#646#669#1#PHP" expanded="true" />
+            <element signature="e#735#767#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/CityBundle/Controller/CrudController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="67" column="42" lean-forward="false" selection-start-line="67" selection-start-column="42" selection-end-line="67" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/CityBundle/Repository/LocationRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding>
+            <element signature="e#44#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/add.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/form_add.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="59" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="59" />
+          <folding>
+            <element signature="e#20#59#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/admin_base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+          <folding>
+            <element signature="e#2112#2126#0#Twig" expanded="true" />
+            <element signature="e#2477#2488#0#Twig" expanded="true" />
+            <element signature="e#2550#2564#0#Twig" expanded="true" />
+            <element signature="e#2848#2857#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/CityBundle/Resources/views/listLocation.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+          <folding>
+            <element signature="e#12#34#0#Twig" expanded="true" />
+            <element signature="e#612#629#0#HTML" expanded="true" />
+            <element signature="e#1123#1138#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
