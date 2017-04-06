@@ -9,16 +9,17 @@
 namespace Bs\StationBundle\Controller;
 
 
+use Bs\CityBundle\Entity\Location;
 use Bs\StationBundle\Entity\Station;
 use Bs\StationBundle\Form\StationType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class CrudController extends Controller
+class CrudController extends BaseController
 {
     /**
-     * @Route("/add/station", name="add_station")
+     * @Route("/admin/add/station", name="add_station")
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
@@ -40,6 +41,57 @@ class CrudController extends Controller
             );
 
             return $this->redirectToRoute('homepage');
+        }
+
+        return $this->render(
+            '@BsStation/add.html.twig',
+            array('form' => $form->createView())
+        );
+    }
+
+    /**
+     * @Route("/admin/delete/station/{id}/{filter}", name="delete_station")
+     * @param Station $station
+     * @param string $filter
+     * @return RedirectResponse
+     */
+    public function removeStation(Station $station, $filter=null)
+    {
+        $em = $this->getEntityManager();
+        $em->remove($station);
+        $em->flush();
+        $this->get('session')->getFlashBag()->add(
+            'success',
+            'The Station was successfully deleted.'
+        );
+
+        return $this->redirectToRoute('view_station',['filter'=>$filter]);
+    }
+
+    /**
+     * @Route("/admin/edit/station/{id}/{filter}", name="edit_station")
+     * @param Request $request
+     * @param Station $station
+     * @param null $filter
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     */
+    public function editStationAction(Request $request, Station $station, $filter=null)
+    {
+        $form = $this->createForm(StationType::class, $station);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted()) {
+
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($station);
+            $em->flush();
+            $this->get('session')->getFlashBag()->add(
+                'success',
+                'The station was succes ful updated.'
+            );
+
+            return $this->redirectToRoute('view_stations',['filter'=>$filter]);
         }
 
         return $this->render(

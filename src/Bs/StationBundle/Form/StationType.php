@@ -19,17 +19,15 @@ class StationType extends AbstractType
                 array(
                     'class' => 'BsCityBundle:Location',
                     'choice_label' => 'uniqueName',
-                    'multiple'=>true,
-                    'expanded' => true,
+
 
                 )
             );
 
     }
-    private function getUniqueName()
-    {
-        return sprintf('%s - %s', $this->name, $this->value);
-    }
+/*'multiple'=>true,
+'expanded' => true,*/
+
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(

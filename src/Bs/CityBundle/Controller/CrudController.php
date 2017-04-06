@@ -40,7 +40,7 @@ class CrudController extends Controller
                 'Your user was successfully added.'
             );
 
-            return $this->redirectToRoute('homepage');
+            return $this->redirectToRoute('view_locations');
         }
 
         return $this->render(
@@ -50,12 +50,12 @@ class CrudController extends Controller
     }
 
     /**
-     * @Route("admin/delete/location/{id}/{filter}", name="delete_location")
+     * @Route("/admin/delete/location/{id}/{filter}", name="delete_location")
      * @param Location $location
      * @param string $filter
      * @return RedirectResponse
      */
-    public function removeCategory(Location $location, $filter=null)
+    public function removeLocation(Location $location, $filter=null)
     {
         $em = $this->getEntityManager();
         $em->remove($location);
@@ -68,9 +68,44 @@ class CrudController extends Controller
         return $this->redirectToRoute('view_locations',['filter'=>$filter]);
     }
 
+
     /**
-     * @return \Doctrine\Common\Persistence\ObjectManager
+     * @Route("/admin/edit/location/{id}", name="edit_location")
+     * @param Location $location
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
+    public function editAction(Request $request, Location $location)
+    {
+        $form = $this->createForm(LocationType::class, $location);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted()) {
+
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($location);
+            $em->flush();
+            $this->get('session')->getFlashBag()->add(
+                'success',
+                'Your user was updated added.'
+            );
+
+            return $this->redirectToRoute('view_locations');
+        }
+
+        return $this->render(
+            '@BsCity/CRUD/add.html.twig',
+            array('form' => $form->createView())
+        );
+
+
+
+    }
+
+    /**
+ * @return \Doctrine\Common\Persistence\ObjectManager
+ */
     protected function getEntityManager()
     {
         $em = $this->getDoctrine()->getManager();
