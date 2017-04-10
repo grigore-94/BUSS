@@ -6,7 +6,7 @@
  * Time: 10:55 PM
  */
 
-namespace Bs\StationBundle\Controller;
+namespace Bs\AppBundle\Controller;
 
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;

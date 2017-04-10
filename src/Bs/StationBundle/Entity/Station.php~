@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  * User: User
  * Date: 3/28/2017
  * Time: 10:32 PM
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Bs\StationBundle\Repository\StationRepository")
  * @ORM\Table(name="station")
  */
 class Station

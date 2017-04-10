@@ -12,7 +12,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Bs\RouteBundle\Repository\RouteRepository")
  * @ORM\Table(name="route")
  */
 class Route

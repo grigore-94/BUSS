@@ -6,13 +6,15 @@
  * Time: 10:45 PM
  */
 
-namespace Bs\StationBundle\Controller;
+namespace Bs\UserBundle\Controller;
 
 
 use Bs\AppBundle\Controller\BaseController;
 use Bs\CityBundle\Entity\Location;
-use Bs\StationBundle\Entity\Station;
-use Bs\StationBundle\Form\StationType;
+
+use Bs\UserBundle\Entity\User;
+use Bs\UserBundle\Form\UserType;
+use Bs\UserBundle\Form\UserTypeEdit;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -22,21 +24,21 @@ use Symfony\Component\HttpFoundation\Response;
 class CrudController extends BaseController
 {
     /**
-     * @Route("/admin/add/station", name="add_station")
+     * @Route("/admin/add/user", name="add_user")
      * @param Request $request
      * @return RedirectResponse|Response
      */
     public function addAction(Request $request)
     {
-        $station = new Station();
-        $form = $this->createForm(StationType::class, $station);
+        $user = new User();
+        $form = $this->createForm(UserType::class, $user);
 
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
 
 
             $em = $this->getDoctrine()->getManager();
-            $em->persist($station);
+            $em->persist($user);
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
@@ -47,58 +49,58 @@ class CrudController extends BaseController
         }
 
         return $this->render(
-            '@BsStation/add.html.twig',
+            '@BsUser/add.html.twig',
             array('form' => $form->createView())
         );
     }
 
     /**
-     * @Route("/admin/delete/station/{id}/{filter}", name="delete_station")
-     * @param Station $station
+     * @Route("/admin/delete/user/{id}/{filter}", name="delete_user")
+     * @param User $user
      * @param string $filter
      * @return RedirectResponse
      */
-    public function removeStation(Station $station, $filter=null)
+    public function removeUser(User $user, $filter=null)
     {
         $em = $this->getEntityManager();
-        $em->remove($station);
+        $em->remove($user);
         $em->flush();
         $this->get('session')->getFlashBag()->add(
             'success',
-            'The Station was successfully deleted.'
+            'The User was successfully deleted.'
         );
 
-        return $this->redirectToRoute('view_stations',['filter'=>$filter]);
+        return $this->redirectToRoute('view_users',['filter'=>$filter]);
     }
 
     /**
-     * @Route("/admin/edit/station/{id}/{filter}", name="edit_station")
+     * @Route("/admin/edit/user/{id}/{filter}", name="edit_user")
      * @param Request $request
-     * @param Station $station
+     * @param User $user
      * @param null $filter
      * @return RedirectResponse|Response
      */
-    public function editStationAction(Request $request, Station $station, $filter=null)
+    public function editUserAction(Request $request, User $user, $filter=null)
     {
-        $form = $this->createForm(StationType::class, $station);
+        $form = $this->createForm(UserTypeEdit::class, $user);
 
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
 
 
             $em = $this->getDoctrine()->getManager();
-            $em->persist($station);
+            $em->persist($user);
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
-                'The station was succes ful updated.'
+                'The user was succes ful updated.'
             );
 
-            return $this->redirectToRoute('view_stations',['filter'=>$filter]);
+            return $this->redirectToRoute('view_users',['filter'=>$filter]);
         }
 
         return $this->render(
-            '@BsStation/add.html.twig',
+            '@BsUser/add.html.twig',
             array('form' => $form->createView())
         );
     }

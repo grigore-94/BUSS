@@ -65,6 +65,27 @@ class User implements UserInterface, \Serializable
      */
     private $cards;
 
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $releasedAt;
+
+    /**
+     * @return mixed
+     */
+    public function getReleasedAt()
+    {
+        return $this->releasedAt;
+    }
+
+    /**
+     * @param mixed $releasedAt
+     */
+    public function setReleasedAt($releasedAt)
+    {
+        $this->releasedAt = $releasedAt;
+    }
     /**
      * @return mixed
      */

@@ -11,7 +11,7 @@ namespace Bs\BussBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Bs\BussBundle\Repository\BussRepository")
  * @ORM\Table(name="buss")
  */
 class Buss

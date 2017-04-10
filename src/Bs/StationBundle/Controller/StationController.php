@@ -2,8 +2,8 @@
 
 namespace Bs\StationBundle\Controller;
 
+use Bs\AppBundle\Controller\BaseController;
 use Bs\CityBundle\Entity\Location;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 class StationController extends BaseController

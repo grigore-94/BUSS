@@ -1,0 +1,10 @@
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+
+{{ form_start(form) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.username) }}
+    {{ form_row(form.email) }}
+
+
+<button type="submit" class="btn btn-default">Save</button>
+{{ form_end(form) }}

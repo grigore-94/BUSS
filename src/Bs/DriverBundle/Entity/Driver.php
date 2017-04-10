@@ -11,7 +11,7 @@ namespace Bs\DriverBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Bs\DriverBundle\Repository\DriverRepository")
  * @ORM\Table(name="driver")
  */
 class Driver

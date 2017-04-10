@@ -13,7 +13,9 @@ use Bs\CityBundle\Entity\Location;
 use Bs\CityBundle\Form\LocationType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class CrudController extends Controller
 {
@@ -21,7 +23,7 @@ class CrudController extends Controller
     /**
      * @Route("/admin/add/location", name="add_location")
      * @param Request $request
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     * @return RedirectResponse|Response
      */
     public function addAction(Request $request)
     {
@@ -73,7 +75,7 @@ class CrudController extends Controller
      * @Route("/admin/edit/location/{id}", name="edit_location")
      * @param Location $location
      * @param Request $request
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     * @return RedirectResponse|Response
      */
     public function editAction(Request $request, Location $location)
     {

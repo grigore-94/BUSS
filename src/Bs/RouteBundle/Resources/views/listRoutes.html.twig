@@ -1,0 +1,58 @@
+{% extends '::admin_base.html.twig' %}
+{% block body %}
+    <script type="text/javascript">
+        var lolz;
+        function onload() {
+            lolz = document.getElementById('lolz');
+        }
+
+        function kk() {
+            if (lolz.value != "") {
+                window.location.assign("http://buss.md/app_dev.php/admin/view/routes/" + lolz.value);
+            }else
+            { window.location.assign("http://buss.md/app_dev.php/admin/view/routes");}
+        }
+    </script>
+
+    <body onload="onload();">
+    <h2>Filter:</h2>
+    <input type="text" name="enter" class="" value="{{ filter }}" id="lolz" style="width:20%"/>
+
+    <i class="fa fa-search" onclick="kk();"></i>
+
+    </body>
+
+    <table class="table table-inverse">
+        <thead>
+        <tr>
+            <th>Operations</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Departure Ho</th>
+            <th>Arival Ho</th>
+            <th>Stations </th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for route in routes %}
+            <tr>
+                <td>
+                    <a class="fa fa-edit" href="{{ path('edit_route',{'id':route.id}) }}"> </a>
+                    <a class="fa fa-trash-o" href="{{ path('delete_route',{'id':route.id}) }}"
+                       onclick="return confirm('Do you want to delete this route?')"></a>
+
+                </td>
+                <td>{{ route.from.uniqueName }}</td>
+                <td>{{ route.to.uniqueName }}</td>
+                <td>{{ route.hourDeparture|date('H:i:s') }}</td>
+                <td>{{ route.hourArive|date('H:i:s') }}</td>
+                <td>
+                    <a class="btn btn-default btn-block" href="#">{{ route.routeStations|length }}</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

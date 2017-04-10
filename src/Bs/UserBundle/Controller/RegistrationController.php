@@ -33,6 +33,9 @@ class RegistrationController extends Controller
             $user->setPassword($password);
             $user->setIsActive(true);
             $user->setRoles(array('ROLE_ADMIN'));
+            if ($user->getReleasedAt() == null) {
+                $user->setReleasedAt(new \DateTime('now'));
+            }
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
             $em->flush();

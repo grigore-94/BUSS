@@ -2,104 +2,112 @@
 /**
  * Created by PhpStorm.
  * User: User
- * Date: 4/2/2017
- * Time: 10:45 PM
+ * Date: 4/4/2017
+ * Time: 10:41 PM
  */
 
-namespace Bs\StationBundle\Controller;
+namespace Bs\BussBundle\Controller;
 
 
 use Bs\AppBundle\Controller\BaseController;
-use Bs\CityBundle\Entity\Location;
-use Bs\StationBundle\Entity\Station;
-use Bs\StationBundle\Form\StationType;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Bs\BussBundle\Entity\Buss;
+use Bs\BussBundle\Form\BussType;
+use Bs\RouteBundle\Form\RouteType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class CrudController extends BaseController
 {
     /**
-     * @Route("/admin/add/station", name="add_station")
+     * @Route("/admin/add/buss", name="add_buss")
      * @param Request $request
      * @return RedirectResponse|Response
      */
     public function addAction(Request $request)
     {
-        $station = new Station();
-        $form = $this->createForm(StationType::class, $station);
+        $entity = new Buss();
+        $form = $this->createForm(BussType::class, $entity);
 
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
 
 
             $em = $this->getDoctrine()->getManager();
-            $em->persist($station);
+            $em->persist($entity);
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
-                'Your user was successfully added.'
+                'Buss was successfully added.'
             );
 
-            return $this->redirectToRoute('homepage');
+            return $this->redirectToRoute('admin_homepage');
         }
 
         return $this->render(
-            '@BsStation/add.html.twig',
+            '@BsBuss/add.html.twig',
             array('form' => $form->createView())
         );
     }
 
+
     /**
-     * @Route("/admin/delete/station/{id}/{filter}", name="delete_station")
-     * @param Station $station
+     * @Route("/admin/delete/route/{id}/{filter}", name="delete_buss")
      * @param string $filter
+     * @param $id
      * @return RedirectResponse
      */
-    public function removeStation(Station $station, $filter=null)
+    public function removeBuss($id, $filter = null)
     {
+        $buss=$this->getEntityManager()->getRepository('BsBussBundle:Buss')->find($id);
         $em = $this->getEntityManager();
-        $em->remove($station);
+        $em->remove($buss);
         $em->flush();
         $this->get('session')->getFlashBag()->add(
             'success',
-            'The Station was successfully deleted.'
+            'The buss was successfully deleted.'
         );
 
-        return $this->redirectToRoute('view_stations',['filter'=>$filter]);
+        return $this->redirectToRoute('view_busses', ['filter' => $filter]);
     }
 
+
     /**
-     * @Route("/admin/edit/station/{id}/{filter}", name="edit_station")
-     * @param Request $request
-     * @param Station $station
-     * @param null $filter
+     * @Route("/admin/edit/buss/{id}", name="edit_buss")
+     * @param  $id
+     * @param  Request $request
      * @return RedirectResponse|Response
      */
-    public function editStationAction(Request $request, Station $station, $filter=null)
+    public function editAction($id, Request $request)
     {
-        $form = $this->createForm(StationType::class, $station);
+        $buss=$this->getEntityManager()->getRepository('BsBussBundle:Buss')->find($id);
+
+        $form = $this->createForm(BussType::class, $buss);
 
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
 
 
             $em = $this->getDoctrine()->getManager();
-            $em->persist($station);
+            $em->persist($buss);
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
-                'The station was succes ful updated.'
+                'Your user was updated added.'
             );
 
-            return $this->redirectToRoute('view_stations',['filter'=>$filter]);
+            return $this->redirectToRoute('view_busss');
         }
 
         return $this->render(
-            '@BsStation/add.html.twig',
+            '@BsBuss/add.html.twig',
             array('form' => $form->createView())
         );
+
+
     }
+
+
 }
