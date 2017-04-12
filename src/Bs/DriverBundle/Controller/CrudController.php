@@ -10,24 +10,25 @@ namespace Bs\DriverBundle\Controller;
 
 
 use Bs\AppBundle\Controller\BaseController;
-use Bs\RouteBundle\Form\RouteType;
+use Bs\DriverBundle\Form\DriverType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Driver;
 use Symfony\Component\Routing\Annotation\Route;
 
 class CrudController extends BaseController
 {
     /**
-     * @Route("/add/route", name="add_route")
+     * @Route("/admin/add/driver", name="add_driver")
      * @param Request $request
      * @return RedirectResponse|Response
      */
     public function addAction(Request $request)
     {
-        $entity = new \Bs\RouteBundle\Entity\Route();
-        $form = $this->createForm(RouteType::class, $entity);
+        $entity = new \Bs\DriverBundle\Entity\Driver();
+        $form = $this->createForm(DriverType::class, $entity);
 
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
@@ -38,69 +39,69 @@ class CrudController extends BaseController
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
-                'Route was successfully added.'
+                'Driver was successfully added.'
             );
 
             return $this->redirectToRoute('admin_homepage');
         }
 
         return $this->render(
-            '@BsRoute/add.html.twig',
+            '@BsDriver/add.html.twig',
             array('form' => $form->createView())
         );
     }
 
 
     /**
-     * @Route("/admin/delete/route/{id}/{filter}", name="delete_route")
+     * @Route("/admin/delete/driver/{id}/{filter}", name="delete_driver")
      * @param string $filter
      * @param $id
      * @return RedirectResponse
      */
-    public function removeRoute($id, $filter = null)
+    public function removeDriver($id, $filter = null)
     {
-        $route=$this->getEntityManager()->getRepository('BsRouteBundle:Route')->find($id);
+        $driver=$this->getEntityManager()->getRepository('BsDriverBundle:Driver')->find($id);
         $em = $this->getEntityManager();
-        $em->remove($route);
+        $em->remove($driver);
         $em->flush();
         $this->get('session')->getFlashBag()->add(
             'success',
             'The route was successfully deleted.'
         );
 
-        return $this->redirectToRoute('view_routes', ['filter' => $filter]);
+        return $this->redirectToRoute('view_drivers', ['filter' => $filter]);
     }
 
 
     /**
-     * @Route("/admin/edit/route/{id}", name="edit_route")
+     * @Route("/admin/edit/driver/{id}", name="edit_driver")
      * @param  $id
      * @param  Request $request
      * @return RedirectResponse|Response
      */
     public function editAction($id, Request $request)
     {
-        $route=$this->getEntityManager()->getRepository('BsRouteBundle:Route')->find($id);
+        $driver=$this->getEntityManager()->getRepository('BsDriverBundle:Driver')->find($id);
 
-        $form = $this->createForm(RouteType::class, $route);
+        $form = $this->createForm(DriverType::class, $driver);
 
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
 
 
             $em = $this->getDoctrine()->getManager();
-            $em->persist($route);
+            $em->persist($driver);
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
                 'Your user was updated added.'
             );
 
-            return $this->redirectToRoute('view_routes');
+            return $this->redirectToDriver('view_drivers');
         }
 
         return $this->render(
-            '@BsRoute/add.html.twig',
+            '@BsDriver/add.html.twig',
             array('form' => $form->createView())
         );
 

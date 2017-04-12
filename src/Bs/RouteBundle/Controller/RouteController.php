@@ -5,6 +5,7 @@ namespace Bs\RouteBundle\Controller;
 use Bs\AppBundle\Controller\BaseController;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Response;
 
 class RouteController extends BaseController
 {
@@ -24,19 +25,43 @@ class RouteController extends BaseController
      */
     public function viewAction($filter = null)
     {
-        $em=$this->getEntityManager();
+        $em = $this->getEntityManager();
         if ($filter) {
-            $routes=$em->getRepository("BsRouteBundle:Route")->findFilter($filter);
+            $routes = $em->getRepository("BsRouteBundle:Route")->findFilter($filter);
         } else {
-            $routes=$em->getRepository("BsRouteBundle:Route")->findAll();
+            $routes = $em->getRepository("BsRouteBundle:Route")->findAll();
         }
         return $this->render(
             '@BsRoute/listRoutes.html.twig',
             [
                 'routes' => $routes,
-                'filter'=>$filter
+                'filter' => $filter
             ]
 
         );
     }
+
+
+    /**
+     * @Route("/admin/view/route/{id}", name="view_route")
+     * @param $id
+     * @return Response
+     */
+    public function viewRouteAction($id)
+    {
+        $em = $this->getEntityManager();
+        $route = $em->getRepository("BsRouteBundle:Route")->find($id);
+        $routeStations = $em->getRepository('BsRouteBundle:RouteStation')->findRouteStations($route);
+        return $this->render(
+            '@BsRoute/viewRouteAdmin.html.twig',
+            [
+                'route' => $route,
+                'routeStations' => $routeStations,
+
+            ]
+
+        );
+    }
+
 }
+

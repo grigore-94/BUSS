@@ -26,28 +26,31 @@
         <thead>
         <tr>
             <th>Operations</th>
-            <th>From</th>
-            <th>To</th>
-            <th>Departure Ho</th>
-            <th>Arival Ho</th>
-            <th>Stations </th>
+            <th>Name</th>
+            <th>Surename</th>
+            <th>Stage</th>
+            <th>Routes</th>
+            <th>Item Routes</th>
         </tr>
         </thead>
         <tbody>
-        {% for route in routes %}
+        {% for driver in drivers %}
             <tr>
                 <td>
-                    <a class="fa fa-edit" href="{{ path('edit_route',{'id':route.id}) }}"> </a>
-                    <a class="fa fa-trash-o" href="{{ path('delete_route',{'id':route.id}) }}"
-                       onclick="return confirm('Do you want to delete this route?')"></a>
+                    <a class="fa fa-edit" href="{{ path('edit_driver',{'id':driver.id}) }}"> </a>
+                    <a class="fa fa-trash-o" href="{{ path('delete_driver',{'id':driver.id}) }}"
+                       onclick="return confirm('Do you want to delete this driver?')"></a>
 
                 </td>
-                <td>{{ route.from.uniqueName }}</td>
-                <td>{{ route.to.uniqueName }}</td>
-                <td>{{ route.hourDeparture|date('H:i:s') }}</td>
-                <td>{{ route.hourArive|date('H:i:s') }}</td>
+                <td>{{ driver.name}}</td>
+                <td>{{ driver.surename }}</td>
+                <td>{{ driver.stage }}</td>
                 <td>
-                    <a class="btn btn-default btn-block" href="{{ path('view_route',{'id':route.id}) }}">{{ route.routeStations|length }}</a>
+                    <a class="btn btn-default btn-block" href="#">{{ driver.routes|length }}</a>
+                </td>
+
+                <td>
+                    <a class="btn btn-default btn-block" href="#">{{ driver.itemRoutes|length }}</a>
                 </td>
             </tr>
         {% endfor %}

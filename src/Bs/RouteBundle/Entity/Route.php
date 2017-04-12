@@ -8,6 +8,8 @@
  */
 namespace Bs\RouteBundle\Entity;
 
+use Bs\RouteBundle\Entity\RouteStation;
+use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -65,6 +67,54 @@ class Route
      */
     private $itemRoutes;
 
+    private $totalDistance;
+    private $totalTime;
+
+    public function getTotalDistance()
+    {
+        $this->totalDistance = 0;
+        /**
+         * @var $station RouteStation
+         */
+        foreach ($this->routeStations as $station) {
+
+            $this->totalDistance += $station->getDistanceFromBackStation();
+        }
+        return $this->totalDistance;
+    }
+
+    public function getTotalTime()
+    {
+
+$this->totalTime = new \DateTime("00:00:00");
+
+
+        /**
+         * @var $station RouteStation
+         */
+        foreach ($this->routeStations as $station) {
+
+            $this->totalTime =$this->addtime($this->totalTime,
+                $station->getTimeFromBackStation()) ;
+        }
+        return $this->totalTime;
+    }
+
+    function addtime($time1,$time2)
+    {
+        $x = new DateTime($time1->format("h:i:s"));
+        $y = new DateTime($time2->format("h:i:s"));
+
+        $interval1 = $x->diff(new DateTime('00:00:00')) ;
+        $interval2 = $y->diff(new DateTime('00:00:00')) ;
+
+        $e = new DateTime('00:00');
+        $f = clone $e;
+        $e->add($interval1);
+        $e->add($interval2);
+        $total = $f->diff($e)->format("%H:%I:%S");
+        return new DateTime($total);
+    }
 
     /**
      * Constructor
@@ -210,11 +260,11 @@ class Route
     /**
      * Add routeStation
      *
-     * @param \Bs\RouteBundle\Entity\RouteStation $routeStation
+     * @param RouteStation $routeStation
      *
      * @return Route
      */
-    public function addRouteStation(\Bs\RouteBundle\Entity\RouteStation $routeStation)
+    public function addRouteStation(RouteStation $routeStation)
     {
         $this->routeStations[] = $routeStation;
 
@@ -224,9 +274,9 @@ class Route
     /**
      * Remove routeStation
      *
-     * @param \Bs\RouteBundle\Entity\RouteStation $routeStation
+     * @param RouteStation $routeStation
      */
-    public function removeRouteStation(\Bs\RouteBundle\Entity\RouteStation $routeStation)
+    public function removeRouteStation(RouteStation $routeStation)
     {
         $this->routeStations->removeElement($routeStation);
     }

@@ -104,7 +104,6 @@ class CrudController extends BaseController
             array('form' => $form->createView())
         );
 
-
     }
 
 

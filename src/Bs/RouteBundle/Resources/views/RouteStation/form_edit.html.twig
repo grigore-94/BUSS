@@ -1,0 +1,12 @@
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+{{ form_start(form) }}
+<div class="hidden">
+{{ form_row(form.station) }}
+</div>
+{{ form_row(form.distanceFromBackStation) }}
+{{ form_row(form.timeFromBackStation) }}
+{{ form_row(form.position) }}
+
+
+<button type="submit" class="btn btn-default">Save</button>
+{{ form_end(form) }}

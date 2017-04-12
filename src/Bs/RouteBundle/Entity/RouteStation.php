@@ -11,7 +11,7 @@ namespace Bs\RouteBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Bs\RouteBundle\Repository\RouteStationRepository")
  * @ORM\Table(name="routeStation")
  */
 class RouteStation
@@ -34,7 +34,7 @@ class RouteStation
     private $distanceFromBackStation;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="datetime")
      */
     private $timeFromBackStation;
     /**
@@ -48,9 +48,7 @@ class RouteStation
     private $position;
 
     /**
-     * Get id
-     *
-     * @return integer
+     * @return mixed
      */
     public function getId()
     {
@@ -58,119 +56,15 @@ class RouteStation
     }
 
     /**
-     * Set distanceFromBackStation
-     *
-     * @param string $distanceFromBackStation
-     *
-     * @return RouteStation
+     * @param mixed $id
      */
-    public function setDistanceFromBackStation($distanceFromBackStation)
+    public function setId($id)
     {
-        $this->distanceFromBackStation = $distanceFromBackStation;
-
-        return $this;
+        $this->id = $id;
     }
 
     /**
-     * Get distanceFromBackStation
-     *
-     * @return string
-     */
-    public function getDistanceFromBackStation()
-    {
-        return $this->distanceFromBackStation;
-    }
-
-    /**
-     * Set name
-     *
-     * @param string $name
-     *
-     * @return RouteStation
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-
-        return $this;
-    }
-
-    /**
-     * Get name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * Set timeFromBackStation
-     *
-     * @param string $timeFromBackStation
-     *
-     * @return RouteStation
-     */
-    public function setTimeFromBackStation($timeFromBackStation)
-    {
-        $this->timeFromBackStation = $timeFromBackStation;
-
-        return $this;
-    }
-
-    /**
-     * Get timeFromBackStation
-     *
-     * @return string
-     */
-    public function getTimeFromBackStation()
-    {
-        return $this->timeFromBackStation;
-    }
-
-    /**
-     * Set position
-     *
-     * @param float $position
-     *
-     * @return RouteStation
-     */
-    public function setPosition($position)
-    {
-        $this->position = $position;
-
-        return $this;
-    }
-
-    /**
-     * Get position
-     *
-     * @return float
-     */
-    public function getPosition()
-    {
-        return $this->position;
-    }
-
-    /**
-     * Set station
-     *
-     * @param \Bs\StationBundle\Entity\Station $station
-     *
-     * @return RouteStation
-     */
-    public function setStation(\Bs\StationBundle\Entity\Station $station = null)
-    {
-        $this->station = $station;
-
-        return $this;
-    }
-
-    /**
-     * Get station
-     *
-     * @return \Bs\StationBundle\Entity\Station
+     * @return mixed
      */
     public function getStation()
     {
@@ -178,26 +72,76 @@ class RouteStation
     }
 
     /**
-     * Set route
-     *
-     * @param \Bs\RouteBundle\Entity\Route $route
-     *
-     * @return RouteStation
+     * @param mixed $station
      */
-    public function setRoute(\Bs\RouteBundle\Entity\Route $route = null)
+    public function setStation($station)
     {
-        $this->route = $route;
-
-        return $this;
+        $this->station = $station;
     }
 
     /**
-     * Get route
-     *
-     * @return \Bs\RouteBundle\Entity\Route
+     * @return mixed
+     */
+    public function getDistanceFromBackStation()
+    {
+        return $this->distanceFromBackStation;
+    }
+
+    /**
+     * @param mixed $distanceFromBackStation
+     */
+    public function setDistanceFromBackStation($distanceFromBackStation)
+    {
+        $this->distanceFromBackStation = $distanceFromBackStation;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTimeFromBackStation()
+    {
+        return $this->timeFromBackStation;
+    }
+
+    /**
+     * @param mixed $timeFromBackStation
+     */
+    public function setTimeFromBackStation($timeFromBackStation)
+    {
+        $this->timeFromBackStation = $timeFromBackStation;
+    }
+
+    /**
+     * @return mixed
      */
     public function getRoute()
     {
         return $this->route;
     }
+
+    /**
+     * @param mixed $route
+     */
+    public function setRoute($route)
+    {
+        $this->route = $route;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPosition()
+    {
+        return $this->position;
+    }
+
+    /**
+     * @param mixed $position
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+    }
+
+
 }
