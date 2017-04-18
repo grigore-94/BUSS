@@ -20,22 +20,47 @@ class Driver
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
-     */private $id;
+     */
+    private $id;
     /**
      * @ORM\Column(type="string")
-     */private $name;
+     */
+    private $name;
     /**
      * @ORM\Column(type="string")
-     */private $surename;
+     */
+    private $surename;
     /**
      * @ORM\Column(type="string")
-     */private $stage;
+     */
+    private $stage;
     /**
      * @ORM\ManyToMany(targetEntity="Bs\RouteBundle\Entity\Route",mappedBy="drivers")
-     */private $routes;
+     */
+    private $routes;
     /**
      * @ORM\OneToMany(targetEntity="Bs\ItemRouteBundle\Entity\ItemRoute", mappedBy="driver")
-     */private $itemRoutes;
+     */
+    private $itemRoutes;
+
+    private $uniqueName;
+
+    /**
+     * @return mixed
+     */
+    public function getUniqueName()
+    {
+        return sprintf('%s  %s', $this->name, $this->surename);
+    }
+
+    /**
+     * @param mixed $uniqueName
+     */
+    public function setUniqueName($uniqueName)
+    {
+        $this->uniqueName = $uniqueName;
+    }
+
     /**
      * Constructor
      */

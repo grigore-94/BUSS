@@ -115,7 +115,23 @@ $this->totalTime = new \DateTime("00:00:00");
         $total = $f->diff($e)->format("%H:%I:%S");
         return new DateTime($total);
     }
+private $driver;
 
+    /**
+     * @return mixed
+     */
+    public function getDriver()
+    {
+        return $this->driver;
+    }
+
+    /**
+     * @param mixed $driver
+     */
+    public function setDriver($driver)
+    {
+        $this->driver = $driver;
+    }
     /**
      * Constructor
      */
@@ -154,7 +170,7 @@ $this->totalTime = new \DateTime("00:00:00");
     /**
      * Get activeDays
      *
-     * @return string
+     * @return array
      */
     public function getActiveDays()
     {

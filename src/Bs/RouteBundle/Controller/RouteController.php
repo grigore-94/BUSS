@@ -52,11 +52,15 @@ class RouteController extends BaseController
         $em = $this->getEntityManager();
         $route = $em->getRepository("BsRouteBundle:Route")->find($id);
         $routeStations = $em->getRepository('BsRouteBundle:RouteStation')->findRouteStations($route);
+       $daysOfWeek= array('Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wendnesday', 'Thursday', 'Friday');
+
+       $date=date_format($route->getHourArive(), 'l');
         return $this->render(
             '@BsRoute/viewRouteAdmin.html.twig',
             [
                 'route' => $route,
                 'routeStations' => $routeStations,
+                'daysOfWeek' => $daysOfWeek,
 
             ]
 
