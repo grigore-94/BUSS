@@ -10,6 +10,7 @@ namespace Bs\RouteBundle\Form;
 
 
 use Bs\RouteBundle\Entity\RouteStation;
+
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -39,7 +40,15 @@ class RouteStationType extends AbstractType
             ->add('position', NumberType::class,
                 [
                     'scale' => 2,
-                ]);
+                ])
+            ->add('canBeStart',ChoiceType::class,
+            [
+                'choices'  => [
+                    'Yes' => true,
+                    'No' => false
+                ]
+            ]
+            );
 
     }
 

@@ -11,6 +11,7 @@ namespace Bs\RouteBundle\Controller;
 use Bs\AppBundle\Controller\BaseController;
 use Bs\DriverBundle\Entity\Driver;
 use Bs\RouteBundle\Entity\RouteStation;
+use Bs\RouteBundle\Form\RouteBussType;
 use Bs\RouteBundle\Form\RouteDriverType;
 use Bs\RouteBundle\Form\RouteStationType;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -20,11 +21,11 @@ use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
 
-class RoureDriverController extends BaseController
+class RouteBussesController extends BaseController
 {
 
     /**
-     * @Route("/admin/add/route/drivers/{id}", name="add_route_drivers")
+     * @Route("/admin/add/route/buss/{id}", name="add_route_buss")
      * @param Request $request
      * @param $id
      * @return RedirectResponse|Response
@@ -34,46 +35,46 @@ class RoureDriverController extends BaseController
         $em = $this->getEntityManager();
         $route = $em->getRepository("BsRouteBundle:Route")->find($id);
 
-        $form = $this->createForm(RouteDriverType::class, $route);
+        $form = $this->createForm(RouteBussType::class, $route);
 
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
 
-            $route->addDriver($route->getDriver());
+            $route->addBuss($route->getBuss());
             $em->persist($route);
             $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
-                'Route Driver was successfully added.'
+                'Route Buss was successfully added.'
             );
 
             return $this->redirectToRoute('view_route', ['id' => $id]);
         }
 
         return $this->render(
-            '@BsRoute/RouteDrivers/add.html.twig',
+            '@BsRoute/RouteBusses/add.html.twig',
             array('form' => $form->createView())
         );
     }
 
     /**
-     * @Route("/admin/delete/route/{routeId}/driver/{driverId}", name="delete_route_driver")
+     * @Route("/admin/delete/route/{routeId}/buss/{bussId}", name="delete_route_buss")
      * @param $routeId
-     * @param $driverId
+     * @param $bussId
      * @return RedirectResponse
      */
-    public function deleteAction($routeId, $driverId)
+    public function deleteAction($routeId, $bussId)
     {
         $em = $this->getEntityManager();
         $route = $em->getRepository("BsRouteBundle:Route")->find($routeId);
-        $driver = $em->getRepository("BsDriverBundle:Driver")->find($driverId);
+        $buss = $em->getRepository("BsBussBundle:Buss")->find($bussId);
 
-        $route->removeDriver($driver);
+        $route->removeBuss($buss);
         $em->persist($route);
         $em->flush();
         $this->get('session')->getFlashBag()->add(
             'success',
-            'Route Driver was successfully Deleted from this Route.'
+            'Route Buss was successfully Deleted from this Route.'
         );
 
 

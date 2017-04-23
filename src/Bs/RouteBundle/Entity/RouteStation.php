@@ -34,12 +34,12 @@ class RouteStation
     private $distanceFromBackStation;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="time")
      */
     private $timeFromBackStation;
     /**
      * @ORM\ManyToOne(targetEntity="Bs\RouteBundle\Entity\Route", inversedBy="routeStations")
-     * @ORM\JoinColumn(name="route_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="route_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $route;
     /**
@@ -47,6 +47,24 @@ class RouteStation
      */
     private $position;
 
+    /**
+     * @return mixed
+     */
+    public function getCanBeStart()
+    {
+        return $this->canBeStart;
+    }
+
+    /**
+     * @param mixed $canBeStart
+     */
+    public function setCanBeStart($canBeStart)
+    {
+        $this->canBeStart = $canBeStart;
+    }
+    /**
+     * @ORM\Column(type="boolean")
+     */private $canBeStart;
     /**
      * @return mixed
      */

@@ -1,1 +1,142 @@
-Hello World!
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="order-tour">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="mini-slider" data-tesla-plugin="slider" data-tesla-item=".slide"
+                     data-tesla-next=".slide-right" data-tesla-prev=".slide-left" data-tesla-container=".slide-wrapper">
+                    <ul class="slide-arrows">
+                        <li class="slide-left"><i class="fa d-bg-c-h fa-caret-left"></i></li>
+                        <li class="slide-right"><i class="fa d-bg-c-h fa-caret-right"></i></li>
+                    </ul>
+                    <ul class="slide-wrapper">
+                        <li class="slide">
+                            <img src="{{ asset('images/photos/tour-1.jpg') }}" alt="slider image"/>
+                        </li>
+                        <li class="slide">
+                            <img src="{{ asset('images/photos/tour-2.jpg') }}" alt="slider image"/>
+                        </li>
+                        <li class="slide">
+                            <img src="{{ asset('images/photos/tour-3.jpg') }}" alt="slider image"/>
+                        </li>
+                    </ul>
+                    <ul class="slider-dots" data-tesla-plugin="bullets">
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="order-now s-bg-c">
+                    <h1>Order your route</h1>
+                    {{ form_start(form) }}
+
+
+                    <div class="form-group">
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-map-marker fa" aria-hidden="true"></i></span>
+                                <input type="text" id="text_from" class="form-control"   placeholder="From">
+                                {{ form_row(form.from,{'attr': {'novalidate': 'novalidate'}}) }}
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-map-marker fa" aria-hidden="true"></i></span>
+                                <input type="text" id="text_to" class="form-control"   placeholder="To">
+                                {{ form_row(form.to,{'attr': {'novalidate': 'novalidate'}}) }}
+                            </div>
+                        </div>
+                    </div>
+
+
+                            <div class="form-group">
+                                <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-calendar fa"
+                                                                       aria-hidden="true"></i></span>
+                                    {{ form_row(form.atDate,{ 'attr': {'class': 'form-control', 'placeholder': 'To'} }) }}
+                                </div>
+                            </div>
+                        </div>
+
+                            <div class="form-group">
+                                <div class="cols-sm-10">
+
+                                <div class="input-group">
+                                                                <span class="input-group-addon"><i class="fa fa-clock-o fa" aria-hidden="true"></i></span>
+
+                                    {{ form_row(form.atTime,{ 'attr': {'class': 'form-control'} }) }}
+                                </div>
+                            </div>
+
+
+                    <div class="d-bg-c submit-search">
+                        <div class="relative inline-block">
+                            <i class="fa fa-chevron-circle-right"></i>
+                            <input type="submit" value="Submit" class="form-send">
+                        </div>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{#    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>#}
+    <script>
+        $(function () {
+
+
+
+            $("#text_from").autocomplete({
+                source: "{{ path('search_route') }}",
+                minLength: 2,
+                select: function (event, ui) {
+                    event.preventDefault();
+                    $(this).val(ui.item.label);
+                    $("#search_from").val(ui.item.value);
+                   },
+                change: function (event, ui) {
+                    debugger;
+
+                    $(this).val(ui.item.label ? ui.item.label : null);
+                    $("#search_from").val(ui.item.value ? ui.item.value : null);
+                }
+
+
+            });
+
+
+            $("#text_to").autocomplete({
+                source: "{{ path('search_route') }}",
+                minLength: 2,
+                select: function (event, ui) {
+                    event.preventDefault();
+                    $(this).val(ui.item.label);
+                    $("#search_to").val(ui.item.value);
+                    },
+                change: function (event, ui) {
+                    debugger;
+                    event.preventDefault();
+                    $(this).val(ui.item.label ? ui.item.label : null);
+                    $("#search_to").val(ui.item.value ? ui.item.value : null);
+                }
+
+
+            });
+        });
+    </script>
+{% endblock %}

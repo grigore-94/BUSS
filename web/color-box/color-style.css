@@ -45,7 +45,7 @@
     margin-bottom: 15px;
 }
 .color-box select:focus {
-    border: 1px solid #22948f;
+    border: 1px solid #96a6a6;
 }
 .color-box p {
     margin: 0px 0px 10px 0px;
@@ -81,7 +81,7 @@
     height: 100%;
 }
 .color-box li span.color_1 {
-    background: #22948f;
+    background: #96a6a6;
 }
 .color-box li span.color_2 {
     background: #e84c3d;
@@ -90,7 +90,7 @@
     background: #96a6a6;
 }
 .color-box li span.color_4 {
-    background: #22948f;
+    background: #96a6a6;
 }
 .color-box li span.color_pick {
     background: url('../color-box/farbtastic/color_pick.png') no-repeat center center;
@@ -161,20 +161,20 @@ body.animated_change *{
 .d-text-c-h.active,
 .d-text-c-h:hover,
 .d-text-c {
-    color: #22948f !important;
+    color: #96a6a6 !important;
 }
 .d-bg-c.active,
 .d-bg-c-h:hover,
 .mini-slider .slider-dots li.active,
 .d-bg-c-h.active,
 .d-bg-c {
-    background: #22948f !important;
+    background: #96a6a6 !important;
 }
 .d-border-c.active,
 .d-border-c-h:hover,
 .d-border-c-h.active,
 .d-border-c {
-    border-color: #22948f !important;
+    border-color: #96a6a6 !important;
 }
 /* ===== COLOR CHANGE ===== */
 

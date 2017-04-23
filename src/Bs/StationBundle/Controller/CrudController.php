@@ -43,7 +43,7 @@ class CrudController extends BaseController
                 'Your user was successfully added.'
             );
 
-            return $this->redirectToRoute('homepage');
+            return $this->redirectToRoute('view_stations');
         }
 
         return $this->render(

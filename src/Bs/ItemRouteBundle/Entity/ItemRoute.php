@@ -11,7 +11,7 @@ namespace Bs\ItemRouteBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="ItemRouteRepository")
  * @ORM\Table(name="item_route")
  */
 class ItemRoute
@@ -24,7 +24,7 @@ class ItemRoute
     private $id;
     /**
      * @ORM\ManyToOne(targetEntity="Bs\RouteBundle\Entity\Route", inversedBy="itemRoutes")
-     * @ORM\JoinColumn(name="route_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="route_id", referencedColumnName="id",onDelete="CASCADE")
      */
     private $route;
     /**
@@ -46,6 +46,26 @@ class ItemRoute
      * @ORM\JoinColumn(name="buss_id", referencedColumnName="id")
      */
     private $buss;
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $date;
+    /**
+     * @return mixed
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param mixed $date
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+    }
+
 
     /**
      * Constructor

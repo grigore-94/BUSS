@@ -41,17 +41,20 @@ class Route
      */
     private $to;
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="time")
      */
     private $hourDeparture;
-    /**
-     * @ORM\Column(type="datetime")
-     */
+
+private $buss;
+
+
     private $hourArive;
     /**
      * @ORM\OneToMany(targetEntity="Bs\RouteBundle\Entity\RouteStation", mappedBy="route")
      */
     private $routeStations;
+
+
     /**
      * @ORM\ManyToMany(targetEntity="Bs\BussBundle\Entity\Buss", inversedBy="routes")
      * @ORM\JoinTable(name="routes_busses")
@@ -86,8 +89,8 @@ class Route
     public function getTotalTime()
     {
 
-$this->totalTime = new \DateTime("00:00:00");
-
+        $this->totalTime = new \DateTime("00:00:00");
+        $this->totalTime->setDate(0,0,0);
 
         /**
          * @var $station RouteStation
@@ -99,11 +102,22 @@ $this->totalTime = new \DateTime("00:00:00");
         }
         return $this->totalTime;
     }
+    /**
+     * Get hourArive
+     *
+     * @return string
+     */
+    public function getHourArive()
+    {
 
+        $this->hourArive=$this->addtime($this->getTotalTime(),$this->getHourDeparture());
+        return $this->hourArive;
+    }
     function addtime($time1,$time2)
     {
-        $x = new DateTime($time1->format("h:i:s"));
-        $y = new DateTime($time2->format("h:i:s"));
+        $time2->setDate(0,0,0);
+        $x = new DateTime($time1->format('H:i:s'));
+        $y = new DateTime($time2->format('H:i:s'));
 
         $interval1 = $x->diff(new DateTime('00:00:00')) ;
         $interval2 = $y->diff(new DateTime('00:00:00')) ;
@@ -113,9 +127,11 @@ $this->totalTime = new \DateTime("00:00:00");
         $e->add($interval1);
         $e->add($interval2);
         $total = $f->diff($e)->format("%H:%I:%S");
-        return new DateTime($total);
+        $responce= new \DateTime($total);
+        $responce->setDate(0,0,0);
+        return $responce;
     }
-private $driver;
+    private $driver;
 
     /**
      * @return mixed
@@ -123,6 +139,38 @@ private $driver;
     public function getDriver()
     {
         return $this->driver;
+    }
+
+    /**
+     * @param mixed $routeStations
+     */
+    public function setRouteStations($routeStations)
+    {
+        $this->routeStations = $routeStations;
+    }
+
+    /**
+     * @param mixed $busses
+     */
+    public function setBusses($busses)
+    {
+        $this->busses = $busses;
+    }
+
+    /**
+     * @param mixed $drivers
+     */
+    public function setDrivers($drivers)
+    {
+        $this->drivers = $drivers;
+    }
+
+    /**
+     * @param mixed $itemRoutes
+     */
+    public function setItemRoutes($itemRoutes)
+    {
+        $this->itemRoutes = $itemRoutes;
     }
 
     /**
@@ -246,6 +294,7 @@ private $driver;
      */
     public function getHourDeparture()
     {
+
         return $this->hourDeparture;
     }
 
@@ -263,15 +312,7 @@ private $driver;
         return $this;
     }
 
-    /**
-     * Get hourArive
-     *
-     * @return string
-     */
-    public function getHourArive()
-    {
-        return $this->hourArive;
-    }
+
 
     /**
      * Add routeStation
@@ -407,5 +448,21 @@ private $driver;
     public function getItemRoutes()
     {
         return $this->itemRoutes;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBuss()
+    {
+        return $this->buss;
+    }
+
+    /**
+     * @param mixed $buss
+     */
+    public function setBuss($buss)
+    {
+        $this->buss = $buss;
     }
 }

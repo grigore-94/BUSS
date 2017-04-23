@@ -19,6 +19,7 @@ class BussType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('name')
             ->add('seats')
         ->add('type')
         ;

@@ -44,7 +44,6 @@ class RouteType extends AbstractType
                 ]
             )
             ->add('hourDeparture',TimeType::class)
-            ->add('hourArive',TimeType::class)
         ;
 
     }

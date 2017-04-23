@@ -23,10 +23,11 @@
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
 </head>
 <body class="home-page">
-{#
 <!-- ========================= START COLOR BOX ======================== -->
 <div class="color-box">
     <div class="color-box_settings"><i class="fa fa-cogs"></i></div>
@@ -81,15 +82,34 @@
         <li><img src="{{ asset('color-box/background/back_5.jpg') }}" alt="background"></li>
     </ul>
 </div>
-#}
 
 <!-- ========================= END COLOR BOX ======================== -->
 
 
 <!-- ========================= START COLOR BOX CLASS ======================== -->
-<div class="boxed-fluid">
+<div class="boxed-fluid"></div>
     <!-- ========================= START COLOR BOX CLASS ======================== -->
+{#<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
 
+        <div class="collapse navbar-collapse" id="myNavbar">
+
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group input-group">
+                    <input type="text" class="form-control" placeholder="Search..">
+                    <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>#}
 
     <!-- ========================= START HEADER ======================== -->
     <header class="main-header">
@@ -120,18 +140,22 @@
                         <input type="text" class="search-line" placeholder="Search">
                     </form>
                 </div>
+                <br>
                     <div class="col-md-1">
                     {% if app.user %}
-                        <a href="{{ path('logout')}}" class="form-send">LogOut</a>
+                        <a href="{{ path('logout') }}"> <span class="glyphicon glyphicon-log-in"></span> LogIn</a>
 
                     {% else %}
-                        <a href="{{ path('login') }}" class="form-send">LogIn</a>
+                        <a href="{{ path('login') }}"> <span class="glyphicon glyphicon-log-in"></span> LogIn</a>
                     {% endif %}
                     </div>
 
             </div>
         </div>
-        <!-- MENU -->
+    </header>
+</header>
+
+<!-- MENU -->
         <div class="container">
             <div class="main-header-bottom">
                 <nav class="main-nav d-bg-c">
@@ -178,11 +202,11 @@
 
 
                     </ul>
+
                 </nav>
             </div>
         </div>
         <!-- MENU -->
-    </header>
     <div class="header-space"></div>
     <!-- ========================= END HEADER ======================== -->
 
@@ -190,14 +214,11 @@
     <!-- ========================= START CONTENT ======================== -->
     <div class="content">
         <div class="container">
-            <div class="order-tour">
-                <div class="row">
                     <!-- ========================= START ORDER TOUR ======================== -->
                     {% block body %}{% endblock %}
                     <!-- ========================= END ORDER TOUR ======================== -->
 
-                </div>
-            </div>
+
         </div>
         <!-- ========================= START SERVICES ======================== -->
 

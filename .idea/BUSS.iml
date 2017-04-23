@@ -32,10 +32,12 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/pugx/autocompleter-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sensio/distribution-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sensio/framework-extra-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sensio/generator-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sensiolabs/security-checker" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/snilius/twig-sort-by-field" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/monolog-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/phpunit-bridge" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-apcu" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-icu" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
@@ -48,16 +50,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library name="PHP Runtime" type="php">
-        <CLASSES>
-          <root url="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard" />
-        </CLASSES>
-        <SOURCES>
-          <root url="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard" />
-        </SOURCES>
-      </library>
-    </orderEntry>
     <orderEntry type="module-library">
       <library name="PHARS">
         <CLASSES>
@@ -104,10 +96,12 @@
           <root url="file://$MODULE_DIR$/vendor/pugx/autocompleter-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensio/distribution-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensio/framework-extra-bundle" />
+          <root url="file://$MODULE_DIR$/vendor/sensio/generator-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensiolabs/security-checker" />
           <root url="file://$MODULE_DIR$/vendor/snilius/twig-sort-by-field" />
           <root url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
           <root url="file://$MODULE_DIR$/vendor/symfony/monolog-bundle" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/phpunit-bridge" />
           <root url="file://$MODULE_DIR$/vendor/symfony/polyfill-apcu" />
           <root url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-icu" />
           <root url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
@@ -148,10 +142,12 @@
           <root url="file://$MODULE_DIR$/vendor/pugx/autocompleter-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensio/distribution-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensio/framework-extra-bundle" />
+          <root url="file://$MODULE_DIR$/vendor/sensio/generator-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensiolabs/security-checker" />
           <root url="file://$MODULE_DIR$/vendor/snilius/twig-sort-by-field" />
           <root url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
           <root url="file://$MODULE_DIR$/vendor/symfony/monolog-bundle" />
+          <root url="file://$MODULE_DIR$/vendor/symfony/phpunit-bridge" />
           <root url="file://$MODULE_DIR$/vendor/symfony/polyfill-apcu" />
           <root url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-icu" />
           <root url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
@@ -164,5 +160,7 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="jquery-3.1.1" level="application" />
+    <orderEntry type="library" name="select2" level="application" />
   </component>
 </module>

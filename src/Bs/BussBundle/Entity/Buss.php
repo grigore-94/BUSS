@@ -22,6 +22,13 @@ class Buss
      * @ORM\Column(type="integer")
      */
     private $id;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $name;
+
+
     /**
      * @ORM\Column(type="string")
      */
@@ -40,7 +47,15 @@ class Buss
      */
     private $intemRoutes;
 
+    private $uniqueName;
 
+    /**
+     * @return mixed
+     */
+    public function getUniqueName()
+    {
+        return sprintf('%s - %s - %s - %s', $this->id, $this->name, $this->seats, $this->type);
+    }
     /**
      * Constructor
      */
@@ -174,5 +189,21 @@ class Buss
     public function getIntemRoutes()
     {
         return $this->intemRoutes;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
     }
 }

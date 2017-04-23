@@ -2,8 +2,10 @@
 
 namespace Bs\RouteBundle\Repository;
 
+use Bs\AppBundle\Models\SearchRoute;
 use Bs\RouteBundle\Entity\Route;
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\QueryBuilder;
 
 /**
  * RouteRepository
@@ -26,12 +28,38 @@ class RouteRepository extends EntityRepository
             ->orWhere('f.region LIKE :filter')
             ->orWhere('t.city LIKE :filter')
             ->orWhere('t.region LIKE :filter')
-            ->setParameter('filter', '%'.$filter.'%')
+            ->setParameter('filter', '%' . $filter . '%')
             ->getQuery()
             ->getResult();
 
         return $stations;
     }
 
+    /**
+     */
+    public function searcheRoute(SearchRoute $searche, $day)
+    {
+        /** @var QueryBuilder $query */
+        $query = $this->createQueryBuilder('r')
+            ->join('r.routeStations', 'rsFrom')
+            ->join('r.routeStations', 'rsTo')
+            ->join('rsFrom.station', 'rtsFrom')
+            ->join('rsTo.station', 'rtsTo')
+            ->where('rtsFrom = :from')
+            ->andWhere('rtsTo = :to')
+            ->andWhere('r.activeDays Like :day')
+            ->setParameters(
+                [
+                    'from' => $searche->getFrom(),
+                    'to' => $searche->getTo(),
+                    'day'=>'%'.$day.'%',
 
+                ]
+            )
+            ->groupBy('r.id')
+            ->getQuery();
+        $res = $query->getResult();
+
+        return $res;
+    }
 }

@@ -84,14 +84,15 @@ $(document).ready(function () {
 });
 
 
+/*
 
 $(document).ready(function () {
 var datePicker = function() {
-    jQuery('#check-in').datetimepicker({
+    jQuery('#search_atDate').datetimepicker({
       format:'m-d-Y',
       onShow:function( ct ){
         this.setOptions({
-          maxDate:jQuery('#check-out').val()?jQuery('#check-out').val():false
+          maxDate:jQuery('#search_atDate').val()?jQuery('#search_atDate').val():false
         })
       },
       timepicker:false
@@ -108,6 +109,7 @@ var datePicker = function() {
   }
   datePicker();
 });
+*/
 
 $(document).ready(function () {
 var roomSelect = function() {

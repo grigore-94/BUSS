@@ -8,10 +8,10 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/itemRoutes/search")
      */
-    public function indexAction()
+    public function listAction()
     {
-        return $this->render('BsItemRouteBundle:Default:index.html.twig');
+        return $this->render('@BsItemRoute/listItemRoutes.html.twig');
     }
 }

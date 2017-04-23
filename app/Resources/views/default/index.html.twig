@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="container">
+
         <div class="order-tour">
             <div class="row">
                 <div class="col-md-7">
@@ -30,13 +30,13 @@
                 </div>
                 <div class="col-md-5">
                     <div class="order-now s-bg-c">
-                        <h1>Order your tour</h1>
+                        <h1>Order your route</h1>
                         <form>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="tour-drop">
                                         <i class="fa d-bg-c fa-caret-down"></i>
-                                        <input type="text" readonly class="drop-select" placeholder="Destination">
+                                        <input type="text" readonly class="drop-select" placeholder="From">
                                         <ul>
                                             <li>Costa Rica</li>
                                             <li>Monaco</li>
@@ -46,44 +46,32 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="tour-drop">
-                                        <i class="fa d-bg-c fa-calendar"></i>
-                                        <input id="check-in" readonly type="text" placeholder="Check-in" >
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="tour-drop">
-                                        <i class="fa d-bg-c fa-calendar"></i>
-                                        <input id="check-out" readonly type="text" placeholder="Check-out" >
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="tour-drop">
                                         <i class="fa d-bg-c fa-caret-down"></i>
-                                        <input type="text" readonly class="drop-select" placeholder="Price">
+                                        <input type="text" readonly class="drop-select" placeholder="To">
                                         <ul>
-                                            <li>0-100$</li>
-                                            <li>100-300$</li>
-                                            <li>300-700$</li>
-                                            <li>700-1000$</li>
-                                            <li>1000$ +</li>
+                                            <li>Costa Rica</li>
+                                            <li>Monaco</li>
+                                            <li>Barcelona</li>
+                                            <li>Thailand</li>
+                                            <li>Mirihi</li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="tour-drop">
-                                        <i class="fa d-bg-c fa-caret-down"></i>
-                                        <input type="text" readonly class="drop-select" placeholder="Rooms">
-                                        <ul>
-                                            <li>1</li>
-                                            <li>2</li>
-                                            <li>3</li>
-                                            <li>4</li>
-                                            <li>5 +</li>
-                                        </ul>
+                                        <i class="fa d-bg-c fa-calendar"></i>
+                                        <input id="check-in" readonly type="text" placeholder="At  date" >
                                     </div>
                                 </div>
+                                <div class="col-md-12">
+                                    <div class="tour-drop">
+                                        <i class="fa d-bg-c fa-calendar"></i>
+                                        <input id="check-out" readonly type="text" placeholder="At time" >
+                                    </div>
+                                </div>
+
                             </div>
                             <div class="d-bg-c submit-search">
                                 <div class="relative inline-block">
@@ -96,5 +84,27 @@
                 </div>
             </div>
         </div>
-    </div>
+
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            function log( message ) {
+                $( "<div>" ).text( message ).prependTo( "#log" );
+                $( "#log" ).scrollTop( 0 );
+            }
+
+            $( "#project_bundle_dutertebundle_voters_city").autocomplete({
+                source: "{{ path('secure_resource') }}",
+                minLength: 2,
+                select: function( event, ui ) {
+                    log( ui.item ?
+                        "Selected: " + ui.item.value + " aka " + ui.item.id :
+                        "Nothing selected, input was " + this.value );
+                }
+            });
+        });
+    </script>
 {% endblock %}

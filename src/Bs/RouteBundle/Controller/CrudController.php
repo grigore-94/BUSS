@@ -61,6 +61,9 @@ class CrudController extends BaseController
     {
         $route=$this->getEntityManager()->getRepository('BsRouteBundle:Route')->find($id);
         $em = $this->getEntityManager();
+        $route->setDrivers(null);
+        $route->setBusses(null);
+        $em->flush();
         $em->remove($route);
         $em->flush();
         $this->get('session')->getFlashBag()->add(
