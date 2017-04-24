@@ -34,14 +34,10 @@ class SearchController extends BaseController
             $names[] = [
                 'label' => $entity->getUniqueName(),
                 'value' => $entity->getId(),
-                '1'=>1,
-                '0'=>0
-            ];
+                       ];
         }
-
-        $response = new JsonResponse();
-        $response->setData($names);
-
-        return $response;
+ /*       $response = new JsonResponse();
+        $response->setData($names);*/
+echo (json_encode($names));die;
     }
 }

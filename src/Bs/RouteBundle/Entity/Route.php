@@ -46,6 +46,11 @@ class Route
     private $hourDeparture;
 
 private $buss;
+private $price;
+function getPrice() {
+    $price=$this->getTotalDistance() * 0.50;
+        return $price;
+}
 
 
     private $hourArive;

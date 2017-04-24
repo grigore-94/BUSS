@@ -45,11 +45,20 @@ class SearchType extends AbstractType
                     'label' => false,
                 ]
             )
-            ->
-            add('to', TextType::class,
+            -> add('to', TextType::class,
                 [
                     'required'=>false,
                     'attr'=>['style'=>'display:none;'],
+                    'label' => false,
+                ]
+            )
+            -> add('t', TextType::class,
+                [
+                    'label' => false,
+                ]
+            )
+            -> add('f', TextType::class,
+                [
                     'label' => false,
                 ]
             )
@@ -68,6 +77,7 @@ class SearchType extends AbstractType
             ->addModelTransformer(new SearchRouteModelTransformer($this->em));
         $builder->get('to')
             ->addModelTransformer(new SearchRouteModelTransformer($this->em));
+
 
     }
 

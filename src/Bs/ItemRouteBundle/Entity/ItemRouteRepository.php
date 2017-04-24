@@ -25,8 +25,13 @@ class ItemRouteRepository extends EntityRepository
             )
             ->getQuery()
             ->getResult();
+if (!empty($result))
+{
+    return $result[0];
 
-        return $result;
+}
+        return null;
+
     }
 
 }

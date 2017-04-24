@@ -1,0 +1,111 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    <div class="container text-center" xmlns="http://www.w3.org/1999/html">
+        <div class="row">
+            <div class="col-sm-3 well">
+                <div class="well">
+                    <img src="https://placeholdit.imgix.net/~text?txtsize=50&txt={{ route.from.uniqueName }}&w=200&h=200&txttrack=0"
+                         class="img-circle" height="80" width="80"
+                         alt="Avatar">
+                    <br>
+                    <h2>.</h2>
+
+
+                    <h2>|</h2>
+                    {{ route.totalDistance }}Km
+                    <br>
+                    Trip Time
+                    <br>
+                    {{ route.totalTime|date("H:i") }}
+                    <h2>|</h2>
+
+                    <h2>.</h2>
+
+                    <img src="https://placeholdit.imgix.net/~text?txtsize=50&txt={{ route.to.uniqueName }}&w=200&h=200&txttrack=0"
+                         class="img-circle" height="80" width="80"
+                         alt="Avatar">
+                    <br>
+                    <br>
+                    <div class="thumbnail">
+                        <p>Active every : </p>
+
+                        {% for key in route.activeDays %}
+                            <span class="label label-default">{{ daysOfWeek[key-1] }}</span>
+
+
+                        {% endfor %}
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="col-sm-9">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default text-left">
+                            <div class="panel-body">
+
+                                <a href="{{ path('add_route_buss',{'id':route.id}) }}" class="btn btn-default btn-sm" style="float: right;">
+                                    <i class="fa fa-cart-plus" aria-hidden="true"></i> BUY
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="thumbnail">
+
+                    {% for routeStation in routeStations %}
+                        <div class="row">
+                            <div class="col-sm-3">
+                                {% if(routeStation.distanceFromBackStation !=0) %}
+                                    <div>
+                                        <h2>|</h2>
+                                        {{ routeStation.distanceFromBackStation }} Km
+                                        <br>
+                                        {{ routeStation.timeFromBackStation|date('H:i:s') }}
+                                        </br>
+                                        <h2>|</h2>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-sm-3">
+
+                                <img src="https://placeholdit.imgix.net/~text?txtsize=50&txt={{ routeStation.station.name }}&w=200&h=200&txttrack=0"
+                                     class="img-circle" height="80" width="80"
+                                     alt="Avatar">
+
+
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="well">
+                                    Location : {{ routeStation.station.location.uniqueName }}
+                                    {% if is_granted("ROLE_ADMIN") %}
+                                        <br>
+                                        <a class="fa fa-edit"
+                                           href="{{ path('edit_route_station',{'id':routeStation.id}) }}"> </a>
+                                        <a class="fa fa-trash-o"
+                                           href="{{ path('delete_route_station',{'id':routeStation.id}) }}"
+                                           onclick="return confirm('Do you want to delete this route?')"></a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+{% endblock %}

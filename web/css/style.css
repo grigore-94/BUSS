@@ -248,7 +248,7 @@ ul.page-numbers li span {
 	color: #333;
 }
 ul.page-numbers li a:hover {
-	background: #939595 !important;
+	background: #a1d2ee !important;
 	color: #fff !important;
 }
 /* ========================================================================
@@ -265,19 +265,19 @@ ul.page-numbers li a:hover {
 .d-text-c-h.active,
 .d-text-c-h:hover,
 .d-text-c {
-	color: #96a6a6 !important;
+	color: #22948f !important;
 }
 .d-bg-c.active,
 .d-bg-c-h:hover,
 .d-bg-c-h.active,
 .d-bg-c {
-	background: #96a6a6 !important;
+	background: #22948f !important;
 }
 .d-border-c.active,
 .d-border-c-h:hover,
 .d-border-c-h.active,
 .d-border-c {
-	border-color: #96a6a6 !important;
+	border-color: #22948f !important;
 }
 .white {
 	color: #fff;
@@ -393,7 +393,7 @@ header .search-it .search-button {
 	padding: 0;
 	height: 34px;
 	border-radius: 100px;
-	background: #939595;
+	background: #54e8c3;
 	font-size: 13px;
 	font-style: italic;
 	border: 0;
@@ -440,7 +440,7 @@ header .search-it .search-button:hover {
 	border-bottom: 2px solid #d6d6d6;
 }
 .order-tour .order-now {
-	background: #a7afaf;
+	background: #6694c7;
 }
 .order-tour .order-now h1 {
 	text-align: left;
@@ -462,13 +462,13 @@ header .search-it .search-button:hover {
 }
 .order-tour .order-now form .submit-search .form-send {
 	border-radius: 50px;
-	background: rgba(255,255,255,0.3); 
+	background: rgba(255,255,255,0.3);
 	padding-right: 60px;
 	color: #fff;
 	margin: 0;
 }
 .order-tour .order-now form .submit-search .form-send:hover {
-	background: rgba(255,255,255,0.8); 
+	background: rgba(255,255,255,0.8);
 	color: #121212;
 }
 .order-tour .order-now form .submit-search .relative:hover i {
@@ -487,7 +487,7 @@ header .search-it .search-button:hover {
 ========================================================================= */
 .error-404-page .boxed-fluid {
 	background: url('../images/photos/error-bg.jpg') top center;
-	background-size: cover; 
+	background-size: cover;
 }
 .error-404-content {
 	padding: 20px 0 120px;
@@ -514,7 +514,7 @@ header .search-it .search-button:hover {
 	color: #fff;
 	padding: 20px;
 	text-align: center;
-	border: 2px solid #fff; 
+	border: 2px solid #fff;
 	width: 120px;
 	margin-bottom: 40px;
 	height: 120px;
@@ -580,7 +580,7 @@ header .search-it .search-button:hover {
 .statistics {
 	margin-bottom: 40px;
 	padding: 30px 30px 0;
-	background: #fff; 
+	background: #fff;
 }
 .statistics .statistic {
 	margin-bottom: 30px;
@@ -592,7 +592,7 @@ header .search-it .search-button:hover {
 	font-size: 45px;
 	margin-bottom: 10px;
 	display: block;
-	color: #939595;
+	color: #54e8c3;
 	line-height: 1.2em;
 	text-align: center;
 }
@@ -744,7 +744,7 @@ header .search-it .search-button:hover {
 	margin-right: 5px;
 }
 .blog-entry .entry-footer ul li.entry-f-1 {
-	background: #939595;
+	background: #54e8c3;
 }
 .blog-entry .entry-footer ul li.entry-f-2 {
 	background: #5c85b3;
@@ -835,7 +835,7 @@ header .search-it .search-button:hover {
 }
 .commentlist .comment .comment-info p {
 	font-size: 13px;
-	color: #a7afaf;
+	color: #6694c7;
 	margin: 0 0 0 70px;
 	font-weight: 700;
 	line-height: 1.5em;
@@ -869,7 +869,7 @@ header .search-it .search-button:hover {
 	padding: 20px 45px;
 }
 .comment-respond .comment-form {
-	background: #a7afaf;
+	background: #6694c7;
 	margin: 0 -45px;
 	padding: 40px 85px;
 }
@@ -883,7 +883,7 @@ header .search-it .search-button:hover {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: #939595;
+	background: #54e8c3;
 	color: #000000;
 	font-weight: 300;
 	text-align: center;
@@ -935,7 +935,7 @@ header .search-it .search-button:hover {
 }
 .comment-respond .comment-form .comments-line:focus,
 .comment-respond .comment-form .comments-area-field:focus {
-	border: 1px solid #939595;
+	border: 1px solid #54e8c3;
 	background: none;
 }
 .comment-respond .comment-form .comments-area-field {
@@ -971,7 +971,7 @@ header .search-it .search-button:hover {
 }
 .button-1:hover {
 	color: #fff;
-	background: #939595;
+	background: #54e8c3;
 }
 .button-1:hover i {
 	color: #fff;
@@ -1072,7 +1072,7 @@ header .search-it .search-button:hover {
 .widget.widget-hot-offers ul li {
 	list-style: none;
 	position: relative;
-	min-height: 50px; 
+	min-height: 50px;
 	padding-left: 60px;
 	margin-bottom: 15px;
 	padding-bottom: 15px;
@@ -1089,7 +1089,7 @@ header .search-it .search-button:hover {
 	line-height: 1em;
 }
 .widget.widget-hot-offers ul li h4 a {
-	color: #a7afaf;
+	color: #6694c7;
 	font-size: 13px;
 	line-height: 1.5em;
 	font-weight: 700;
@@ -1125,7 +1125,7 @@ header .search-it .search-button:hover {
 	font-size: 13px;
 	line-height: 1.5em;
 	font-style: italic;
-	padding: 10px 50px 10px 10px; 
+	padding: 10px 50px 10px 10px;
 	color: #393939;
 	background: #eeeeee;
 	border-top: 2px solid #d6d6d6;
@@ -1188,7 +1188,7 @@ header .search-it .search-button:hover {
 	color: #757575;
 }
 .popular-tours a:hover {
-	color: #a7afaf;
+	color: #6694c7;
 }
 .popular-tours .country-titles h1 {
 	color: #ff85c7;
@@ -1198,14 +1198,14 @@ header .search-it .search-button:hover {
 	background: #fff;
 	text-transform: uppercase;
 	text-align: center;
-	border: 1px solid #cecece;	
+	border: 1px solid #cecece;
 }
 .meteo-widget h1 {
 	margin: -10px -30px 30px -20px;
 	padding: 10px 15px;
 	background: #cecece;
 	color: #959595;
-	text-align: left;	
+	text-align: left;
 }
 .meteo-widget .meteo-c {
 	color: #757575;
@@ -1232,7 +1232,7 @@ header .search-it .search-button:hover {
 	font-size: 11px;
 }
 .meteo-widget ul li .m-icon {
-	color: #a7afaf;
+	color: #6694c7;
 	font-size: 20px;
 }
 .meteo-widget ul li .m-day {
@@ -1241,7 +1241,7 @@ header .search-it .search-button:hover {
 	font-weight: 700;
 }
 .meteo-widget ul li .m-night {
-	color: #a7afaf;
+	color: #6694c7;
 	font-size: 14px;
 	font-weight: 700;
 }
@@ -1336,7 +1336,7 @@ form .form-send,
 form .form-send:hover,
 .contact-box .contact-form .form-send:hover {
 	color: #fff;
-	background: #939595;
+	background: #54e8c3;
 }
 form .relative i,
 .contact-box .contact-form .relative i {
@@ -1383,7 +1383,7 @@ form .inline-block:hover i,
 	padding-bottom: 50px;
 }
 .services-box .service-one:hover .service-one-cover .service-one-hover {
-	background: #a7afaf;
+	background: #6694c7;
 }
 .services-box .service-one .service-one-cover .service-one-hover {
 	position: absolute;
@@ -1408,7 +1408,7 @@ form .inline-block:hover i,
 	padding-top: 5px;
 	line-height: 1.4em;
 	font-size: 50px;
-	color: #a7afaf;
+	color: #6694c7;
 }
 .services-box .service-one .service-one-cover .service-one-hover h4 {
 	text-align: center;
@@ -1418,8 +1418,8 @@ form .inline-block:hover i,
 	font-size: 14px;
 	color: #fff;
 	padding: 20px 10px;
-	margin: 0; 
-	background: #a7afaf;
+	margin: 0;
+	background: #6694c7;
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -1432,7 +1432,7 @@ form .inline-block:hover i,
 .services-box {
 	background: url('../images/photos/bg-services.jpg') no-repeat top center;
 	margin: 0 0 60px;
-	background-size: cover; 
+	background-size: cover;
 }
 .services-box-down {
 	padding: 80px 80px 0;
@@ -1508,7 +1508,7 @@ form .inline-block:hover i,
 	width: 39px;
 }
 .accordion .active .accordion-toggle span {
-	background: #a7afaf;
+	background: #6694c7;
 	color: #fff;
 	margin: -1px;
 	height: 41px;
@@ -1517,7 +1517,7 @@ form .inline-block:hover i,
 .accordion .accordion-body {
 	background: #eee;
 	border-radius: 8px;
-	margin: -15px 0 20px;	
+	margin: -15px 0 20px;
 }
 .accordion .accordion-body .accordion-inner {
 	padding: 10px 10px 10px 55px;
@@ -1562,7 +1562,7 @@ form .inline-block:hover i,
 	padding: 0;
 }
 .testimonials .testimonials-relative .testimonials-dots li.active {
-	background: #a7afaf;
+	background: #6694c7;
 }
 .testimonials .testimonial {
 	background: #fff;
@@ -1677,7 +1677,7 @@ form .inline-block:hover i,
 }
 .all-tours .next:hover,
 .all-tours .prev:hover {
-	background: #939595;
+	background: #54e8c3;
 	color: #555;
 }
 .all-tours .next.disabled,
@@ -1701,7 +1701,7 @@ form .inline-block:hover i,
 ========================================================================= */
 .our-team-cover-bg {
 	background: url("../images/photos/bg-team.jpg") top center no-repeat;
-	background-size: cover; 
+	background-size: cover;
 	margin-bottom: 60px;
 }
 .our-team-cover-bg .our-team {
@@ -1758,7 +1758,7 @@ form .inline-block:hover i,
 }
 .our-team .our-team-box .member .member-cover img {
 	max-width: 100%;
-	height: auto; 
+	height: auto;
 	border-radius: 6px;
 }
 .our-team .our-team-box .member .member-name h3 {
@@ -1771,7 +1771,7 @@ form .inline-block:hover i,
 .our-team .our-team-box .member .member-name h4 {
 	margin: 0;
 	text-transform: uppercase;
-	color: #a7afaf;
+	color: #6694c7;
 	line-height: 1.5em;
 	font-size: 13px;
 	font-weight: 700;
@@ -1931,7 +1931,7 @@ form .inline-block:hover i,
 	text-align: center;
 }
 .mini-slider .slide-arrows li i:hover {
-	background: #939595;
+	background: #54e8c3;
 	color: #000;
 }
 .about-us .mini-slider {
@@ -1963,7 +1963,7 @@ form .inline-block:hover i,
 	background: #eee;
 }
 .mini-slider .slider-dots li.active {
-	background: #939595;
+	background: #54e8c3;
 }
 /* ========================================================================
                                 END ABOUT US
@@ -1998,7 +1998,7 @@ form .inline-block:hover i,
 .tour-page .tour-content-box .location-map-points h4 {
 	text-transform: uppercase;
 	font-size: 13px;
-	color: #a7afaf;
+	color: #6694c7;
 	margin: 0 0 10px 0;
 }
 .tour-page .tour-content-box .location-map-points h4 span {
@@ -2076,7 +2076,7 @@ form .inline-block:hover i,
 	margin-bottom: 90px;
 	background: #fff;
 	padding: 40px;
-	border-bottom: 2px solid #d6d6d6; 
+	border-bottom: 2px solid #d6d6d6;
 }
 .tour-page .boxed-fluid {
 	background: url('../images/photos/bg-contact.jpg') top center no-repeat;
@@ -2139,12 +2139,12 @@ form .inline-block:hover i,
 	font-weight: 700;
 }
 .tour-description-details ul li:last-child span {
-	color: #a7afaf;
+	color: #6694c7;
 	text-transform: none;
 }
 .tour-description-details .buy-box {
 	padding: 60px 50px;
-	background: #a7afaf;
+	background: #6694c7;
 }
 .tour-description-details .buy-box .button-1 {
 	background: rgba(255,255,255,0.3);
@@ -2246,7 +2246,7 @@ form .inline-block:hover i,
 	color: #fff;
 }
 .all-tours .one-tour .one-tour-title {
-	padding: 15px; 
+	padding: 15px;
 }
 .all-tours .one-tour .one-tour-cover {
 	text-align: center;
@@ -2283,7 +2283,7 @@ form .inline-block:hover i,
 }
 .all-tours .one-tour .one-tour-footer li span {
 	font-weight: 700;
-	color: #a7afaf;
+	color: #6694c7;
 }
 .all-tours .one-tour .one-tour-content .tabs-box ul {
 	font-size: 0;
@@ -2302,7 +2302,7 @@ form .inline-block:hover i,
 	color: #484848;
 }
 .all-tours .one-tour .one-tour-content .tabs-box .ot-li-1 {
-	background: #a7afaf;
+	background: #6694c7;
 	width: 33%;
 }
 .all-tours .one-tour .one-tour-content .tabs-box .ot-li-2 {
@@ -2340,7 +2340,7 @@ form .inline-block:hover i,
 }
 .all-tours .one-tour .one-tour-content .tabs-box .item .item-info h4 b {
 	padding: 0 5px 0 0;
-	color: #a7afaf;
+	color: #6694c7;
 	text-transform: uppercase;
 }
 /* ========================================================================
@@ -2387,7 +2387,7 @@ form .inline-block:hover i,
 }
 .tabs-box .navigation-tab li.active a {
 	background: #fff;
-	color: #a7afaf;
+	color: #6694c7;
 }
 .tabs-box .tab-content {
 	background: #fff;
@@ -2412,7 +2412,7 @@ form .inline-block:hover i,
 .tabs-box .tab-content ul li .item {
 	padding-left: 200px;
 	position: relative;
-	min-height: 65px; 
+	min-height: 65px;
 }
 .tabs-box .tab-content ul li .item .item-info {
 	left: 0;
@@ -2433,7 +2433,7 @@ form .inline-block:hover i,
 	margin: 0 0 0 60px;
 	padding: 0;
 	line-height: 1.5em;
-	color: #e8728d; 
+	color: #e8728d;
 }
 .tabs-box .tab-content ul li .item .item-info h5 {
 	font-size: 15px;
@@ -2443,7 +2443,7 @@ form .inline-block:hover i,
 }
 .tabs-box .tab-content ul li .item .item-info p {
 	font-size: 13px;
-	color: #a7afaf;
+	color: #6694c7;
 	margin: 0 0 0 60px;
 	font-weight: 700;
 	padding: 0;

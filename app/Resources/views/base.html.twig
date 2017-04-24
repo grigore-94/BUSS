@@ -83,35 +83,7 @@
     </ul>
 </div>
 
-<!-- ========================= END COLOR BOX ======================== -->
-
-
-<!-- ========================= START COLOR BOX CLASS ======================== -->
-<div class="boxed-fluid"></div>
-    <!-- ========================= START COLOR BOX CLASS ======================== -->
-{#<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-
-        <div class="collapse navbar-collapse" id="myNavbar">
-
-            <form class="navbar-form navbar-right" role="search">
-                <div class="form-group input-group">
-                    <input type="text" class="form-control" placeholder="Search..">
-                    <span class="input-group-btn">
-            <button class="btn btn-default" type="button">
-              <span class="glyphicon glyphicon-search"></span>
-            </button>
-          </span>
-                </div>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>#}
-
-    <!-- ========================= START HEADER ======================== -->
+ <!-- ========================= START HEADER ======================== -->
     <header class="main-header">
         <div class="container">
             <div class="row">
@@ -133,27 +105,24 @@
 
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <form method="get" role="search" class="search-it d-bg-c-h">
-                        <i class="fa fa-search"></i>
-                        <input type="submit" value="" class="search-button">
-                        <input type="text" class="search-line" placeholder="Search">
-                    </form>
+                <div class="col-md-2">
                 </div>
-                <br>
-                    <div class="col-md-1">
-                    {% if app.user %}
-                        <a href="{{ path('logout') }}"> <span class="glyphicon glyphicon-log-in"></span> LogIn</a>
+                <div class="col-md-2">
+<br>
+<br>
+                {% if app.user %}
+                        <a href="{{ path('logout') }}" style="float: left"> <span class="glyphicon glyphicon-log-out"></span> LogOut({{ app.user.username }})</a>
 
                     {% else %}
-                        <a href="{{ path('login') }}"> <span class="glyphicon glyphicon-log-in"></span> LogIn</a>
+                        <a href="{{ path('login') }}" style="float: left"> <span class="glyphicon glyphicon-log-in"></span> LogIn</a>
                     {% endif %}
-                    </div>
+                </div>
+                <br>
+
 
             </div>
         </div>
     </header>
-</header>
 
 <!-- MENU -->
         <div class="container">
@@ -198,14 +167,27 @@
                         <li><a href="{{ path('admin_homepage') }}">Admin</a>
 
                         </li>
+                        {% if app.user %}
 
-
-
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span><span
+                                        class="fa fa-2x fa-child"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#"><span class="fa fa-user"></span> My Profile</a></li>
+                                <li><a href="#"><span class="fa fa-ticket"></span> My Tickets</a></li>
+                                <li><a href="#"><span class="fa fa-gear"></span> Settings</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#"><span class="fa fa-power-off"></span> Logout</a></li>
+                            </ul>
+                        </li>
+{% endif %}
                     </ul>
 
                 </nav>
             </div>
         </div>
+</header>
+
         <!-- MENU -->
     <div class="header-space"></div>
     <!-- ========================= END HEADER ======================== -->
@@ -214,11 +196,12 @@
     <!-- ========================= START CONTENT ======================== -->
     <div class="content">
         <div class="container">
-                    <!-- ========================= START ORDER TOUR ======================== -->
+
+            <!-- ========================= START ORDER TOUR ======================== -->
                     {% block body %}{% endblock %}
                     <!-- ========================= END ORDER TOUR ======================== -->
 
-
+            </div>
         </div>
         <!-- ========================= START SERVICES ======================== -->
 
@@ -320,7 +303,9 @@
 </body>
 {% block javascripts %}
     <script src={{ asset('js/jquery-1.10.0.min.js') }}></script>
+{#
     <script src={{ asset('js/jquery-ui.min.js') }}></script>
+#}
     <script src={{ asset('js/bootstrap.js') }}></script>
     <script src={{ asset('js/placeholder.js') }}></script>
     <script src={{ asset('js/imagesloaded.pkgd.min.js') }}></script>
@@ -333,7 +318,51 @@
     <script src={{ asset('color-box/color-js.js') }}></script>
     <script src={{ asset('color-box/farbtastic/farbtastic.js') }}></script>
 
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+        $(function () {
 
+
+
+            $("#search_f").autocomplete({
+                source: "{{ path('search_route') }}",
+                minLength: 2,
+                select: function (event, ui) {
+                    event.preventDefault();
+                    $(this).val(ui.item.label);
+                    $("#search_from").val(ui.item.value);
+                },
+                change: function (event, ui) {
+                    debugger;
+
+                    $(this).val(ui.item.label ? ui.item.label : null);
+                    $("#search_from").val(ui.item.value ? ui.item.value : null);
+                }
+
+
+            });
+
+
+            $("#search_t").autocomplete({
+                source: "{{ path('search_route') }}",
+                minLength: 2,
+                select: function (event, ui) {
+                    event.preventDefault();
+                    $(this).val(ui.item.label);
+                    $("#search_to").val(ui.item.value);
+                },
+                change: function (event, ui) {
+                    debugger;
+                    event.preventDefault();
+                    $(this).val(ui.item.label ? ui.item.label : null);
+                    $("#search_to").val(ui.item.value ? ui.item.value : null);
+                }
+
+
+            });
+        });
+    </script>
 
 {% endblock %}
 

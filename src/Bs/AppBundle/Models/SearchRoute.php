@@ -15,6 +15,40 @@ class SearchRoute
     private $to;
     private $atDate;
     private $atTime;
+    private $f;
+    private $t;
+
+    /**
+     * @return mixed
+     */
+    public function getF()
+    {
+        return $this->f;
+    }
+
+    /**
+     * @param mixed $f
+     */
+    public function setF($f)
+    {
+        $this->f = $f;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getT()
+    {
+        return $this->t;
+    }
+
+    /**
+     * @param mixed $t
+     */
+    public function setT($t)
+    {
+        $this->t = $t;
+    }
 
     /**
      * @return mixed

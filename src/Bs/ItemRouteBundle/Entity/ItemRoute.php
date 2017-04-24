@@ -33,9 +33,14 @@ class ItemRoute
      */
     private $driver;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="integer")
      */
     private $seats;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $freeSeats;
     /**
      * @ORM\OneToMany(targetEntity="Bs\TicketBundle\Entity\Ticket", mappedBy="itemRoute")
      */
@@ -50,6 +55,46 @@ class ItemRoute
      * @ORM\Column(type="datetime")
      */
     private $date;
+
+    /**
+     * @ORM\Column(type="array")
+     */
+    private $places;
+
+    /**
+     * @return mixed
+     */
+    public function getPlaces()
+    {
+        return $this->places;
+    }
+
+    /**
+     *
+     * @param string $places
+     *
+     * @return ItemRoute
+     */
+    public function setPlaces($places)
+    {
+        $this->places = $places;
+        return $this;
+    }
+    /**
+     * @return mixed
+     */
+    public function getFreeSeats()
+    {
+        return $this->freeSeats;
+    }
+
+    /**
+     * @param mixed $freeSeats
+     */
+    public function setFreeSeats($freeSeats)
+    {
+        $this->freeSeats = $freeSeats;
+    }
     /**
      * @return mixed
      */

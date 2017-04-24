@@ -26,38 +26,54 @@ class DefaultController extends BaseController
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
             $em = $this->getEntityManager();
-            $day = date("N", $search->getAtDate()->getTimeStamp())-1;
+            $day = date("N", $search->getAtDate()->getTimeStamp()) - 1;
 
-              $routes = $em->getRepository('BsRouteBundle:Route')->searcheRoute($search,$day);
-            $itemRoutes=[];
+            $routes = $em->getRepository('BsRouteBundle:Route')->searcheRoute($search, $day);
+            $itemRoutes = [];
             /** @var \Bs\RouteBundle\Entity\Route $route */
             foreach ($routes as $route) {
-                  $itemRoute=$em->getRepository('BsItemRouteBundle:ItemRoute')->getItemByRoute($route,$search->getAtDate());
-if ($itemRoutes == null) {
-    $itemRoute= new ItemRoute();
-    $itemRoute->setDriver($route->getDrivers()[0]);
-    $itemRoute->setBuss($route->getBusses()[0]);
-    $itemRoute->setRoute($route);
-    $itemRoute->setSeats($itemRoute->getBuss()->getSeats());
-    $itemRoute->setDate($search->getAtDate());
+                $itemRoute = $em->getRepository('BsItemRouteBundle:ItemRoute')->getItemByRoute($route, $search->getAtDate());
+                if ($itemRoute == null) {
+                    $itemRoute = new ItemRoute();
+                    $itemRoute->setDriver($route->getDrivers()[0]);
+                    $itemRoute->setBuss($route->getBusses()[0]);
+                    $itemRoute->setRoute($route);
+                    $itemRoute->setSeats($itemRoute->getBuss()->getSeats());
+                    $itemRoute->setFreeSeats($itemRoute->getBuss()->getSeats());
+                    $itemRoute->setDate($search->getAtDate());
+                    $em->persist($itemRoute);
+                    $em->flush();
+                }
+                $itemRoutes[] = $itemRoute;
+            }
+            $search->setF($search->getFrom()->getUniqueName());
+            $search->setT($search->getTo()->getUniqueName());
+            $form = $this->createForm(SearchType::class, $search);
 
-    $em->persist($itemRoute);
-    $em->flush();
-}
-                  $itemRoutes[]=$itemRoute;
-              }
             return $this->render('@BsItemRoute/listItemRoutes.html.twig',
                 [
-                    'itemRoutes'=>$itemRoutes,
+                    'form' => $form->createView(),
+                    'itemRoutes' => $itemRoutes,
                 ]
-                );
+            );
         }
+
 
         return $this->render(
             '@BsApp/Default/index.html.twig',
             array('form' => $form->createView())
         );
         return $this->render(':default:index.html.twig');
+    }
+
+    private function getPlaces($p)
+    {
+        $aray = [];
+        for ($i = 1; $i < $p; $i++) {
+            $aray[$i] = 0;
+        }
+        return $aray;// array('Saturday'=>1, 'Sunday'=>2, 'Monday'=>3, 'Tuesday'=>4, 'Wendnesday'=>5, 'Thursday'=>6, 'Friday'=>7);
+
     }
 
     /**
