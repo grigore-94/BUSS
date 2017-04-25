@@ -45,18 +45,19 @@ class RouteRepository extends EntityRepository
             ->join('r.routeStations', 'rsTo')
             ->join('rsFrom.station', 'rtsFrom')
             ->join('rsTo.station', 'rtsTo')
-            ->where('rtsFrom = :from')
-            ->andWhere('rtsTo = :to')
+            ->where('rsFrom = rsTo')
+            ->andWhere('rtsFrom.location = :from')
+          //  ->andWhere('rtsTo.location.id = :to')
             ->andWhere('r.activeDays Like :day')
             ->setParameters(
                 [
                     'from' => $searche->getFrom(),
-                    'to' => $searche->getTo(),
+                 //   'to' => $searche->getTo()->getId(),
                     'day'=>'%'.$day.'%',
 
                 ]
             )
-            ->groupBy('r.id')
+           // ->groupBy('r.id')
             ->getQuery();
         $res = $query->getResult();
 

@@ -24,7 +24,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class BookController extends BaseController
 {
     /**
-     * @Route("/book/ticket/itemRoute/{id}", name="book_ticket")
+     * @Route("/book/ticket/itemRoute/{id}", name="command_ticket")
      * @param Request $request
      * @return RedirectResponse|Response
      */
@@ -38,12 +38,16 @@ class BookController extends BaseController
         $entity->setToStation($this->getStopStations($itemRoute));
         $entity->setNrPlaces($itemRoute->getSeats());
         $entity->setPlaces($itemRoute->getPlaces());
+
+
+        /*$url = $this->generateUrl('preview_ticket', array('id' => $itemRoute->getId()));*/
         $form = $this->createForm(BookingType::class, $entity);
 
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
+            $this->get('session')->set('booking', $entity);
 
-
+/*
             $em = $this->getDoctrine()->getManager();
             $allSelectedPlaces = $entity->getPlaces();
            foreach ($itemRoute->getPlaces() as $place) {
@@ -55,10 +59,13 @@ class BookController extends BaseController
             $this->get('session')->getFlashBag()->add(
                 'success',
                 'Ticket was successfully .'
-            );
+            );*/
 
 
-            return $this->redirectToRoute('admin_homepage');
+            return $this->redirectToRoute('preview_ticket',
+                [
+                    'id'=>$itemRoute->getId()
+                ]);
         }
 
         return $this->render(
@@ -83,7 +90,7 @@ class BookController extends BaseController
          */
         foreach ($itemRoute->getRoute()->getRouteStations() as $routeStation) {
             if ($routeStation->getCanBeStart())
-                $stations[] = $routeStation->getStation();
+                $stations[] = $routeStation;
         }
         if (!empty($stations)) {
             return $stations;
@@ -103,7 +110,7 @@ class BookController extends BaseController
          */
         foreach ($itemRoute->getRoute()->getRouteStations() as $routeStation) {
             if (!$routeStation->getCanBeStart())
-                $stations[] = $routeStation->getStation();
+                $stations[] = $routeStation;
         }
         if (!empty($stations)) {
             return $stations;

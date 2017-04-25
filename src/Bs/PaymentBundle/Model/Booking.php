@@ -14,8 +14,15 @@ use Doctrine\ORM\Mapping as ORM;
 class Booking
 {
     /**
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+    /**
      * @ORM\Column(type="string")
-     */private $itemRoute;
+     */
+    private $itemRoute;
     /**
      * @ORM\Column(type="string")
      */
@@ -32,11 +39,48 @@ class Booking
     private $places;
     /**
      * @ORM\Column(type="string")
-     */private $nrPlaces;
+     */
+    private $nrPlaces;
     /**
      * @ORM\Column(type="string")
      */
     private $price;
+
+    private $nrTickets;
+    private $totalDistance;
+
+    /**
+     * @return mixed
+     */
+    public function getTotalDistance()
+    {
+        return $this->totalDistance;
+    }
+
+    /**
+     * @param mixed $totalDistance
+     */
+    public function setTotalDistance($totalDistance)
+    {
+        $this->totalDistance = $totalDistance;
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getNrTickets()
+    {
+        return count($this->places);
+    }
+
+    /**
+     * @param mixed $nrTickets
+     */
+    public function setNrTickets($nrTickets)
+    {
+        $this->nrTickets = $nrTickets;
+    }
 
     /**
      * @return mixed
@@ -132,6 +176,22 @@ class Booking
     public function setPrice($price)
     {
         $this->price = $price;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 
 

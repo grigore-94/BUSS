@@ -47,6 +47,23 @@ class RouteStation
      */
     private $position;
 
+    private $name;
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->station->getName();
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
     /**
      * @return mixed
      */

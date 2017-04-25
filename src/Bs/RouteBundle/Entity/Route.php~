@@ -45,6 +45,13 @@ class Route
      */
     private $hourDeparture;
 
+private $buss;
+private $price;
+function getPrice() {
+    $price=$this->getTotalDistance() * 0.50;
+        return $price;
+}
+
 
     private $hourArive;
     /**
@@ -88,7 +95,7 @@ class Route
     {
 
         $this->totalTime = new \DateTime("00:00:00");
-
+        $this->totalTime->setDate(0,0,0);
 
         /**
          * @var $station RouteStation
@@ -100,11 +107,22 @@ class Route
         }
         return $this->totalTime;
     }
+    /**
+     * Get hourArive
+     *
+     * @return string
+     */
+    public function getHourArive()
+    {
 
+        $this->hourArive=$this->addtime($this->getTotalTime(),$this->getHourDeparture());
+        return $this->hourArive;
+    }
     function addtime($time1,$time2)
     {
-        $x = new DateTime($time1->format("h:i:s"));
-        $y = new DateTime($time2->format("h:i:s"));
+        $time2->setDate(0,0,0);
+        $x = new DateTime($time1->format('H:i:s'));
+        $y = new DateTime($time2->format('H:i:s'));
 
         $interval1 = $x->diff(new DateTime('00:00:00')) ;
         $interval2 = $y->diff(new DateTime('00:00:00')) ;
@@ -114,7 +132,9 @@ class Route
         $e->add($interval1);
         $e->add($interval2);
         $total = $f->diff($e)->format("%H:%I:%S");
-        return new DateTime($total);
+        $responce= new \DateTime($total);
+        $responce->setDate(0,0,0);
+        return $responce;
     }
     private $driver;
 
@@ -433,5 +453,21 @@ class Route
     public function getItemRoutes()
     {
         return $this->itemRoutes;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBuss()
+    {
+        return $this->buss;
+    }
+
+    /**
+     * @param mixed $buss
+     */
+    public function setBuss($buss)
+    {
+        $this->buss = $buss;
     }
 }
