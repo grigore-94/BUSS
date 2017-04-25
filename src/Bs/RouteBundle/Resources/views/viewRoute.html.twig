@@ -6,18 +6,18 @@
                      class="img-circle" height="80" width="80"
                      alt="Avatar">
                 <br>
-                <h2>.</h2>
+                <h4>.</h4>
 
 
-                <h2>|</h2>
+                <h4>|</h4>
                 {{ route.totalDistance }}Km
                 <br>
                 Trip Time
                 <br>
                 {{ route.totalTime|date("H:i") }}
-                <h2>|</h2>
+                <h4>|</h4>
 
-                <h2>.</h2>
+                <h4>.</h4>
 
                 <img src="https://placeholdit.imgix.net/~text?txtsize=50&txt={{ route.to.uniqueName }}&w=200&h=200&txttrack=0"
                      class="img-circle" height="80" width="80"
@@ -29,14 +29,7 @@
 
             </div>
 
-            <div class="alert alert-success fade in">
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
-                <p><strong>Ey!</strong></p>
-                People are looking at your profile. Find out who.
-            </div>
-            <p><a href="#">Link</a></p>
-            <p><a href="#">Link</a></p>
-            <p><a href="#">Link</a></p>
+
         </div>
 
         <div class="col-sm-7">
@@ -74,12 +67,12 @@
                         <div class="col-sm-3">
                             {% if(routeStation.distanceFromBackStation !=0) %}
                                 <div>
-                                    <h2>|</h2>
+                                    <h4>|</h4>
                                     {{ routeStation.distanceFromBackStation }} Km
                                     <br>
                                     {{ routeStation.timeFromBackStation|date('H:i:s') }}
                                     </br>
-                                    <h2>|</h2>
+                                    <h4>|</h4>
                                 </div>
                             {% endif %}
                         </div>
@@ -150,9 +143,7 @@
                     </p>
                 {% endfor %}
             </div>
-            <div class="well">
-                <p>ADS</p>
-            </div>
+
         </div>
     </div>
 </div>

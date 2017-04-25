@@ -70,7 +70,7 @@ html.swipebox {
     position: relative;
 }
 #swipebox-slider .slide .swipebox-video-container .swipebox-video iframe{
-    width: 100%!important; 
+    width: 100%!important;
     height: 100%!important;
     position: absolute;
     top: 0; left: 0;
@@ -140,47 +140,47 @@ html.swipebox {
 }
 @-moz-keyframes rightSpring {
     0% {
-    margin-left: 0px;
-}
-50% {
-    margin-left: -30px;
-}
-100% {
-    margin-left: 0px;
-}
+        margin-left: 0px;
+    }
+    50% {
+        margin-left: -30px;
+    }
+    100% {
+        margin-left: 0px;
+    }
 }
 @-moz-keyframes leftSpring {
     0% {
-    margin-left: 0px;
-}
-50% {
-    margin-left: 30px;
-}
-100% {
-    margin-left: 0px;
-}
+        margin-left: 0px;
+    }
+    50% {
+        margin-left: 30px;
+    }
+    100% {
+        margin-left: 0px;
+    }
 }
 @-webkit-keyframes rightSpring {
     0% {
-    margin-left: 0px;
-}
-50% {
-    margin-left: -30px;
-}
-100% {
-    margin-left: 0px;
-}
+        margin-left: 0px;
+    }
+    50% {
+        margin-left: -30px;
+    }
+    100% {
+        margin-left: 0px;
+    }
 }
 @-webkit-keyframes leftSpring {
     0% {
-    margin-left: 0px;
-}
-50% {
-    margin-left: 30px;
-}
-100% {
-    margin-left: 0px;
-}
+        margin-left: 0px;
+    }
+    50% {
+        margin-left: 30px;
+    }
+    100% {
+        margin-left: 0px;
+    }
 }
 @media screen and (max-width: 800px) {
     #swipebox-action #swipebox-close {

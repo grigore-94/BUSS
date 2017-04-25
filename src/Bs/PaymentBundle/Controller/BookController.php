@@ -34,7 +34,7 @@ class BookController extends BaseController
         $itemRoute = $em->getRepository('BsItemRouteBundle:ItemRoute')->find($id);
 
         $entity = new Booking();
-     $entity->setFromStation($this->getStartStations($itemRoute));
+        $entity->setFromStation($this->getStartStations($itemRoute));
         $entity->setToStation($this->getStopStations($itemRoute));
         $entity->setNrPlaces($itemRoute->getSeats());
         $entity->setPlaces($itemRoute->getPlaces());
@@ -45,14 +45,17 @@ class BookController extends BaseController
 
 
             $em = $this->getDoctrine()->getManager();
-            $itemRoute->setPlaces($entity->getPlaces());
+            $allSelectedPlaces = $entity->getPlaces();
+           foreach ($itemRoute->getPlaces() as $place) {
+               $allSelectedPlaces[]=$place;
+           }
+            $itemRoute->setPlaces($allSelectedPlaces);
             $em->persist($itemRoute);
-           $em->flush();
+            $em->flush();
             $this->get('session')->getFlashBag()->add(
                 'success',
                 'Ticket was successfully .'
             );
-
 
 
             return $this->redirectToRoute('admin_homepage');
@@ -61,14 +64,11 @@ class BookController extends BaseController
         return $this->render(
             '@BsPayment/create_booking.html.twig',
             array(
-                'routeStations'=>$itemRoute->getRoute()->getRouteStations(),
+                'routeStations' => $itemRoute->getRoute()->getRouteStations(),
                 'form' => $form->createView(),
-                )
+            )
         );
     }
-
-
-
 
 
     /**

@@ -16,13 +16,19 @@
 
             <div class="col-sm-7">
                 <div class="well">
+                    <h3>Select From station</h3>
 
                     {{ form_row(form.fromStation,{'attr':{'class':'form-control'}}) }}
+                    <h3>Select Destination station</h3>
+
                     {{ form_row(form.toStation,{'attr':{'class':'form-control'}}) }}
+                    <button type="submit" class="btn btn-default">Save</button>
+
                 </div>
 
             </div>
             <div class="col-sm-2 well">
+                <h3>Select Place(s)</h3>
 
                 <ul class="checkbox-grid">
                     <div class="place-selector">
@@ -36,7 +42,6 @@
             </div>
         </div>
     </div>
-    <button type="submit" class="btn btn-default">Save</button>
 
     {{ form_end(form) }}
 

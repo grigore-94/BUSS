@@ -28,6 +28,7 @@ $nrPlaces=$options['data']->getNrPlaces();
             ->add('fromStation',
                 ChoiceType::class,
                 [
+                    'label'=>false,
                     'choice_label' => 'name',
                     'choices' => $options['data']->getFromStation(),
 
@@ -36,6 +37,7 @@ $nrPlaces=$options['data']->getNrPlaces();
             ->add('toStation',
                 ChoiceType::class,
                 [
+                    'label'=>false,
                     'choices' => $options['data']->getToStation(),
                     'choice_label' => 'name'
                 ]
@@ -45,22 +47,21 @@ $nrPlaces=$options['data']->getNrPlaces();
                     'choices' => $this->getPlaces($nrPlaces,$places),
                     'multiple' => true,
                     'expanded' => true,
+'label'=>false,
+                    'choice_attr' => function($value, $key, $index) {
 
-                    'choice_attr' => [function($value, $key, $index) {
-
-                        if ($value == 0) {
+                        if ($value == 100) {
                              return ['disabled' => 'disabled','style'=>'  background: #d72526!important;'];
                         }
                         else
                         return ['class'=>'place-selector-red'];
                     },
-                        "label_attr"  => ['disabled' => 'disabled','class'=>'place-selector-red'],
-                    ],
+
                     'choice_label' => function ($value, $key, $index) {
-                        if ($key == 0) {
+                        if ($key == 100) {
                             return 'x';
                         } else
-                        if ($value == 0) {
+                        if ($value == 100) {
                             return 'x';
                         }
                         return strtoupper($key);
@@ -80,7 +81,9 @@ $nrPlaces=$options['data']->getNrPlaces();
         }*/
         $aray= [];
         for($i=1; $i<$nrPlaces+1;$i++) {
-            if(is_array($places)&& in_array($i,$places))  {$aray[$i]=0;}
+            if(is_array($places)&& in_array($i,$places))  {
+                $aray[$i]=100;
+            }
             else
             $aray[$i]=$i;
         }

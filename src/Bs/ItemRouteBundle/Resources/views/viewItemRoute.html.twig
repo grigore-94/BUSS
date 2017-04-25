@@ -8,18 +8,18 @@
                          class="img-circle" height="80" width="80"
                          alt="Avatar">
                     <br>
-                    <h2>.</h2>
+                    <h1>.</h1>
 
 
-                    <h2>|</h2>
+                    <h1>|</h1>
                     {{ route.totalDistance }}Km
                     <br>
                     Trip Time
                     <br>
                     {{ route.totalTime|date("H:i") }}
-                    <h2>|</h2>
+                    <h1>|</h1>
 
-                    <h2>.</h2>
+                    <h1>.</h1>
 
                     <img src="https://placeholdit.imgix.net/~text?txtsize=50&txt={{ route.to.uniqueName }}&w=200&h=200&txttrack=0"
                          class="img-circle" height="80" width="80"
@@ -61,12 +61,12 @@
                             <div class="col-sm-3">
                                 {% if(routeStation.distanceFromBackStation !=0) %}
                                     <div>
-                                        <h2>|</h2>
+                                        <h4>|</h4>
                                         {{ routeStation.distanceFromBackStation }} Km
                                         <br>
                                         {{ routeStation.timeFromBackStation|date('H:i:s') }}
                                         </br>
-                                        <h2>|</h2>
+                                        <h4>|</h4>
                                     </div>
                                 {% endif %}
                             </div>
