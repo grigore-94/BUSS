@@ -3,13 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e34b1ac5-d3e5-4983-8501-907c82e8d6ab" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/ItemRouteBundle/Resources/views/viewItemRoute.html.twig" afterPath="$PROJECT_DIR$/src/Bs/ItemRouteBundle/Resources/views/viewItemRoute.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/PaymentBundle/Controller/BookController.php" afterPath="$PROJECT_DIR$/src/Bs/PaymentBundle/Controller/BookController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/PaymentBundle/Form/BookingType.php" afterPath="$PROJECT_DIR$/src/Bs/PaymentBundle/Form/BookingType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/form_add_booking.html.twig" afterPath="$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/form_add_booking.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/viewRoute.html.twig" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/viewRoute.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/style.css" afterPath="$PROJECT_DIR$/web/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/swipebox.css" afterPath="$PROJECT_DIR$/web/css/swipebox.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/UserBundle/Resources/views/login.html.twig" afterPath="$PROJECT_DIR$/src/Bs/UserBundle/Resources/views/login.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/UserBundle/Resources/views/registration/register.html.twig" afterPath="$PROJECT_DIR$/src/Bs/UserBundle/Resources/views/registration/register.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/color-box/color-js.js" afterPath="$PROJECT_DIR$/web/color-box/color-js.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/color-box/color-style.css" afterPath="$PROJECT_DIR$/web/color-box/color-style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,38 +48,63 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="75" column="35" lean-forward="false" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
+            <state relative-caret-position="968">
+              <caret line="368" column="7" lean-forward="false" selection-start-line="368" selection-start-column="7" selection-end-line="368" selection-end-column="7" />
               <folding>
-                <marker date="1493140561063" expanded="true" signature="10402:13487" ph="..." />
-                <marker date="1493140561063" expanded="true" signature="10434:13473" ph="..." />
-                <marker date="1493140561063" expanded="true" signature="10471:13458" ph="..." />
-                <marker date="1493140561063" expanded="true" signature="10562:10866" ph="..." />
-                <marker date="1493140561063" expanded="true" signature="11039:11824" ph="..." />
-                <marker date="1493140561063" expanded="true" signature="11077:11800" ph="..." />
-                <marker date="1493140561063" expanded="true" signature="11124:11246" ph="..." />
-                <marker date="1493140561063" expanded="true" signature="11293:11599" ph="..." />
-                <marker date="1493140561063" expanded="true" signature="11401:11503" ph="..." />
-                <marker date="1493140561063" expanded="true" signature="11646:11773" ph="..." />
-                <marker date="1493140561063" expanded="true" signature="11950:13162" ph="..." />
-                <marker date="1493140561063" expanded="true" signature="11993:12266" ph="..." />
-                <marker date="1493140561063" expanded="true" signature="12038:12239" ph="..." />
-                <marker date="1493140561063" expanded="true" signature="12309:12880" ph="..." />
-                <marker date="1493140561063" expanded="true" signature="12354:12853" ph="..." />
-                <marker date="1493140561063" expanded="true" signature="12923:13139" ph="..." />
-                <marker date="1493140561063" expanded="true" signature="12968:13112" ph="..." />
-                <marker date="1493140561063" expanded="true" signature="13296:13396" ph="..." />
-                <marker date="1493140561063" expanded="true" signature="13320:13373" ph="..." />
-                <marker date="1493140561063" expanded="true" signature="13986:14052" ph="{##    &lt;script src={{ asset('js/jquery-ui.min.js') }}&gt;&lt;/script&gt;...##}" />
-                <marker date="1493140561063" expanded="true" signature="14884:16194" ph="..." />
-                <marker date="1493140561063" expanded="true" signature="14953:15518" ph="{&quot;source&quot;: &quot;{{ path('search_route') }}&quot;...}" />
-                <marker date="1493140561063" expanded="false" signature="14989:15001" ph="/autocomplete" />
-                <marker date="1493140561063" expanded="true" signature="15084:15253" ph="{...}" />
-                <marker date="1493140561063" expanded="true" signature="15300:15502" ph="{...}" />
+                <element signature="e#4888#4896#0#Twig" expanded="true" />
+                <element signature="e#5333#5339#0#Twig" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#3;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#5519#5524#0#Twig" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#div#3;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#6024#6032#0#Twig" expanded="true" />
+                <element signature="e#7646#7653#0#Twig" expanded="true" />
+                <element signature="e#7716#7730#0#Twig" expanded="true" />
+                <element signature="e#14116#14128#0#Twig" expanded="true" />
+                <element signature="e#14726#14738#0#Twig" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="color-js.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/color-box/color-js.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="170" column="28" lean-forward="false" selection-start-line="170" selection-start-column="28" selection-end-line="170" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Bs/UserBundle/Resources/views/registration/register.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="125" column="33" lean-forward="false" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="color-style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/color-box/color-style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="86" column="24" lean-forward="false" selection-start-line="86" selection-start-column="24" selection-end-line="86" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Bs/UserBundle/Resources/views/login.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="98" column="27" lean-forward="false" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -96,11 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="start-style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="start-style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/css/start-style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+            <state relative-caret-position="17">
+              <caret line="16" column="3" lean-forward="false" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -126,66 +149,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bs/PaymentBundle/Controller/BookController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-              <folding>
-                <element signature="e#131#174#0#PHP" expanded="true" />
-                <element signature="e#940#969#1#PHP" expanded="true" />
-                <element signature="e#1931#1947#1#PHP" expanded="true" />
-                <element signature="e#2003#2040#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="viewItemRoute.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bs/ItemRouteBundle/Resources/views/viewItemRoute.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="63" column="43" lean-forward="false" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
-              <folding>
-                <element signature="e#12#28#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BookingType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bs/PaymentBundle/Form/BookingType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-              <folding>
-                <element signature="e#7#89#0#PHP" expanded="true" />
-                <element signature="e#124#159#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FormBuilder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Form/FormBuilder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-              <folding>
-                <element signature="e#7#236#0#PHP" expanded="false" />
-                <element signature="e#273#333#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>-&gt;format('</find>
-      <find>-&gt;format(</find>
-      <find>-&gt;format</find>
       <find>-&gt;forma</find>
       <find>-&gt;form</find>
       <find>-&gt;fo</find>
@@ -213,10 +180,12 @@
       <find>weekDays-selector</find>
       <find>getpa</find>
       <find>setPlaces</find>
+      <find>#96a6a6</find>
+      <find>96a6a6</find>
+      <find>tick</find>
     </findStrings>
     <replaceStrings>
       <replace>asset</replace>
-      <replace>22948f</replace>
       <replace>routes</replace>
       <replace>route</replace>
       <replace>user</replace>
@@ -234,6 +203,7 @@
       <replace>#</replace>
       <replace>place</replace>
       <replace>place-selector</replace>
+      <replace>22948f</replace>
     </replaceStrings>
     <dirStrings>
       <dir>E:\BUSS\web\color-box</dir>
@@ -263,10 +233,6 @@
         <option value="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Bs/AppBundle/Models/ModelTransformer/SearchRouteModelTransformer.php" />
         <option value="$PROJECT_DIR$/web/js/jquery-1.10.0.min.js" />
-        <option value="$PROJECT_DIR$/web/color-box/color-style.css" />
-        <option value="$PROJECT_DIR$/web/color-box/color-js.js" />
-        <option value="$PROJECT_DIR$/src/Bs/UserBundle/Resources/views/login.html.twig" />
-        <option value="$PROJECT_DIR$/src/Bs/UserBundle/Resources/views/registration/register.html.twig" />
         <option value="$PROJECT_DIR$/src/Bs/RouteBundle/Form/RouteStationType.php" />
         <option value="$PROJECT_DIR$/web/js/options.js" />
         <option value="$PROJECT_DIR$/src/Bs/RouteBundle/Controller/CrudController.php" />
@@ -296,10 +262,14 @@
         <option value="$PROJECT_DIR$/src/Bs/PaymentBundle/Controller/BookController.php" />
         <option value="$PROJECT_DIR$/src/Bs/ItemRouteBundle/Resources/views/viewItemRoute.html.twig" />
         <option value="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/viewRoute.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/web/css/swipebox.css" />
         <option value="$PROJECT_DIR$/web/css/style.css" />
         <option value="$PROJECT_DIR$/web/css/start-style.css" />
+        <option value="$PROJECT_DIR$/web/color-box/color-js.js" />
+        <option value="$PROJECT_DIR$/src/Bs/UserBundle/Resources/views/registration/register.html.twig" />
+        <option value="$PROJECT_DIR$/web/color-box/color-style.css" />
+        <option value="$PROJECT_DIR$/src/Bs/UserBundle/Resources/views/login.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
       </list>
     </option>
   </component>
@@ -498,7 +468,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -516,7 +486,51 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="color-box" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="color-box" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="farbtastic" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="color-box" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="background" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -923,12 +937,12 @@
       <workItem from="1492538739889" duration="12511000" />
       <workItem from="1492715153394" duration="1754000" />
       <workItem from="1492717151532" duration="1912000" />
-      <workItem from="1492851933523" duration="116144000" />
+      <workItem from="1492851933523" duration="116732000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="270343000" />
+    <option name="totallyTimeSpent" value="270931000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -941,8 +955,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24485861" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24485861" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969153" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1150,38 +1165,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Bs/PaymentBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/ItemRouteBundle/Resources/views/listItemRoutes.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="48" column="19" lean-forward="false" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
-          <folding>
-            <element signature="e#12#28#0#Twig" expanded="true" />
-            <element signature="e#1343#1361#0#Twig" expanded="true" />
-            <element signature="e#1470#1488#0#HTML" expanded="false" />
-            <element signature="e#1507#1518#0#Twig" expanded="true" />
-            <element signature="e#2577#2606#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Controller/RouteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="749">
-          <caret line="52" column="56" lean-forward="false" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
-          <folding>
-            <element signature="e#1412#1440#1#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Repository/RouteStationRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1233,14 +1216,6 @@
           <folding>
             <element signature="e#12#28#0#Twig" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/UserBundle/Resources/views/registration/register.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1576,48 +1551,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/viewRoute.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="74" column="39" lean-forward="false" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="75" column="35" lean-forward="false" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
-          <folding>
-            <marker date="1493140561063" expanded="true" signature="10402:13487" ph="..." />
-            <marker date="1493140561063" expanded="true" signature="10434:13473" ph="..." />
-            <marker date="1493140561063" expanded="true" signature="10471:13458" ph="..." />
-            <marker date="1493140561063" expanded="true" signature="10562:10866" ph="..." />
-            <marker date="1493140561063" expanded="true" signature="11039:11824" ph="..." />
-            <marker date="1493140561063" expanded="true" signature="11077:11800" ph="..." />
-            <marker date="1493140561063" expanded="true" signature="11124:11246" ph="..." />
-            <marker date="1493140561063" expanded="true" signature="11293:11599" ph="..." />
-            <marker date="1493140561063" expanded="true" signature="11401:11503" ph="..." />
-            <marker date="1493140561063" expanded="true" signature="11646:11773" ph="..." />
-            <marker date="1493140561063" expanded="true" signature="11950:13162" ph="..." />
-            <marker date="1493140561063" expanded="true" signature="11993:12266" ph="..." />
-            <marker date="1493140561063" expanded="true" signature="12038:12239" ph="..." />
-            <marker date="1493140561063" expanded="true" signature="12309:12880" ph="..." />
-            <marker date="1493140561063" expanded="true" signature="12354:12853" ph="..." />
-            <marker date="1493140561063" expanded="true" signature="12923:13139" ph="..." />
-            <marker date="1493140561063" expanded="true" signature="12968:13112" ph="..." />
-            <marker date="1493140561063" expanded="true" signature="13296:13396" ph="..." />
-            <marker date="1493140561063" expanded="true" signature="13320:13373" ph="..." />
-            <marker date="1493140561063" expanded="true" signature="13986:14052" ph="{##    &lt;script src={{ asset('js/jquery-ui.min.js') }}&gt;&lt;/script&gt;...##}" />
-            <marker date="1493140561063" expanded="true" signature="14884:16194" ph="..." />
-            <marker date="1493140561063" expanded="true" signature="14953:15518" ph="{&quot;source&quot;: &quot;{{ path('search_route') }}&quot;...}" />
-            <marker date="1493140561063" expanded="false" signature="14989:15001" ph="/autocomplete" />
-            <marker date="1493140561063" expanded="true" signature="15084:15253" ph="{...}" />
-            <marker date="1493140561063" expanded="true" signature="15300:15502" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/swipebox.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3791">
@@ -1644,9 +1577,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/start-style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        <state relative-caret-position="17">
+          <caret line="16" column="3" lean-forward="false" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/viewRoute.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="74" column="39" lean-forward="false" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/color-box/color-js.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="170" column="28" lean-forward="false" selection-start-line="170" selection-start-column="28" selection-end-line="170" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/UserBundle/Resources/views/registration/register.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="125" column="33" lean-forward="false" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/color-box/color-style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="86" column="24" lean-forward="false" selection-start-line="86" selection-start-column="24" selection-end-line="86" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/UserBundle/Resources/views/login.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="98" column="27" lean-forward="false" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="968">
+          <caret line="368" column="7" lean-forward="false" selection-start-line="368" selection-start-column="7" selection-end-line="368" selection-end-column="7" />
+          <folding>
+            <element signature="e#4888#4896#0#Twig" expanded="true" />
+            <element signature="e#5333#5339#0#Twig" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#3;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#5519#5524#0#Twig" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#3;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#6024#6032#0#Twig" expanded="true" />
+            <element signature="e#7646#7653#0#Twig" expanded="true" />
+            <element signature="e#7716#7730#0#Twig" expanded="true" />
+            <element signature="e#14116#14128#0#Twig" expanded="true" />
+            <element signature="e#14726#14738#0#Twig" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

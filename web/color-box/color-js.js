@@ -137,7 +137,7 @@ jQuery(function($){
             });
         }
 
-        color_options('#site_color','#96a6a6',"\n\
+        color_options('#site_color','#280f46',"\n\
         .d-text-c.active,\n\
         .d-text-c-h.active,\n\
         .d-text-c-h:hover,\n\
@@ -159,7 +159,7 @@ jQuery(function($){
         }\n\
         ");
 
-        color_options('#site_color_2','#96a6a6',"\n\
+        color_options('#site_color_2','#6694c7',"\n\
         .s-text-c.active,\n\
         .s-text-c-h.active,\n\
         .s-text-c-h:hover,\n\
