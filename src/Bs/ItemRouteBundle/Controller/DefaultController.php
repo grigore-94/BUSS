@@ -18,20 +18,22 @@ class DefaultController extends BaseController
     }
 
     /**
-     * @Route("view/itemRoutes/{idItemRoute}}}", name="view_item_itemRute")
+     * @Route("view/itemRoutes/{id}}}", name="view_item_itemRute")
      */
-    public function viewAction($idItemRoute)
+    public function viewAction($id)
     {
         $em = $this->getEntityManager();
-        $itemRoute = $em->getRepository('BsItemRouteBundle:ItemRoute')->find($idItemRoute);
+        $itemRoute = $em->getRepository('BsItemRouteBundle:ItemRoute')->find($id);
         $route = $itemRoute->getRoute();
         $routeStations = $em->getRepository('BsRouteBundle:RouteStation')->findRouteStations($route);
         $daysOfWeek= array('Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wendnesday', 'Thursday', 'Friday');
 
         $date=date_format($route->getHourArive(), 'l');
+
         return $this->render(
             '@BsItemRoute/viewItemRoute.html.twig',
             [
+                'itemRoute'=>$itemRoute,
                 'route' => $route,
                 'routeStations' => $routeStations,
                 'daysOfWeek' => $daysOfWeek,

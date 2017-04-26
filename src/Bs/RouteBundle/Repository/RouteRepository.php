@@ -4,6 +4,7 @@ namespace Bs\RouteBundle\Repository;
 
 use Bs\AppBundle\Models\SearchRoute;
 use Bs\RouteBundle\Entity\Route;
+use Bs\RouteBundle\Entity\RouteStation;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\QueryBuilder;
 
@@ -41,26 +42,33 @@ class RouteRepository extends EntityRepository
     {
         /** @var QueryBuilder $query */
         $query = $this->createQueryBuilder('r')
-            ->join('r.routeStations', 'rsFrom')
-            ->join('r.routeStations', 'rsTo')
-            ->join('rsFrom.station', 'rtsFrom')
-            ->join('rsTo.station', 'rtsTo')
-            ->where('rsFrom = rsTo')
-            ->andWhere('rtsFrom.location = :from')
-          //  ->andWhere('rtsTo.location.id = :to')
-            ->andWhere('r.activeDays Like :day')
+            ->where('r.activeDays Like :day')
             ->setParameters(
                 [
-                    'from' => $searche->getFrom(),
-                 //   'to' => $searche->getTo()->getId(),
-                    'day'=>'%'.$day.'%',
-
+                    'day' => '%' . $day . '%',
                 ]
             )
-           // ->groupBy('r.id')
             ->getQuery();
-        $res = $query->getResult();
 
-        return $res;
+        $routes = $query->getResult();
+        $responce = [];
+        /** @var Route $route */
+        foreach ($routes as $route) {
+            $routeLocationsStart = [];
+            $routeLocationsEnd = [];
+
+            /** @var RouteStation $routeStation */
+            foreach ($route->getRouteStations() as $routeStation) {
+                if ($routeStation->getCanBeStart()) {
+                    $routeLocationsStart[] = $routeStation->getStation()->getLocation();
+                }
+                $routeLocationsEnd[] = $routeStation->getStation()->getLocation();
+            }
+
+            if (in_array($searche->getFrom(), $routeLocationsStart) && in_array($searche->getTo(), $routeLocationsEnd)) {
+                $responce[] = $route;
+            }
+        }
+        return $responce;
     }
 }

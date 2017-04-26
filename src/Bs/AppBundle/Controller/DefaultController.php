@@ -50,8 +50,10 @@ class DefaultController extends BaseController
             $search->setT($search->getTo()->getUniqueName());
             $form = $this->createForm(SearchType::class, $search);
 
+            $price=$em->getRepository('BsPaymentBundle:Price')->find(1);
             return $this->render('@BsItemRoute/listItemRoutes.html.twig',
                 [
+                    'price'=>$price->getPrice(),
                     'form' => $form->createView(),
                     'itemRoutes' => $itemRoutes,
                 ]

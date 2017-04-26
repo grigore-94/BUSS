@@ -27,7 +27,7 @@ class Ticket
      * @ORM\Column(type="string")
      */private $dateBought;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="float")
      */private $price;
     /**
      * @ORM\Column(type="string")

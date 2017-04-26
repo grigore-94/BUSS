@@ -5,8 +5,7 @@
     <div class="col-md-8">
 
         <ul class="event-list">
-            <br>
-            <br>
+
 
             {% for itemRoute in itemRoutes %}
                 <li>
@@ -28,8 +27,9 @@
                         <p class="desc"> Trip time : {{ itemRoute.route.totalTime|date('h:i') }} <span
                                     class="fa fa-clock-o"></span></p>
                         <ul>
-                           <li style="width:33%;">  <a href="{{ path('view_item_itemRute',{'idItemRoute':itemRoute.id}) }}"><span class="fa fa-eye"></span></a></li>
-                            <li style="width:34%;"> <a href={{ path('command_ticket',{'id':itemRoute.id}) }}>{{ itemRoute.route.price }} MDL <span class="fa fa-cart-plus"></span>
+                           <li style="width:33%;">  <a href="{{ path('view_item_itemRute',{'id':itemRoute.id}) }}"><span class="fa fa-eye"></span></a></li>
+                            <li style="width:34%;">
+                                <a href={{ path('command_ticket',{'id':itemRoute.id}) }}>{{ itemRoute.route.getPrice(price) }} MDL <span class="fa fa-cart-plus"></span>
                                 </a>
                             </li>
                         </ul>

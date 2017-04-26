@@ -46,8 +46,8 @@
                     <div class="col-sm-12">
                         <div class="panel panel-default text-left">
                             <div class="panel-body">
-
-                                <a href="{{ path('add_route_buss',{'id':route.id}) }}" class="btn btn-default btn-sm" style="float: right;">
+<h2>Only {{ itemRoute.freeSeats }} free seats</h2>
+                                <a href="{{ path('command_ticket',{'id':itemRoute.id}) }}" class="btn btn-default btn-sm" style="float: right;">
                                     <i class="fa fa-cart-plus" aria-hidden="true"></i> BUY
                                 </a>
                             </div>

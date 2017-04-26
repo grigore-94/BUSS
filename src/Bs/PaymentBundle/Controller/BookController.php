@@ -47,21 +47,6 @@ class BookController extends BaseController
         if ($form->isSubmitted()) {
             $this->get('session')->set('booking', $entity);
 
-/*
-            $em = $this->getDoctrine()->getManager();
-            $allSelectedPlaces = $entity->getPlaces();
-           foreach ($itemRoute->getPlaces() as $place) {
-               $allSelectedPlaces[]=$place;
-           }
-            $itemRoute->setPlaces($allSelectedPlaces);
-            $em->persist($itemRoute);
-            $em->flush();
-            $this->get('session')->getFlashBag()->add(
-                'success',
-                'Ticket was successfully .'
-            );*/
-
-
             return $this->redirectToRoute('preview_ticket',
                 [
                     'id'=>$itemRoute->getId()

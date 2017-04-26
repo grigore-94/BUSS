@@ -47,8 +47,8 @@ class Route
 
 private $buss;
 private $price;
-function getPrice() {
-    $price=$this->getTotalDistance() * 0.50;
+function getPrice($price) {
+  $price=$this->getTotalDistance() * $price;
         return $price;
 }
 

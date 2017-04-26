@@ -10,51 +10,62 @@
 
             <div class="col-sm-12">
                 <div class="well">
-                    <h4>Route</h4>
-                    <h3> {{ itemRoute.route.from.getUniqueName }} >>> {{ itemRoute.route.to.getUniqueName }}</h3>
+                    <h2>
+                    Booking informations:
+
+                    </h2>
+                    <h4>Route : {{ itemRoute.route.from.getUniqueName }} >>> {{ itemRoute.route.to.getUniqueName }}</h4>
+
                     <br>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 ">
 
                 <div class="well">
-                    <h1><img src="" class="img-responsive" style="width:100%"
-                             alt="Image">
+                    <br>
+                    <br>
+                    <h1><img src="https://placeholdit.imgix.net/~text?txtsize=40&txt=We%20will%20go%20home%20(:&w=250&h=180&txttrack=0" class="img-responsive" style="width:100%" alt="Image">
                     </h1>
+                                        <br>
                 </div>
+
+
+
+
+
+
             </div>
-            <br>
 
 
-            <div class="col-sm-8">
+            <div class="col-sm-8 ">
                 <div class="well">
-                    <p>Trip time: {{ itemRoute.route.totalTime|date('H:i') }} <i class="fa fa-clock-o" aria-hidden="true"></i>
-                    </p>
+                    <p class="date">Date : {{ itemRoute.date|date("m/d/Y") }}</p>
+                    <p class="desc"> Departure : {{ itemRoute.route.hourDeparture|date('H:i') }}</p>
+                    <p class="desc"> Arive : {{ itemRoute.route.hourArive|date('H:i') }} </p>
+                    <p>Trip time: {{ itemRoute.route.totalTime|date('H:i') }} <i class="fa fa-clock-o" aria-hidden="true"></i></p>
                     <p>Trip distance: {{ booking.totalDistance }}    </p>
                     <p>Nr Tikets : {{ booking.nrTickets }} </p>
+                    <p>Place(s) :
+                        {% for place in booking.places  %}
+                        {{ place }}
+                            {% endfor %}
+                            </p>
                     <p>Price : {{ booking.price }} MDL</p>
                     <p>From Station : {{ booking.fromStation.station.name }} </p>
                     <p>To Station : {{ booking.toStation.station.name }} </p>
 
-                    <br>
+
                 </div>
             </div>
 
             <div class="col-sm-12">
                 <div class="well">
-                    <h1>Category : </h1>
-                    <br>
+                    <a class="btn btn-default btn-block"  href="{{ path('book_ticket',{'id':itemRoute.id}) }}">Paye</a>
+
                 </div>
             </div>
 
-            <div class="col-sm-12">
-                <div class="well">
-                    <h1>POH</h1>
 
-
-                    <br>
-                </div>
-            </div>
 
 
         </div>

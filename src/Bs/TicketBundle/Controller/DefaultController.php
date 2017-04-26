@@ -24,7 +24,7 @@ class DefaultController extends BaseController
 
         $em = $this->getEntityManager();
         $itemRoute = $em->getRepository('BsItemRouteBundle:ItemRoute')->find($id);
-
+        /** @var Booking $booking */
         $booking = $this->get('session')->get('booking');
         $fromStation = $em->getRepository('BsRouteBundle:RouteStation')->find($booking->getFromStation()->getId());
         $toStation = $em->getRepository('BsRouteBundle:RouteStation')->find($booking->getToStation()->getId());
@@ -46,8 +46,9 @@ class DefaultController extends BaseController
         }
 
         $price = $em->getRepository('BsPaymentBundle:Price')->find(1);
-        $totalPrice = $distance * $price->getPrice();
+        $totalPrice = $distance * $price->getPrice() * count($booking->getPlaces());
         $booking->setPrice($totalPrice);
+        $booking->setTotalDistance($distance);
         $this->get('session')->set('booking', $booking);
 
 
@@ -80,10 +81,13 @@ class DefaultController extends BaseController
 
         $em = $this->getDoctrine()->getManager();
         $allSelectedPlaces = $booking->getPlaces();
-        foreach ($itemRoute->getPlaces() as $place) {
-            $allSelectedPlaces[] = $place;
+        if ($itemRoute->getPlaces() != null) {
+            foreach ($itemRoute->getPlaces() as $place) {
+                $allSelectedPlaces[] = $place;
+            }
         }
         $itemRoute->setPlaces($allSelectedPlaces);
+        $itemRoute->setFreeSeats($itemRoute->getSeats()-count($allSelectedPlaces));
         $em->persist($itemRoute);
         $em->flush();
         $this->get('session')->getFlashBag()->add(
@@ -92,13 +96,10 @@ class DefaultController extends BaseController
         );
 
 
-        return $this->render('@BsPayment/previewTickets.html.twig',
-            [
-                'itemRoute' => $itemRoute,
+        return $this->redirectToRoute('view_item_itemRute',['id'=>$itemRoute->getId()]);
 
-            ]
 
-        );
+
     }
 
 
