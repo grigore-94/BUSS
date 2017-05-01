@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -83,180 +82,185 @@
     </ul>
 </div>
 
- <!-- ========================= START HEADER ======================== -->
-    <header class="main-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <ul class="socials">
-                        <li><a class="d-text-c" href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a class="d-text-c" href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a class="d-text-c" href="#"><i class="fa fa-youtube"></i></a></li>
-                        <li><a class="d-text-c" href="#"><i class="fa fa-dribbble"></i></a></li>
-                        <li><a class="d-text-c" href="#"><i class="fa fa-pinterest"></i></a></li>
-                        <li><a class="d-text-c" href="#"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <div class="logo">
-                        <a href="{{ path('homepage') }}" class="d-text-c">Buss Md
-                            <img src="{{ asset('images/photos/title-logo.png') }}" class="fa fa-plane" alt="Buss" height="42" width="42">
-                            </a>
-
-                    </div>
-                </div>
-                <div class="col-md-2">
-                </div>
-                <div class="col-md-2">
-<br>
-<br>
-                {% if app.user %}
-                        <a href="{{ path('logout') }}" style="float: left"> <span class="glyphicon glyphicon-log-out"></span> LogOut({{ app.user.username }})</a>
-
-                    {% else %}
-                        <a href="{{ path('login') }}" style="float: left"> <span class="glyphicon glyphicon-log-in"></span> LogIn</a>
-                    {% endif %}
-                </div>
-                <br>
-
-
+<!-- ========================= START HEADER ======================== -->
+<header class="main-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <ul class="socials">
+                    <li><a class="d-text-c" href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="d-text-c" href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a class="d-text-c" href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a class="d-text-c" href="#"><i class="fa fa-dribbble"></i></a></li>
+                    <li><a class="d-text-c" href="#"><i class="fa fa-pinterest"></i></a></li>
+                    <li><a class="d-text-c" href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
             </div>
+            <div class="col-md-4">
+                <div class="logo">
+                    <a href="{{ path('homepage') }}" class="d-text-c">Buss Md
+                        <img src="{{ asset('images/photos/title-logo.png') }}" class="fa fa-plane" alt="Buss"
+                             height="42" width="42">
+                    </a>
+
+                </div>
+            </div>
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-2">
+                <br>
+                <br>
+                {% if app.user %}
+                    <a href="{{ path('logout') }}" style="float: left"> <span
+                                class="glyphicon glyphicon-log-out"></span> LogOut({{ app.user.username }})</a>
+
+                {% else %}
+                    <a href="{{ path('login') }}" style="float: left"> <span class="glyphicon glyphicon-log-in"></span>
+                        LogIn</a>
+                {% endif %}
+            </div>
+            <br>
+
+
         </div>
-    </header>
+    </div>
+</header>
 
 <!-- MENU -->
-        <div class="container">
-            <div class="main-header-bottom">
-                <nav class="main-nav d-bg-c">
-                    <div class="responsive-menu"><i class="fa fa-align-justify"></i> Menu</div>
-                    <ul class="clean-list clearfix">
-                        <li class="current-menu-item"><a href="{{ path('homepage') }}">Home</a></li>
-                        <li><a href="#">Pages</a>
+<div class="container">
+    <div class="main-header-bottom">
+        <nav class="main-nav d-bg-c">
+            <div class="responsive-menu"><i class="fa fa-align-justify"></i> Menu</div>
+            <ul class="clean-list clearfix">
+                <li class="current-menu-item"><a href="{{ path('homepage') }}">Home</a></li>
+                <li><a href="#">Pages</a>
+                    <ul>
+                        <li><a href="about-us.html">About us</a></li>
+                        <li><a href="error-404.html">Error 404</a></li>
+                        <li><a href="our-team.html">Our team</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li class="menu-item-has-children"><a href="#">Dropdown</a>
                             <ul>
-                                <li><a href="about-us.html">About us</a></li>
-                                <li><a href="error-404.html">Error 404</a></li>
-                                <li><a href="our-team.html">Our team</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li class="menu-item-has-children"><a href="#">Dropdown</a>
+                                <li><a href="#">nephew</a></li>
+                                <li><a href="#">nephew</a></li>
+                                <li class="menu-item-has-children"><a href="#">nephew</a>
                                     <ul>
                                         <li><a href="#">nephew</a></li>
                                         <li><a href="#">nephew</a></li>
-                                        <li class="menu-item-has-children"><a href="#">nephew</a>
-                                            <ul>
-                                                <li><a href="#">nephew</a></li>
-                                                <li><a href="#">nephew</a></li>
-                                                <li><a href="#">nephew</a></li>
-                                            </ul>
-                                        </li>
+                                        <li><a href="#">nephew</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="tours.html">Tours</a>
-                            <ul>
-                                <li><a href="single-tour.html">Single tour</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item-has-children"><a href="blog.html">Blog</a>
-                            <ul>
-                                <li><a href="post.html">Single post</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="{{ path('contact') }}">Contact</a></li>
-
-                        <li><a href="{{ path('admin_homepage') }}">Admin</a>
-
-                        </li>
-                        {% if app.user %}
-
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span><span
-                                        class="fa fa-2x fa-child"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#"><span class="fa fa-user"></span> My Profile</a></li>
-                                <li><a href="#"><span class="fa fa-ticket"></span> My Tickets</a></li>
-                                <li><a href="#"><span class="fa fa-gear"></span> Settings</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#"><span class="fa fa-power-off"></span> Logout</a></li>
-                            </ul>
-                        </li>
-{% endif %}
                     </ul>
+                </li>
+                <li><a href="tours.html">Tours</a>
+                    <ul>
+                        <li><a href="single-tour.html">Single tour</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="blog.html">Blog</a>
+                    <ul>
+                        <li><a href="post.html">Single post</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ path('contact') }}">Contact</a></li>
 
-                </nav>
-            </div>
-        </div>
+                <li><a href="{{ path('admin_homepage') }}">Admin</a>
+
+                </li>
+                {% if app.user %}
+
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span><span
+                                    class="fa fa-2x fa-child"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#"><span class="fa fa-user"></span> My Profile</a></li>
+                            <li><a href="#"><span class="fa fa-ticket"></span> My Tickets</a></li>
+                            <li><a href="#"><span class="fa fa-gear"></span> Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><span class="fa fa-power-off"></span> Logout</a></li>
+                        </ul>
+                    </li>
+                {% endif %}
+            </ul>
+
+        </nav>
+    </div>
+</div>
 </header>
 
-        <!-- MENU -->
-    <div class="header-space"></div>
-    <!-- ========================= END HEADER ======================== -->
+<!-- MENU -->
+<div class="header-space"></div>
+<!-- ========================= END HEADER ======================== -->
 
 
-    <!-- ========================= START CONTENT ======================== -->
-    <div class="content">
-        <div class="container">
-
-            <!-- ========================= START ORDER TOUR ======================== -->
-                    {% block body %}{% endblock %}
-                    <!-- ========================= END ORDER TOUR ======================== -->
-
-            </div>
-        </div>
-        <!-- ========================= START SERVICES ======================== -->
-
-        <!-- ========================= END SERVICES ======================== -->
+<!-- ========================= START CONTENT ======================== -->
+<div class="content">
+    <div class="container">
 
 
-        <!-- ========================= START CHOOSE TOURS ======================== -->
 
-        <!-- ========================= END CHOOSE TOURS ======================== -->
-
-
-        <!-- ========================= START POPULAR TOURS ======================== -->
-
-        <!-- ========================= START POPULAR TOURS ======================== -->
+                <!-- ========================= START ORDER TOUR ======================== -->
+                {% block body %}{% endblock %}
+                <!-- ========================= END ORDER TOUR ======================== -->
 
     </div>
-    <!-- ========================= END CONTENT ======================== -->
+</div>
+<!-- ========================= START SERVICES ======================== -->
+
+<!-- ========================= END SERVICES ======================== -->
 
 
-    <!-- ========================= START FOOTER ======================== -->
-    <footer>
-        <div class="container">
-            <div class="footer-box">
+<!-- ========================= START CHOOSE TOURS ======================== -->
 
-                <!-- END FOOTER CUSTOM MENU -->
+<!-- ========================= END CHOOSE TOURS ======================== -->
 
-                <!-- START NEWSLETTER FORM -->
-                <form class="newsletter-form" id="newsletter" method="post">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <h3>Newsletter subscribe <i class="fa fa-envelope-o"></i></h3>
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" name="email" placeholder="E-mail" class="subscription-line"
-                                   data-tt-subscription-required="" data-tt-subscription-type="email">
-                            <div class="result_container"></div>
-                        </div>
-                        <div class="col-md-3">
-                            <input type="submit" value="Subscribe" class="subscription-button">
-                        </div>
+
+<!-- ========================= START POPULAR TOURS ======================== -->
+
+<!-- ========================= START POPULAR TOURS ======================== -->
+
+</div>
+<!-- ========================= END CONTENT ======================== -->
+
+
+<!-- ========================= START FOOTER ======================== -->
+<footer>
+    <div class="container">
+        <div class="footer-box">
+
+            <!-- END FOOTER CUSTOM MENU -->
+
+            <!-- START NEWSLETTER FORM -->
+            <form class="newsletter-form" id="newsletter" method="post">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h3>Newsletter subscribe <i class="fa fa-envelope-o"></i></h3>
                     </div>
-                </form>
-
-                <div class="bottom-footer">
-                    <p>Creayed by Grigore Brodicico
-                    </p>
+                    <div class="col-md-6">
+                        <input type="text" name="email" placeholder="E-mail" class="subscription-line"
+                               data-tt-subscription-required="" data-tt-subscription-type="email">
+                        <div class="result_container"></div>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="submit" value="Subscribe" class="subscription-button">
+                    </div>
                 </div>
-                <!-- END BOTTOM FOOTER -->
+            </form>
+
+            <div class="bottom-footer">
+                <p>Creayed by Grigore Brodicico
+                </p>
             </div>
+            <!-- END BOTTOM FOOTER -->
         </div>
-    </footer>
-    <!-- ========================= END FOOTER ======================== -->
+    </div>
+</footer>
+<!-- ========================= END FOOTER ======================== -->
 
 
-    <!-- ========================= END COLOR BOX CLASS ======================== -->
+<!-- ========================= END COLOR BOX CLASS ======================== -->
 </div>
 <!-- ========================= END COLOR BOX CLASS ======================== -->
 
@@ -267,9 +271,9 @@
 </body>
 {% block javascripts %}
     <script src={{ asset('js/jquery-1.10.0.min.js') }}></script>
-{#
-    <script src={{ asset('js/jquery-ui.min.js') }}></script>
-#}
+    {#
+        <script src={{ asset('js/jquery-ui.min.js') }}></script>
+    #}
     <script src={{ asset('js/bootstrap.js') }}></script>
     <script src={{ asset('js/placeholder.js') }}></script>
     <script src={{ asset('js/imagesloaded.pkgd.min.js') }}></script>
@@ -286,7 +290,6 @@
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script>
         $(function () {
-
 
 
             $("#search_f").autocomplete({

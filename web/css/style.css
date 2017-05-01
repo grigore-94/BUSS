@@ -265,19 +265,19 @@ ul.page-numbers li a:hover {
 .d-text-c-h.active,
 .d-text-c-h:hover,
 .d-text-c {
-    color: #280f46 !important;
+    color: #22948f !important;
 }
 .d-bg-c.active,
 .d-bg-c-h:hover,
 .d-bg-c-h.active,
 .d-bg-c {
-    background: #280f46 !important;
+    background: #22948f !important;
 }
 .d-border-c.active,
 .d-border-c-h:hover,
 .d-border-c-h.active,
 .d-border-c {
-    border-color: #280f46 !important;
+    border-color: #22948f !important;
 }
 .white {
     color: #fff;
@@ -440,7 +440,7 @@ header .search-it .search-button:hover {
     border-bottom: 2px solid #d6d6d6;
 }
 .order-tour .order-now {
-    background: #6694c7;
+    background: #9ca8b4;
 }
 .order-tour .order-now h1 {
     text-align: left;
@@ -835,7 +835,7 @@ header .search-it .search-button:hover {
 }
 .commentlist .comment .comment-info p {
     font-size: 13px;
-    color: #6694c7;
+    color: #9ca8b4;
     margin: 0 0 0 70px;
     font-weight: 700;
     line-height: 1.5em;
@@ -869,7 +869,7 @@ header .search-it .search-button:hover {
     padding: 20px 45px;
 }
 .comment-respond .comment-form {
-    background: #6694c7;
+    background: #9ca8b4;
     margin: 0 -45px;
     padding: 40px 85px;
 }
@@ -1089,7 +1089,7 @@ header .search-it .search-button:hover {
     line-height: 1em;
 }
 .widget.widget-hot-offers ul li h4 a {
-    color: #6694c7;
+    color: #9ca8b4;
     font-size: 13px;
     line-height: 1.5em;
     font-weight: 700;
@@ -1188,7 +1188,7 @@ header .search-it .search-button:hover {
     color: #757575;
 }
 .popular-tours a:hover {
-    color: #6694c7;
+    color: #9ca8b4;
 }
 .popular-tours .country-titles h1 {
     color: #ff85c7;
@@ -1232,7 +1232,7 @@ header .search-it .search-button:hover {
     font-size: 11px;
 }
 .meteo-widget ul li .m-icon {
-    color: #6694c7;
+    color: #9ca8b4;
     font-size: 20px;
 }
 .meteo-widget ul li .m-day {
@@ -1241,7 +1241,7 @@ header .search-it .search-button:hover {
     font-weight: 700;
 }
 .meteo-widget ul li .m-night {
-    color: #6694c7;
+    color: #9ca8b4;
     font-size: 14px;
     font-weight: 700;
 }
@@ -1383,7 +1383,7 @@ form .inline-block:hover i,
     padding-bottom: 50px;
 }
 .services-box .service-one:hover .service-one-cover .service-one-hover {
-    background: #6694c7;
+    background: #9ca8b4;
 }
 .services-box .service-one .service-one-cover .service-one-hover {
     position: absolute;
@@ -1408,7 +1408,7 @@ form .inline-block:hover i,
     padding-top: 5px;
     line-height: 1.4em;
     font-size: 50px;
-    color: #6694c7;
+    color: #9ca8b4;
 }
 .services-box .service-one .service-one-cover .service-one-hover h4 {
     text-align: center;
@@ -1419,7 +1419,7 @@ form .inline-block:hover i,
     color: #fff;
     padding: 20px 10px;
     margin: 0;
-    background: #6694c7;
+    background: #9ca8b4;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1508,7 +1508,7 @@ form .inline-block:hover i,
     width: 39px;
 }
 .accordion .active .accordion-toggle span {
-    background: #6694c7;
+    background: #9ca8b4;
     color: #fff;
     margin: -1px;
     height: 41px;
@@ -1562,7 +1562,7 @@ form .inline-block:hover i,
     padding: 0;
 }
 .testimonials .testimonials-relative .testimonials-dots li.active {
-    background: #6694c7;
+    background: #9ca8b4;
 }
 .testimonials .testimonial {
     background: #fff;
@@ -1771,7 +1771,7 @@ form .inline-block:hover i,
 .our-team .our-team-box .member .member-name h4 {
     margin: 0;
     text-transform: uppercase;
-    color: #6694c7;
+    color: #9ca8b4;
     line-height: 1.5em;
     font-size: 13px;
     font-weight: 700;
@@ -1998,7 +1998,7 @@ form .inline-block:hover i,
 .tour-page .tour-content-box .location-map-points h4 {
     text-transform: uppercase;
     font-size: 13px;
-    color: #6694c7;
+    color: #9ca8b4;
     margin: 0 0 10px 0;
 }
 .tour-page .tour-content-box .location-map-points h4 span {
@@ -2139,12 +2139,12 @@ form .inline-block:hover i,
     font-weight: 700;
 }
 .tour-description-details ul li:last-child span {
-    color: #6694c7;
+    color: #9ca8b4;
     text-transform: none;
 }
 .tour-description-details .buy-box {
     padding: 60px 50px;
-    background: #6694c7;
+    background: #9ca8b4;
 }
 .tour-description-details .buy-box .button-1 {
     background: rgba(255,255,255,0.3);
@@ -2283,7 +2283,7 @@ form .inline-block:hover i,
 }
 .all-tours .one-tour .one-tour-footer li span {
     font-weight: 700;
-    color: #6694c7;
+    color: #9ca8b4;
 }
 .all-tours .one-tour .one-tour-content .tabs-box ul {
     font-size: 0;
@@ -2302,7 +2302,7 @@ form .inline-block:hover i,
     color: #484848;
 }
 .all-tours .one-tour .one-tour-content .tabs-box .ot-li-1 {
-    background: #6694c7;
+    background: #9ca8b4;
     width: 33%;
 }
 .all-tours .one-tour .one-tour-content .tabs-box .ot-li-2 {
@@ -2340,7 +2340,7 @@ form .inline-block:hover i,
 }
 .all-tours .one-tour .one-tour-content .tabs-box .item .item-info h4 b {
     padding: 0 5px 0 0;
-    color: #6694c7;
+    color: #9ca8b4;
     text-transform: uppercase;
 }
 /* ========================================================================
@@ -2387,7 +2387,7 @@ form .inline-block:hover i,
 }
 .tabs-box .navigation-tab li.active a {
     background: #fff;
-    color: #6694c7;
+    color: #9ca8b4;
 }
 .tabs-box .tab-content {
     background: #fff;
@@ -2443,7 +2443,7 @@ form .inline-block:hover i,
 }
 .tabs-box .tab-content ul li .item .item-info p {
     font-size: 13px;
-    color: #6694c7;
+    color: #9ca8b4;
     margin: 0 0 0 60px;
     font-weight: 700;
     padding: 0;

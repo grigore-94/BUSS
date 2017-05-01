@@ -87,7 +87,7 @@ class DefaultController extends BaseController
             }
         }
         $itemRoute->setPlaces($allSelectedPlaces);
-        $itemRoute->setFreeSeats($itemRoute->getSeats()-count($allSelectedPlaces));
+        $itemRoute->setFreeSeats($itemRoute->getSeats() - count($allSelectedPlaces));
         $em->persist($itemRoute);
         $em->flush();
         $this->get('session')->getFlashBag()->add(
@@ -96,8 +96,7 @@ class DefaultController extends BaseController
         );
 
 
-        return $this->redirectToRoute('view_item_itemRute',['id'=>$itemRoute->getId()]);
-
+        return $this->render('@BsPayment/payement.html.twig', ['booking' => $booking]);
 
 
     }
