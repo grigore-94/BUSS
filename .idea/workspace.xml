@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e34b1ac5-d3e5-4983-8501-907c82e8d6ab" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/map.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/mapRouteView.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/AppBundle/Controller/BaseController.php" afterPath="$PROJECT_DIR$/src/Bs/AppBundle/Controller/BaseController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/CityBundle/Repository/LocationRepository.php" afterPath="$PROJECT_DIR$/src/Bs/CityBundle/Repository/LocationRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/ItemRouteBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Bs/ItemRouteBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/ItemRouteBundle/Resources/views/viewItemRoute.html.twig" afterPath="$PROJECT_DIR$/src/Bs/ItemRouteBundle/Resources/views/viewItemRoute.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/RouteBundle/Controller/CrudController.php" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Controller/CrudController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/RouteBundle/Controller/RouteController.php" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Controller/RouteController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/RouteBundle/Controller/RouteStationController.php" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Controller/RouteStationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/RouteBundle/Entity/Route.php" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Entity/Route.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/RouteBundle/Form/RouteType.php" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Form/RouteType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/add.html.twig" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/add.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/form_add.html.twig" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/form_add.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/viewRoute.html.twig" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/viewRoute.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/StationBundle/Controller/CrudController.php" afterPath="$PROJECT_DIR$/src/Bs/StationBundle/Controller/CrudController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/StationBundle/Entity/Station.php" afterPath="$PROJECT_DIR$/src/Bs/StationBundle/Entity/Station.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/StationBundle/Form/StationType.php" afterPath="$PROJECT_DIR$/src/Bs/StationBundle/Form/StationType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/form_add.html.twig" afterPath="$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/form_add.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/adminPage.css" afterPath="$PROJECT_DIR$/web/css/adminPage.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -1273,7 +1252,7 @@
       <workItem from="1492715153394" duration="1754000" />
       <workItem from="1492717151532" duration="1912000" />
       <workItem from="1492851933523" duration="155763000" />
-      <workItem from="1494059438874" duration="43892000" />
+      <workItem from="1494059438874" duration="43943000" />
     </task>
     <task id="LOCAL-00001" summary="Book ticket">
       <created>1493240095427</created>
@@ -1296,11 +1275,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494078654316</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Map modifications">
+      <created>1494110967947</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1494110967947</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="353854000" />
+    <option name="totallyTimeSpent" value="353905000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1378,7 +1364,8 @@
     <MESSAGE value="dfvxrf" />
     <MESSAGE value="Book ticket" />
     <MESSAGE value="some changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="some changes" />
+    <MESSAGE value="Map modifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="Map modifications" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
