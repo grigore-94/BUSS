@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e34b1ac5-d3e5-4983-8501-907c82e8d6ab" name="Default" comment="some changes">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/confirmPage.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/BUSS.iml" afterPath="$PROJECT_DIR$/.idea/BUSS.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+    <list default="true" id="e34b1ac5-d3e5-4983-8501-907c82e8d6ab" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/default/contact.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/default/contact.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/CityBundle/Resources/views/CRUD/add.html.twig" afterPath="$PROJECT_DIR$/src/Bs/CityBundle/Resources/views/CRUD/add.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/payement.html.twig" afterPath="$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/payement.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/StationBundle/Controller/CrudController.php" afterPath="$PROJECT_DIR$/src/Bs/StationBundle/Controller/CrudController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/StationBundle/Entity/Station.php" afterPath="$PROJECT_DIR$/src/Bs/StationBundle/Entity/Station.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/add.html.twig" afterPath="$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/add.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/form_add.html.twig" afterPath="$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/form_add.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,8 +36,8 @@
       <file leaf-file-name="payement.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/payement.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="89" column="10" lean-forward="true" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
+            <state relative-caret-position="199">
+              <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
               <folding>
                 <element signature="e#12#28#0#Twig" expanded="true" />
               </folding>
@@ -804,7 +794,7 @@
       <workItem from="1492715153394" duration="1754000" />
       <workItem from="1492717151532" duration="1912000" />
       <workItem from="1492851933523" duration="155763000" />
-      <workItem from="1494059438874" duration="14850000" />
+      <workItem from="1494059438874" duration="14865000" />
     </task>
     <task id="LOCAL-00001" summary="Book ticket">
       <created>1493240095427</created>
@@ -813,11 +803,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493240095427</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="some changes">
+      <created>1494078643615</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1494078643615</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="324812000" />
+    <option name="totallyTimeSpent" value="324827000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1433,8 +1430,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/payement.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="89" column="10" lean-forward="true" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
+        <state relative-caret-position="199">
+          <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding>
             <element signature="e#12#28#0#Twig" expanded="true" />
           </folding>
