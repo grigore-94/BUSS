@@ -34,6 +34,47 @@ class Station
      */
     private $routeStations;
 
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $lat=47.02571087795901;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $lng=28.830940811157234;
+
+    /**
+     * @return mixed
+     */
+    public function getLat()
+    {
+        return $this->lat;
+    }
+
+    /**
+     * @param mixed $lat
+     */
+    public function setLat($lat)
+    {
+        $this->lat = $lat;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLng()
+    {
+        return $this->lng;
+    }
+
+    /**
+     * @param mixed $lng
+     */
+    public function setLng($lng)
+    {
+        $this->lng = $lng;
+    }
 
 
     /**

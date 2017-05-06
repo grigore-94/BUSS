@@ -48,7 +48,9 @@ class CrudController extends BaseController
 
         return $this->render(
             '@BsStation/add.html.twig',
-            array('form' => $form->createView())
+            ['form' => $form->createView(),
+                'station' => $station,
+                ]
         );
     }
 

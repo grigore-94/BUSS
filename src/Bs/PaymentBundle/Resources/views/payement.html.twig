@@ -7,7 +7,7 @@
     </head>
     <body style="font-family: 'Open Sans', sans-serif;">
     <div class="container">
-        <div class="centered title"><h1>Welcome to our checkout.</h1></div>
+        <div class="centered title"><h1>Payement for yours ticket(s)</h1></div>
     </div>
     <hr class="featurette-divider"></hr>
     <div class="container">
@@ -52,14 +52,21 @@
                                 </div>
                             </div>
 
+                        </form>
 
                             <div class='form-row'>
                                 <div class='form-group'>
                                     <label class='control-label'></label>
+                                    {#<a class="btn btn-default btn-block"  href="{{ path('book_ticket',{'id':itemRoute.id}) }}">Paye</a>#}
 
-                                    <button class='form-control btn btn-primary' type='submit'> Continue →</button>
+                                    <button class='form-control btn btn-primary' onclick="spiner(this)"> Continue →</button>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div id="spiner">
 
-                        </form>
+                                    </div>
+
 
                     </div>
                 </div>
@@ -121,6 +128,19 @@
 
     </body>
     </html>
+    <script>
+        function spiner(this1) {
+$('#spiner').append('<i class="fa fa-spinner fa-spin fa-5x"></i> Processing...',
+function () {
+    setTimeout(function() {
+        alert('sssdss');
+
+    }, 4000);
+});
+
+
+        }
+    </script>
 <style>
     @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
 
@@ -150,100 +170,4 @@
         padding-top: 15px;
     }
 </style>
-<script>
-    $(function() {
-        $('form.require-validation').bind('submit', function(e) {
-            var $form         = $(e.target).closest('form'),
-                inputSelector = ['input[type=email]', 'input[type=password]',
-                    'input[type=text]', 'input[type=file]',
-                    'textarea'].join(', '),
-                $inputs       = $form.find('.required').find(inputSelector),
-                $errorMessage = $form.find('div.error'),
-                valid         = true;
-
-            $errorMessage.addClass('hide');
-            $('.has-error').removeClass('has-error');
-            $inputs.each(function(i, el) {
-                var $input = $(el);
-                if ($input.val() === '') {
-                    $input.parent().addClass('has-error');
-                    $errorMessage.removeClass('hide');
-                    e.preventDefault(); // cancel on first error
-                }
-            });
-        });
-    });
-
-    $(function() {
-        var $form = $("#payment-form");
-
-        $form.on('submit', function(e) {
-            if (!$form.data('cc-on-file')) {
-                e.preventDefault();
-                Stripe.setPublishableKey($form.data('stripe-publishable-key'));
-                Stripe.createToken({
-                    number: $('.card-number').val(),
-                    cvc: $('.card-cvc').val(),
-                    exp_month: $('.card-expiry-month').val(),
-                    exp_year: $('.card-expiry-year').val()
-                }, stripeResponseHandler);
-            }
-        });
-
-        function stripeResponseHandler(status, response) {
-            if (response.error) {
-                $('.error')
-                    .removeClass('hide')
-                    .find('.alert')
-                    .text(response.error.message);
-            } else {
-                // token contains id, last4, and card type
-                var token = response['id'];
-                // insert the token into the form so it gets submitted to the server
-                $form.find('input[type=text]').empty();
-                $form.append("<input type='hidden' name='reservation[stripe_token]' value='" + token + "'/>");
-                $form.get(0).submit();
-            }
-        }
-    })
-
-
-
-    $(document).ready(function() {
-
-        function loading() {
-            $('.paypalResult').show().html('<br><div class="alert alert-info">Please wait while we redirect you to PayPal to finish the checkout.</div>');
-        }
-
-        function formResult(data) {
-            $('.paypalResult').show().html('<br><div class="alert alert-success">Success: if you aren't redirected, hit the PayPal button.</div><meta http-equiv="refresh" content="2; url=https://paypal.ca">');
-            $('#paypalForm input').val('');
-        }
-
-        function onSubmit() {
-            $('#paypalForm').submit(function() {
-                var action = $(this).attr('action');
-                loading();
-                $.ajax({
-                    url: action,
-                    type: 'POST',
-                    data: {
-                        token: $('#token').val(),
-                        action: $('#action').val()
-                    },
-                    success: function(data) {
-                        formResult(data);
-                    },
-                    error: function(data) {
-                        formResult(data);
-                    }
-                });
-                return false;
-            });
-        }
-        onSubmit();
-
-    });
-
-</script>
 {% endblock %}

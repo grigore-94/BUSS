@@ -3,7 +3,65 @@
 {{ form_start(form) }}
 {{ form_row(form.name) }}
     {{ form_row(form.location) }}
+<style>
+    /* Always set the map height explicitly to define the size of the div
+     * element that contains the map. */
+    #map {
+        height: 100%;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+</style>
 
+<div id="map" style="height: 500px; width: 1000px;"></div>
+<script>
 
+    // The following example creates a marker in Stockholm, Sweden using a DROP
+    // animation. Clicking on the marker will toggle the animation between a BOUNCE
+    // animation and no animation.
+
+    var marker;
+
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 13,
+            center: {lat: {{ station.lat }}, lng: {{ station.lng }}}
+        });
+
+        marker = new google.maps.Marker({
+            map: map,
+            draggable: true,
+            animation: google.maps.Animation.DROP,
+
+            position: {lat: {{ station.lat }}, lng: {{ station.lng }}}
+        });
+        marker.addListener('click', toggleBounce);
+    }
+
+    function toggleBounce() {
+        var latlng = marker.getPosition();
+
+        var lat = latlng.lat();
+        var long = latlng.lng();
+        alert(lat+','+long);
+
+        {{ app.session.set('lat') }}
+        if (marker.getAnimation() !== null) {
+            marker.setAnimation(null);
+        } else {
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsqV6lgj4j4S9l1JwOM5xAkbhUHtTjc5I&callback=initMap">
+</script>
+<br>
+<br>
+<br>
 <button type="submit" class="btn btn-default">Save</button>
 {{ form_end(form) }}
