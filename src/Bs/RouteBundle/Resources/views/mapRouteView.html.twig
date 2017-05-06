@@ -1,0 +1,147 @@
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsqV6lgj4j4S9l1JwOM5xAkbhUHtTjc5I&libraries=drawing,places"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script>
+
+    var apiKey = "AIzaSyAsqV6lgj4j4S9l1JwOM5xAkbhUHtTjc5I";
+
+    var map;
+    var drawingManager;
+    var placeIdArray = [];
+    var polylines = [];
+    var snappedCoordinates = [];
+    var locations = [];
+    var marker=[] ;
+    var infowindow =[];
+
+    function initialize() {
+        var mapOptions = {
+            zoom: 13,
+            center: {lat: 47.02571087795901, lng: 28.830940811157234}
+        };
+        map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        // Adds a Places search box. Searching for a place will center the map on that
+        // location.
+        map.controls[google.maps.ControlPosition.RIGHT_TOP].push(
+            document.getElementById('bar'));
+        var autocomplete = new google.maps.places.Autocomplete(
+            document.getElementById('autoc'));
+        autocomplete.bindTo('bounds', map);
+        autocomplete.addListener('place_changed', function() {
+            var place = autocomplete.getPlace();
+            if (place.geometry.viewport) {
+                map.fitBounds(place.geometry.viewport);
+            } else {
+                map.setCenter(place.geometry.location);
+                map.setZoom(17);
+            }
+        });
+
+
+
+
+        // Enables the polyline drawing control. Click on the map to start drawing a
+        // polyline. Each click will add a new vertice. Double-click to stop drawing.
+        drawingManager = new google.maps.drawing.DrawingManager({
+
+            drawingControl: false,
+
+            polylineOptions: {
+                strokeColor: '#d72526',
+                strokeWeight: 2
+            },
+            polylinecompleteOptions:{
+                strokeColor: '#1125d7',
+                strokeWeight: 2
+            }
+        });
+        drawingManager.setMap(map);
+
+        // Snap-to-road when the polyline is completed.
+
+
+        // Clear button. Click to remove all polylines.
+        $('#clear').click(function(ev) {
+            for (var i = 0; i < polylines.length; ++i) {
+                polylines[i].setMap(null);
+            }
+            polylines = [];
+            ev.preventDefault();
+            return false;
+        });
+
+        {% autoescape false %}
+        var data = {{app.session.get('stationsLocation') }};
+        snappedCoordinates= JSON.parse('{{route.road }}');
+        locations= JSON.parse('{{stationsLocation }}');
+        {% endautoescape %}
+       debugger;
+        if (snappedCoordinates){
+            drawSnappedPolyline();
+        }
+        if (locations) {
+            drawStations();
+        }
+
+    }
+ function drawStations() {
+        for (var i=0; i<locations.length;i++){
+            var image = 'http://www.clker.com/cliparts/q/t/n/R/C/j/bus-station-icon-black-white-hi.png';
+            marker[i]  = new google.maps.Marker({
+                position: {lat: locations[i].lat, lng: locations[i].lng},
+                map: map,
+                title: locations[i].title,
+                icon:{
+                    url:image,
+                    size: new google.maps.Size(71, 71),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(17, 34),
+                    scaledSize: new google.maps.Size(25, 25)
+                }
+
+            });
+            infowindow[i] = new google.maps.InfoWindow({
+                content: "<span>Name :"+ locations[i].name+ " </span>"
+            });
+            google.maps.event.addListener(marker[i], 'click', function(i) {
+                return function() {
+                    infowindow[i].open(map, marker[i]);
+                }
+            }(i));
+        }
+
+ }
+
+
+
+
+    // Draws the snapped polyline (after processing snap-to-road response).
+    function drawSnappedPolyline() {
+
+
+        var snappedPolyline = new google.maps.Polyline({
+            path: snappedCoordinates,
+            strokeColor: '#1125d7',
+            strokeWeight: 4
+        });
+
+        snappedPolyline.setMap(map);
+        polylines.push(snappedPolyline);
+    }
+
+
+
+
+
+
+
+
+    $(window).load(initialize);
+
+</script>
+
+
+

@@ -101,7 +101,16 @@
                     {% endfor %}
                 </div>
             </div>
-
+            <div class="col-sm-9">
+<label> Route Road:</label>
+            <div id="map" style="height: 600px;"></div>
+            <div id="bar">
+                <p class="auto"><input type="text" id="autoc"/></p>
+                <p><a id="clear" href="#">Click here</a> to clear map.</p>
+            </div>
+          \
+            {% include('@BsRoute/mapRouteView.html.twig') %}
+            </div>
         </div>
     </div>
 

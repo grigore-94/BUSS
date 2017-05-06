@@ -45,6 +45,28 @@ class Station
     private $lng=28.830940811157234;
 
     /**
+     * @ORM\Column(type="string")
+     */
+    private $address;
+
+    /**
+     * @return mixed
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * @param mixed $address
+     */
+    public function setAddress($address)
+    {
+        $this->address = $address;
+    }
+
+
+    /**
      * @return mixed
      */
     public function getLat()

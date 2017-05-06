@@ -63,14 +63,14 @@
 .wrap #side-menu {
 
     background: #404040;
-    width: 22em;
+    width: 21em;
     padding-top: 40px;
     padding-right: 20px;
     padding-left: 10px;
     float: left;
     display: block;
     left: 0;
-    height: 900px;
+    height: 2000px;
 }
 .wrap .content {
     position: absolute;

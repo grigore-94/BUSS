@@ -32,7 +32,7 @@ class CrudController extends BaseController
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
 
-
+           // value = JSON.parse(value);
             $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
             $em->flush();
@@ -104,7 +104,8 @@ class CrudController extends BaseController
 
         return $this->render(
             '@BsRoute/add.html.twig',
-            array('form' => $form->createView())
+            array('form' => $form->createView(),
+                'route'=>$route)
         );
 
     }

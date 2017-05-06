@@ -55,9 +55,12 @@ class RouteController extends BaseController
        $daysOfWeek= array('Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wendnesday', 'Thursday', 'Friday');
 
        $date=date_format($route->getHourArive(), 'l');
-        return $this->render(
+$stationLocations=$route->getStationsArray();
+$this->get('session')->set('stationsLocation',$stationLocations);
+       return $this->render(
             '@BsRoute/viewRouteAdmin.html.twig',
             [
+                'stationsLocation'=>$stationLocations,
                 'route' => $route,
                 'routeStations' => $routeStations,
                 'daysOfWeek' => $daysOfWeek,

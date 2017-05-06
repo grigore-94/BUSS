@@ -20,13 +20,31 @@ class LocationRepository extends EntityRepository
     public function findFilter($filter)
     {
         $locations = $this->createQueryBuilder('l')
-
             ->where('l.city LIKE :filter')
             ->orWhere('l.region LIKE :filter')
-            ->setParameter('filter', '%'.$filter.'%')
+            ->setParameter('filter', '%' . $filter . '%')
             ->getQuery()
             ->getResult();
 
         return $locations;
+    }
+
+    /**
+     * @param $city
+     * @param $region
+     * @return mixed
+     */
+    public function findByCityAndRegion($city, $region)
+    {
+        $locations = $this->createQueryBuilder('l')
+            ->where('l.city = :city')
+            ->andWhere('l.region = :region')
+            ->setParameter('city', $city)
+            ->setParameter('region', $region)
+            ->getQuery()
+            ->getResult();
+
+
+       return $locations;
     }
 }

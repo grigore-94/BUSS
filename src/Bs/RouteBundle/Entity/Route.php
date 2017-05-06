@@ -9,6 +9,7 @@
 namespace Bs\RouteBundle\Entity;
 
 use Bs\RouteBundle\Entity\RouteStation;
+use Bs\StationBundle\Entity\Station;
 use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
@@ -47,6 +48,42 @@ class Route
 
 private $buss;
 private $price;
+
+    /**
+     * @return mixed
+     */
+    public function getRoad()
+    {
+        return $this->road;
+    }
+
+    /**
+     * @param mixed $road
+     */
+    public function setRoad($road)
+    {
+        $this->road = $road;
+    }
+
+    /**
+     * @ORM\Column(type="json_array")
+     */private $road;
+
+
+
+    public function getStationsArray(){
+        $array=[];
+        /** @var RouteStation $station */
+        foreach ($this->routeStations as $routeStation) {
+            $item['name']=$routeStation->getStation()->getName();
+            $item['lat']=$routeStation->getStation()->getLat();
+            $item['lng']=$routeStation->getStation()->getLng();
+        $array[]=$item;
+        }
+        return json_encode($array);
+}
+
+
 function getPrice($price) {
   $price=$this->getTotalDistance() * $price;
         return $price;
