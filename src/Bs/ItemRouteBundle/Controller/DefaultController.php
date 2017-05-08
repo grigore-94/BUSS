@@ -33,6 +33,7 @@ class DefaultController extends BaseController
         return $this->render(
             '@BsItemRoute/viewItemRoute.html.twig',
             [
+                'buss'=>$route->getBuss(),
                 'stationsLocation'=>$route->getStationsArray(),
                 'itemRoute'=>$itemRoute,
                 'route' => $route,

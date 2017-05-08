@@ -31,11 +31,7 @@ class RouteStationType extends AbstractType
                     'choice_label' => 'name'
                 ]
             )
-            ->add('distanceFromBackStation', NumberType::class,
-                [
-                    'scale' => 2,
-                ]
-            )
+
             ->add('timeFromBackStation', TimeType::class)
             ->add('position', NumberType::class,
                 [

@@ -49,11 +49,13 @@ class DefaultController extends BaseController
         $totalPrice = $distance * $price->getPrice() * count($booking->getPlaces());
         $booking->setPrice($totalPrice);
         $booking->setTotalDistance($distance);
+        $booking->setItemRoute($itemRoute);
         $this->get('session')->set('booking', $booking);
 
 
         return $this->render('@BsPayment/previewTickets.html.twig',
             [
+                'route'=>$route,
                 'itemRoute' => $itemRoute,
                 'booking' => $booking
 
@@ -88,13 +90,6 @@ class DefaultController extends BaseController
         }
         $itemRoute->setPlaces($allSelectedPlaces);
         $itemRoute->setFreeSeats($itemRoute->getSeats() - count($allSelectedPlaces));
-        $em->persist($itemRoute);
-        $em->flush();
-        $this->get('session')->getFlashBag()->add(
-            'success',
-            'Ticket was successfully .'
-        );
-
 
         return $this->render('@BsPayment/payement.html.twig', ['booking' => $booking]);
 

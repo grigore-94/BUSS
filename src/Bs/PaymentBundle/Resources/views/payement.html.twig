@@ -130,14 +130,11 @@
     </html>
     <script>
         function spiner(this1) {
-$('#spiner').append('<i class="fa fa-spinner fa-spin fa-5x"></i> Processing...',
-function () {
-    setTimeout(function() {
-        alert('sssdss');
+$('#spiner').append('<i class="fa fa-spinner fa-spin fa-5x"></i> Processing...')
 
-    }, 4000);
-});
-
+            var timer = setTimeout(function() {
+                window.location='{{ path('succes_payement') }}'
+            }, 3000);
 
         }
     </script>

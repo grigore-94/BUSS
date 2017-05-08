@@ -40,7 +40,6 @@ class BookController extends BaseController
         $entity->setPlaces($itemRoute->getPlaces());
 
 
-        /*$url = $this->generateUrl('preview_ticket', array('id' => $itemRoute->getId()));*/
         $form = $this->createForm(BookingType::class, $entity);
 
         $form->handleRequest($request);
@@ -52,10 +51,12 @@ class BookController extends BaseController
                     'id'=>$itemRoute->getId()
                 ]);
         }
-
+$route=$itemRoute->getRoute();
         return $this->render(
             '@BsPayment/create_booking.html.twig',
             array(
+                'route' => $route,
+                'stationsLocation'=>$route->getStationsArray(),
                 'routeStations' => $itemRoute->getRoute()->getRouteStations(),
                 'form' => $form->createView(),
             )

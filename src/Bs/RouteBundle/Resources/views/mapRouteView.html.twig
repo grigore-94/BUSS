@@ -74,7 +74,6 @@
         });
 
         {% autoescape false %}
-        var data = {{app.session.get('stationsLocation') }};
         snappedCoordinates= JSON.parse('{{route.road }}');
         locations= JSON.parse('{{stationsLocation }}');
         {% endautoescape %}

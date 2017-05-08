@@ -24,26 +24,26 @@ class Ticket
      * @ORM\Column(type="integer")
      */private $id;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="datetime")
      */private $dateBought;
     /**
      * @ORM\Column(type="float")
      */private $price;
     /**
-     * @ORM\Column(type="string")
-     */private $seatNo;
+     * @ORM\Column(type="array")
+     */private $seatsNo;
     /**
      * @ORM\Column(type="string")
      */private $bussNo;
     /**
      * @ORM\Column(type="string")
-     */private $from;
+     */private $fromStation;
+
     /**
      * @ORM\Column(type="string")
-     */private $to;
+     */private $toStation;
     /**
-     * @ORM\ManyToOne(targetEntity="Bs\PaymentBundle\Entity\Payment", inversedBy="tickets")
-     * @ORM\JoinColumn(name="payment_id", referencedColumnName="id")
+
      */private $payment;
 
     /**
@@ -126,17 +126,17 @@ class Ticket
     /**
      * @return mixed
      */
-    public function getSeatNo()
+    public function getSeatsNo()
     {
-        return $this->seatNo;
+        return $this->seatsNo;
     }
 
     /**
-     * @param mixed $seatNo
+     * @param mixed $seatsNo
      */
-    public function setSeatNo($seatNo)
+    public function setSeatsNo($seatsNo)
     {
-        $this->seatNo = $seatNo;
+        $this->seatsNo = $seatsNo;
     }
 
     /**
@@ -158,34 +158,20 @@ class Ticket
     /**
      * @return mixed
      */
-    public function getFrom()
+    public function getToStation()
     {
-        return $this->from;
+        return $this->toStation;
     }
 
     /**
-     * @param mixed $from
+     * @param mixed $toStation
      */
-    public function setFrom($from)
+    public function setToStation($toStation)
     {
-        $this->from = $from;
+        $this->toStation = $toStation;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getTo()
-    {
-        return $this->to;
-    }
 
-    /**
-     * @param mixed $to
-     */
-    public function setTo($to)
-    {
-        $this->to = $to;
-    }
 
     /**
      * @return mixed
@@ -226,5 +212,20 @@ class Ticket
     public function getItemRoute()
     {
         return $this->itemRoute;
+    }
+    /**
+     * @return mixed
+     */
+    public function getFromStation()
+    {
+        return $this->fromStation;
+    }
+
+    /**
+     * @param mixed $fromStation
+     */
+    public function setFromStation($fromStation)
+    {
+        $this->fromStation = $fromStation;
     }
 }
