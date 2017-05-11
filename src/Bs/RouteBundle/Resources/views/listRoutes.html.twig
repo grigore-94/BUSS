@@ -37,6 +37,8 @@
         {% for route in routes %}
             <tr>
                 <td>
+                    <a class="fa fa-eye" href="{{ path('view_route',{'id':route.id}) }}"></a>
+
                     <a class="fa fa-edit" href="{{ path('edit_route',{'id':route.id}) }}"> </a>
                     <a class="fa fa-trash-o" href="{{ path('delete_route',{'id':route.id}) }}"
                        onclick="return confirm('Do you want to delete this route?')"></a>
@@ -47,7 +49,7 @@
                 <td>{{ route.hourDeparture|date('H:i:s') }}</td>
                 <td>{{ route.hourArive|date('H:i:s') }}</td>
                 <td>
-                    <a class="btn btn-default btn-block" href="{{ path('view_route',{'id':route.id}) }}">{{ route.routeStations|length }}</a>
+                    {{ route.routeStations|length }}
                 </td>
             </tr>
         {% endfor %}

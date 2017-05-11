@@ -72,9 +72,14 @@
             ev.preventDefault();
             return false;
         });
+        debugger;
+        {% set road='{}' %}
 
+        {% if route.road != null %}
+        {% set road=route.road %}
+        {% endif %}
         {% autoescape false %}
-        snappedCoordinates= JSON.parse('{{route.road }}');
+        snappedCoordinates= JSON.parse('{{road }}');
         locations= JSON.parse('{{stationsLocation }}');
         {% endautoescape %}
        debugger;

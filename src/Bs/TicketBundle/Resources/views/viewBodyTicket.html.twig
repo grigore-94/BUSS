@@ -8,7 +8,7 @@
                     <h2>
                         Booking informations:
                     </h2>
-                    <h4>Route : {{ itemRoute.route.from.getUniqueName }} --> {{ itemRoute.route.to.getUniqueName }}</h4>
+                    <h4>Route : {{ ticket.itemRoute.route.from.getUniqueName }} --- {{ ticket.itemRoute.route.to.getUniqueName }}</h4>
                     <h4>Buss : {{ route.busses[0].name }}</h4>
                     <br>
                 </div>
@@ -17,37 +17,37 @@
                 <div class="well">
                     <br>
                     <br>
-                    <h1><img src="https://placeholdit.imgix.net/~text?txtsize=40&txt=We%20will%20go%20home%20(:&w=250&h=180&txttrack=0" class="img-responsive" style="width:100%" alt="Image">
+                    <h1><img src="https://chart.googleapis.com/chart?chl={{ ticket.id }}&chs=150x150&cht=qr&chld=H%7C0" class="img-responsive" style="width:100%" alt="Image">
                     </h1>
                     <br>
                 </div>
             </div>
             <div class="col-sm-8 ">
                 <div class="well">
-                    <p class="date">Date : {{ itemRoute.date|date("m/d/Y") }}</p>
-                    <p class="desc"> Departure : {{ itemRoute.route.hourDeparture|date('H:i') }}</p>
-                    <p class="desc"> Arive : {{ itemRoute.route.hourArive|date('H:i') }} </p>
-                    <p>Trip time: {{ itemRoute.route.totalTime|date('H:i') }} <i class="fa fa-clock-o" aria-hidden="true"></i></p>
-                    <p>Trip distance: {{ booking.totalDistance }}    </p>
-                    <p>Nr Tikets : {{ booking.nrTickets }} </p>
+
+                    <p class="desc"> ID: {{ ticket.id }}</p>
+                    <p class="desc"> Date of purchase: {{ ticket.dateBought |date("m/d/Y") }}</p>
+                    <p class="date">Date : {{ ticket.itemRoute.date|date("m/d/Y") }}</p>
+                    <p class="desc"> Departure : {{ ticket.itemRoute.route.hourDeparture|date('H:i') }}<i class="fa fa-clock-o" aria-hidden="true"></i></p>
+                    <p class="desc"> Arive : {{ ticket.itemRoute.route.hourArive|date('H:i') }}<i class="fa fa-clock-o" aria-hidden="true"></i> </p>
+                    <p>Trip time: {{ ticket.itemRoute.route.totalTime|date('H:i') }} <i class="fa fa-clock-o" aria-hidden="true"></i></p>
+                    <p>Trip distance: {{ ticket.distance }}    </p>
+                    <p>Nr Tikets : {{ticket.seatsNo|length  }} </p>
                     <p>Place(s) :
-                        {% for place in booking.places  %}
+                        {% for place in ticket.seatsNo  %}
                             {{ place }}
                         {% endfor %}
                     </p>
-                    <p>Price : {{ booking.price }} MDL</p>
-                    <p>From Station : {{ booking.fromStation.station.name }} </p>
-                    <p>To Station : {{ booking.toStation.station.name }} </p>
+                    <p>Price : {{ ticket.price }} MDL</p>
+                    <p>From Station : {{ ticket.fromStation }} </p>
+                    <p>To Station : {{ ticket.toStation }} </p>
 
 
                 </div>
             </div>
 
             <div class="col-sm-12">
-                <div class="well">
-                    <a class="btn btn-default btn-block"  href="{{ path('book_ticket',{'id':itemRoute.id}) }}">Paye</a>
 
-                </div>
             </div>
 
 

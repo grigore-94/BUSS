@@ -95,6 +95,47 @@ class DefaultController extends BaseController
 
 
     }
+    /**
+     * @Route("/view/tickets", name="view_tickets")
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function viewAction()
+    {
 
+        $userId = $this->getUser()->getId();
+        $em = $this->getEntityManager();
+
+
+        $user = $em->getRepository('BsUserBundle:User')->find($userId);
+
+      $tickets = $user->getTickets();
+
+        return $this->render('@BsTicket/listTickets.html.twig', ['tickets' => $tickets]);
+
+
+    }
+
+
+    /**
+     * @Route("/show/ticket/{id}", name="show_ticket")
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function viewTicketAction(Request $request, $id)
+    {
+
+
+        $em = $this->getEntityManager();
+
+
+        $ticket = $em->getRepository('BsTicketBundle:Ticket')->find($id);
+
+
+        return $this->render('@BsTicket/viewBodyTicket.html.twig', ['ticket' => $ticket,
+            'route'=>$ticket->getItemRoute()->getRoute(),
+            ]);
+
+
+    }
 
 }

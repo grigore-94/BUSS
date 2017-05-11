@@ -42,9 +42,13 @@ class Ticket
     /**
      * @ORM\Column(type="string")
      */private $toStation;
-    /**
 
-     */private $payment;
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $distance;
+
+     private $payment;
 
     /**
      * @ORM\ManyToOne(targetEntity="Bs\UserBundle\Entity\User", inversedBy="tickets")
@@ -71,6 +75,22 @@ class Ticket
     public function setUser($user)
     {
         $this->user = $user;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDistance()
+    {
+        return $this->distance;
+    }
+
+    /**
+     * @param mixed $distance
+     */
+    public function setDistance($distance)
+    {
+        $this->distance = $distance;
     }
 
 
@@ -105,6 +125,22 @@ class Ticket
     public function setDateBought($dateBought)
     {
         $this->dateBought = $dateBought;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPlaces()
+    {
+        return $this->places;
+    }
+
+    /**
+     * @param mixed $places
+     */
+    public function setPlaces($places)
+    {
+        $this->places = $places;
     }
 
     /**

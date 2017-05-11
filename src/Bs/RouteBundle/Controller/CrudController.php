@@ -28,12 +28,12 @@ class CrudController extends BaseController
     {
         $entity = new \Bs\RouteBundle\Entity\Route();
         $form = $this->createForm(RouteType::class, $entity);
+        $em = $this->getDoctrine()->getManager();
 
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
 
            // value = JSON.parse(value);
-            $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
             $em->flush();
             $this->get('session')->getFlashBag()->add(
@@ -41,12 +41,15 @@ class CrudController extends BaseController
                 'Route was successfully added.'
             );
 
-            return $this->redirectToRoute('admin_homepage');
+            return $this->redirectToRoute('view_routes');
         }
-
+ $stations = $em->getRepository('BsStationBundle:Station')->findAll();
         return $this->render(
             '@BsRoute/add.html.twig',
-            array('form' => $form->createView())
+            array('form' => $form->createView(),
+                'stationsLocation' => $this->getStationsArray($stations),
+                'route'=>$entity,
+            )
         );
     }
 
@@ -86,12 +89,12 @@ class CrudController extends BaseController
         $route=$this->getEntityManager()->getRepository('BsRouteBundle:Route')->find($id);
 
         $form = $this->createForm(RouteType::class, $route);
+        $em = $this->getDoctrine()->getManager();
 
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
 
 
-            $em = $this->getDoctrine()->getManager();
             $em->persist($route);
             $em->flush();
             $this->get('session')->getFlashBag()->add(
@@ -101,14 +104,28 @@ class CrudController extends BaseController
 
             return $this->redirectToRoute('view_routes');
         }
+        $stations = $em->getRepository('BsStationBundle:Station')->findAll();
 
         return $this->render(
             '@BsRoute/add.html.twig',
             array('form' => $form->createView(),
-                'route'=>$route)
+                'route'=>$route,
+                'stationsLocation' => $this->getStationsArray($stations),
+
+            )
         );
 
     }
-
+    public function getStationsArray($stations){
+        $array=[];
+        /** @var RouteStation $station */
+        foreach ($stations as $routeStation) {
+            $item['name']=$routeStation->getName();
+            $item['lat']=$routeStation->getLat();
+            $item['lng']=$routeStation->getLng();
+            $array[]=$item;
+        }
+        return json_encode($array);
+    }
 
 }

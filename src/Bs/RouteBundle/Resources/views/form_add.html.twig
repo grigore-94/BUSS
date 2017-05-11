@@ -7,7 +7,12 @@
 {{ form_row(form.road) }}
 
 <input type="hidden" id="placeIdArray" name="placeIdArray" value="">
-
+<label>Select The road:</label>
+<div id="map" style="height: 600px; width: 1000px;left: 60px;"></div>
+<div id="bar">
+    <p class="auto"><input type="text" id="autoc"/></p>
+    <p><a id="clear" href="#">Click here</a> to clear map.</p>
+</div>
     {% include('@BsRoute/map.html.twig') %}
 
 

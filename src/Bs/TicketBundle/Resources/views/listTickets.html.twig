@@ -1,43 +1,43 @@
 {% extends '::base.html.twig' %}
 {% block body %}
     <div class="col-sm-12  tour-description ">
-    <div class="col-md-8">
-<br>
-<br>
+    <div class="col-md-12">
+        <br>
+        <br>
         <ul class="event-list">
 
 
-            {% for itemRoute in itemRoutes %}
+            {% for ticket in tickets %}
                 <li>
                     <div class="col-md-2 time-pic ">
-                        <span class="time">{{ itemRoute.route.hourDeparture|date("H:i") }}</span>
-                        <span class="date">{{ itemRoute.date|date("m/d/Y") }}</span>
+                        <span class="time">{{ ticket.itemRoute.route.hourDeparture|date("H:i") }}</span>
+                        <span class="date">{{ ticket.itemRoute.date|date("m/d/Y") }}</span>
 
                     </div>
 
                     <div class="col-md-2 ">
-                        <p class="desc"> Departure {{ itemRoute.route.hourDeparture|date('H:i') }}</p>
-                        <p class="desc"> Arive {{ itemRoute.route.hourArive|date('H:i') }} </p>
-                        <p class="desc"> Free place {{ itemRoute.freeSeats }}</p>
 
+                        <p class="desc"> Date of purchase: {{ ticket.dateBought |date("m/d/Y") }}</p>
+                        <p class="desc"> Departure {{ ticket.itemRoute.route.hourDeparture|date('H:i') }}</p>
+                        <p class="desc"> Arive {{ ticket.itemRoute.route.hourArive|date('H:i') }} </p>
                     </div>
                     <div class="info">
-                        <h2 class="title">{{ itemRoute.route.from.uniqueName }}</h2>
-                        <h2 class="title">{{ itemRoute.route.to.uniqueName }} </h2>
-                        <p class="desc"> Trip time : {{ itemRoute.route.totalTime|date('h:i') }} <span
-                                    class="fa fa-clock-o"></span></p>
+                        <h2 class="title">{{ ticket.fromStation }}</h2>
+                        <h2 class="title">{{ ticket.toStation }} </h2>
+                        <p class="desc"> Trip time : {{ ticket.itemRoute.route.totalTime|date('h:i') }} <span  class="fa fa-clock-o"></span>
+
+                        </p>
                         <ul>
-                           <li style="width:33%;">  <a href="{{ path('view_item_itemRute',{'id':itemRoute.id}) }}"><span class="fa fa-eye"></span></a></li>
+                            <li style="width:33%;">  <a href="{{ path('show_ticket',{'id':ticket.id}) }}">Ticket <span class="fa fa-eye"></span></a></li>
+                            <li style="width:33%;">  <a href="{{ path('view_item_itemRute',{'id':ticket.itemRoute.id}) }}">Route<span class="fa fa-eye"></span></a></li>
                             <li style="width:34%;">
-                                <a href={{ path('command_ticket',{'id':itemRoute.id}) }}>{{ itemRoute.route.getPrice(price) }} MDL <span class="fa fa-cart-plus"></span>
+                                 <a href="#"> Price: {{ ticket.price}} MDL
                                 </a>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="social">
-
-                    </div>
+                    <
 
                 </li>
 
@@ -47,14 +47,6 @@
         </ul>
     </div>
 
-    <div class="col-md-4">
-        <div class="order-tour">
-
-
-                {% include('@BsApp/form_searche.html.twig') %}
-
-        </div>
-    </div>
     <style>
         @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
         @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");

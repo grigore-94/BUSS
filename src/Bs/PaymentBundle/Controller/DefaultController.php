@@ -78,6 +78,7 @@ $ticket->setFromStation($booking->getFromStation()->getName());
 $ticket->setToStation($booking->getToStation()->getName());
 $ticket->setDateBought(new \DateTime('now'));
 $ticket->setBussNo($itemRoute->getBuss()->getName());
+$ticket->setDistance($booking->getTotalDistance());
 $em->persist($ticket);
 $em->flush();
         return $this->render(

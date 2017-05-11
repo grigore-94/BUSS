@@ -12,6 +12,9 @@
     var placeIdArray = [];
     var polylines = [];
     var snappedCoordinates = [];
+    var locations = [];
+    var marker=[] ;
+    var infowindow =[];
 
     function initialize() {
         var mapOptions = {
@@ -81,14 +84,51 @@
             return false;
         });
 
-        snappedCoordinates= JSON.parse($('#route_road').val());
+        {% set road='{}' %}
 
+        {% if route.road != null %}
+        {% set road=route.road %}
+        {% endif %}
+        {% autoescape false %}
+        snappedCoordinates= JSON.parse('{{road }}');
+        locations= JSON.parse('{{stationsLocation }}');
+        {% endautoescape %}
+        debugger;
         if (snappedCoordinates){
             drawSnappedPolyline();
         }
+        if (locations) {
+            drawStations();
+        }
 
     }
+    function drawStations() {
+        for (var i=0; i<locations.length;i++){
+            var image = 'http://www.clker.com/cliparts/q/t/n/R/C/j/bus-station-icon-black-white-hi.png';
+            marker[i]  = new google.maps.Marker({
+                position: {lat: locations[i].lat, lng: locations[i].lng},
+                map: map,
+                title: locations[i].title,
+                icon:{
+                    url:image,
+                    size: new google.maps.Size(71, 71),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(17, 34),
+                    scaledSize: new google.maps.Size(25, 25)
+                }
 
+            });
+            infowindow[i] = new google.maps.InfoWindow({
+                content: "<span>Name :"+ locations[i].name+ " </span>"
+            });
+            google.maps.event.addListener(marker[i], 'click', function(i) {
+                return function() {
+                    infowindow[i].open(map, marker[i]);
+                }
+            }(i));
+        }
+
+    }
     // Snap a user-created polyline to roads and draw the snapped path
     function runSnapToRoad(path) {
         var pathValues = [];
@@ -106,7 +146,6 @@ debugger;
             drawSnappedPolyline();
 
 
-            getAndDrawSpeedLimits();
         });
     }
 
@@ -139,84 +178,13 @@ debugger;
         polylines.push(snappedPolyline);
     }
 
-    // Gets speed limits (for 100 segments at a time) and draws a polyline
-    // color-coded by speed limit. Must be called after processing snap-to-road
-    // response.
-    function getAndDrawSpeedLimits() {
-        for (var i = 0; i <= placeIdArray.length / 100; i++) {
-            // Ensure that no query exceeds the max 100 placeID limit.
-            var start = i * 100;
-            var end = Math.min((i + 1) * 100 - 1, placeIdArray.length);
-
-            drawSpeedLimits(start, end);
-        }
-    }
-
-    // Gets speed limits for a 100-segment path and draws a polyline color-coded by
-    // speed limit. Must be called after processing snap-to-road response.
-    function drawSpeedLimits(start, end) {
-        var placeIdQuery = '';
 
 
-        for (var i = start; i < end; i++) {
-            placeIdQuery += '&placeId=' + placeIdArray[i];
-        }
-        $.get('https://roads.googleapis.com/v1/speedLimits',
-            'key=' + apiKey + placeIdQuery,
-            function(speedData) {
 
-                processSpeedLimitResponse(speedData, start);
-            }
-        );
-    }
 
-    // Draw a polyline segment (up to 100 road segments) color-coded by speed limit.
-    function processSpeedLimitResponse(speedData, start) {
-        var end = start + speedData.speedLimits.length;
-        for (var i = 0; i < speedData.speedLimits.length - 1; i++) {
-            var speedLimit = speedData.speedLimits[i].speedLimit;
-            var color = getColorForSpeed(speedLimit);
-
-            // Take two points for a single-segment polyline.
-            var coords = snappedCoordinates.slice(start + i, start + i + 2);
-
-            var snappedPolyline = new google.maps.Polyline({
-                path: coords,
-                strokeColor: color,
-                strokeWeight: 6
-            });
-            snappedPolyline.setMap(map);
-            polylines.push(snappedPolyline);
-        }
-    }
-
-    function getColorForSpeed(speed_kph) {
-        if (speed_kph <= 40) {
-            return 'purple';
-        }
-        if (speed_kph <= 50) {
-            return 'blue';
-        }
-        if (speed_kph <= 60) {
-            return 'green';
-        }
-        if (speed_kph <= 80) {
-            return 'yellow';
-        }
-        if (speed_kph <= 100) {
-            return 'orange';
-        }
-        return 'red';
-    }
 
     $(window).load(initialize);
 
 </script>
 
 
-<label>Select The road:</label>
-<div id="map" style="height: 600px; width: 1000px;left: 60px;"></div>
-<div id="bar">
-    <p class="auto"><input type="text" id="autoc"/></p>
-    <p><a id="clear" href="#">Click here</a> to clear map.</p>
-</div>
