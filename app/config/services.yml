@@ -13,3 +13,7 @@ services:
         arguments: ["@doctrine.orm.entity_manager"]
         tags:
           - {name: form.type, alias: search_route}
+
+    app.mailer:
+            class: AppBundle\Mailer\Mailer
+            arguments: ['@mailer','@twig','%mailer_params%']
