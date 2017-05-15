@@ -29,9 +29,9 @@ class RouteStation
      */
     private $station;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="float")
      */
-    private $distanceFromBackStation;
+    private $distanceFromBackStation=0;
 
     /**
      * @ORM\Column(type="time")

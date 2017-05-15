@@ -73,7 +73,7 @@ class Location
      */
     public function getUniqueName()
     {
-        return sprintf('%s - %s', $this->city, $this->region);
+        return sprintf('%s ( %s )', $this->city, $this->region);
     }
 
     /**

@@ -1,15 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: gbrodicico
- * Date: 2/20/2017
- * Time: 1:27 PM
- */
 
-namespace AppBundle\Mailer;
+namespace Bs\AppBundle\Mailer;
 
 
 
+
+use Bs\RouteBundle\Entity\Route;
+use Bs\TicketBundle\Entity\Ticket;
+use Doctrine\ORM\EntityNotFoundException;
+use Swift_Message;
+use Symfony\Component\Config\Definition\Exception\Exception;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class Mailer
 {
@@ -25,100 +26,51 @@ class Mailer
      */
     protected $twig;
 
+    protected $container;
+
     /**
      * Mailer constructor.
      * @param \Swift_Mailer $mailer
      * @param \Twig_Environment $twig
      * @param $params
+     * @param ContainerInterface $container
      */
-    public function __construct(\Swift_Mailer $mailer, \Twig_Environment $twig, $params)
+    public function __construct(\Swift_Mailer $mailer, \Twig_Environment $twig, $params,ContainerInterface $container)
     {
         $this->mailer = $mailer;
         $this->params = $params;
         $this->twig = $twig;
+        $this->container=$container;
 
     }
 
+
     /**
-     * @param Job $job
+     * @param Ticket $ticket
+     * @param Route $route
+     * @param string $email
      */
-    public function sendJobEmailOnNewJob($job)
+    public function sendTicketEmail($ticket, $route, $email,$view)
     {
 
-        $bodyHtml = $this->twig->render(
-            'email/email_job.html.twig',
-            array('job' => $job)
-        );
-        $bodytext = $this->twig->render(
-            'email/email_job.text.twig',
-            array('job' => $job)
-        );
-        $mail = \Swift_Message::newInstance();
+
+
+        $mail = Swift_Message::newInstance();
 
         $mail
             ->setFrom($this->params['from_email'], $this->params['from_name'])
-            ->setTo($job->getEmail())
+            ->setTo($email)
             ->setSubject(
-                'Edit Your job Position :'.$job->getPosition()
+                'Your ticket for Route :'. $route->getFrom()->getUniqueName(). 'to' . $route->getTo()->getUniqueName()
             )
-            ->setBody($bodyHtml, 'text/html')
-            ->addPart($bodytext, 'text/plain');
+          //  ->attach($a)
+            ->setBody($view, 'text/html');
+
 
         //->setContentType('text/html');
 
         $this->mailer->send($mail);
     }
 
-    /**
-     * @param Affiliate $affiliate
-     * @param string $subject
-     */
-    public function sendAffiliateEmail($affiliate, $subject)
-    {
 
-        $bodyHtml = $this->twig->render(
-            'email/email_affiliate.html.twig',
-            array('affiliate' => $affiliate)
-        );
-        $bodytext = $this->twig->render(
-            'email/email_affiliate.text.twig',
-            array('affiliate' => $affiliate)
-        );
-        $mail = \Swift_Message::newInstance();
-
-        $mail
-            ->setFrom($this->params['from_email'], $this->params['from_name'])
-            ->setTo($affiliate->getEmail())
-            ->setSubject(
-                $subject
-            )
-            ->setBody($bodyHtml, 'text/html')
-            ->addPart($bodytext, 'text/plain');
-
-        //->setContentType('text/html');
-
-        $this->mailer->send($mail);
-    }
-
-    /**
-     * @param Affiliate $affiliate
-     * @param string $subject
-     */
-    public function sendAffiliateDeactivationEmail($affiliate, $subject)
-    {
-
-
-        $mail = \Swift_Message::newInstance();
-
-        $mail
-            ->setFrom($this->params['from_email'], $this->params['from_name'])
-            ->setTo($affiliate->getEmail())
-            ->setSubject(
-                $subject
-            )
-            ->setBody($subject, 'text/html');
-
-
-        $this->mailer->send($mail);
-    }
 }

@@ -8,6 +8,7 @@ use Bs\ItemRouteBundle\Entity\ItemRoute;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
+use AppBundle\Mailer\Mailer;
 
 class DefaultController extends BaseController
 {
@@ -79,11 +80,11 @@ class DefaultController extends BaseController
     }
 
     /**
-     * @Route("/admin", name="admin_homepage")
+     * @Route("admin", name="admin_homepage")
      */
     public function indexAdminAction()
     {
-        return $this->render('default/admin_index.html.twig');
+        return $this->redirectToRoute('view_routes');
     }
 
     /**

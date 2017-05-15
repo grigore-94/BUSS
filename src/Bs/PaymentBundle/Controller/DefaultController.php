@@ -9,6 +9,7 @@ use Bs\TicketBundle\Entity\Ticket;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends BaseController
 {
@@ -81,6 +82,21 @@ $ticket->setBussNo($itemRoute->getBuss()->getName());
 $ticket->setDistance($booking->getTotalDistance());
 $em->persist($ticket);
 $em->flush();
+
+
+
+$view = $this->renderView('@BsTicket/email_ticket.html.twig',
+    array('ticket' => $ticket,
+        'route'=>$itemRoute->getRoute())
+);
+
+
+
+
+
+
+        $this->get('app.mailer')
+            ->sendTicketEmail($ticket,$itemRoute->getRoute(),'gr.brodicico@gmail.com',$view);
         return $this->render(
             '@BsPayment/succesPage.hmtl.twig',
             array(

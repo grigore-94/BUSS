@@ -2,23 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e34b1ac5-d3e5-4983-8501-907c82e8d6ab" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bs/TicketBundle/Resources/views/listTickets.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/adminMap.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bs/TicketBundle/Resources/views/email_ticket.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/BUSS.iml" afterPath="$PROJECT_DIR$/.idea/BUSS.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/admin_base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/admin_base.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/parameters.yml.dist" afterPath="$PROJECT_DIR$/app/config/parameters.yml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/services.yml" afterPath="$PROJECT_DIR$/app/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/AppBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Bs/AppBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/AppBundle/Mailer/Mailer.php" afterPath="$PROJECT_DIR$/src/Bs/AppBundle/Mailer/Mailer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/CityBundle/Entity/Location.php" afterPath="$PROJECT_DIR$/src/Bs/CityBundle/Entity/Location.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/CityBundle/Resources/views/listLocation.html.twig" afterPath="$PROJECT_DIR$/src/Bs/CityBundle/Resources/views/listLocation.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/ItemRouteBundle/Resources/views/listItemRoutes.html.twig" afterPath="$PROJECT_DIR$/src/Bs/ItemRouteBundle/Resources/views/listItemRoutes.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/PaymentBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Bs/PaymentBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/Price/add.html.twig" afterPath="$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/Price/add.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/previewTickets.html.twig" afterPath="$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/previewTickets.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/RouteBundle/Controller/CrudController.php" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Controller/CrudController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/PaymentBundle/Entity/Price.php" afterPath="$PROJECT_DIR$/src/Bs/PaymentBundle/Entity/Price.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/PaymentBundle/Form/BookingType.php" afterPath="$PROJECT_DIR$/src/Bs/PaymentBundle/Form/BookingType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/form_add_booking.html.twig" afterPath="$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/form_add_booking.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/RouteBundle/Entity/Route.php" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Entity/Route.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/RouteBundle/Entity/RouteStation.php" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Entity/RouteStation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/form_add.html.twig" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/form_add.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/listRoutes.html.twig" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/listRoutes.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/map.html.twig" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/map.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/mapRouteView.html.twig" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/mapRouteView.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/viewRoute.html.twig" afterPath="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/viewRoute.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/TicketBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Bs/TicketBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/StationBundle/Entity/Station.php" afterPath="$PROJECT_DIR$/src/Bs/StationBundle/Entity/Station.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/listStations.html.twig" afterPath="$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/listStations.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/TicketBundle/Entity/Ticket.php" afterPath="$PROJECT_DIR$/src/Bs/TicketBundle/Entity/Ticket.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/TicketBundle/Resources/views/viewBodyTicket.html.twig" afterPath="$PROJECT_DIR$/src/Bs/TicketBundle/Resources/views/viewBodyTicket.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bs/TicketBundle/Resources/views/listTickets.html.twig" afterPath="$PROJECT_DIR$/src/Bs/TicketBundle/Resources/views/listTickets.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/SymfonyRequirements.php" afterPath="$PROJECT_DIR$/var/SymfonyRequirements.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/config.php" afterPath="$PROJECT_DIR$/web/config.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -130,60 +143,33 @@
       <file leaf-file-name="viewRoute.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/viewRoute.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="151" column="0" lean-forward="false" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
-              <folding>
-                <element signature="e#1363#1373#0#Twig" expanded="false" />
-                <element signature="e#1621#1633#0#Twig" expanded="false" />
-                <element signature="e#1919#1936#0#Twig" expanded="false" />
-                <element signature="e#2169#2186#0#Twig" expanded="false" />
-                <element signature="e#2409#2423#0#Twig" expanded="false" />
-                <element signature="e#4268#4286#0#Twig" expanded="false" />
-                <element signature="e#4437#4457#0#Twig" expanded="false" />
-                <element signature="e#5162#5174#0#Twig" expanded="false" />
-                <element signature="e#5363#5382#0#Twig" expanded="false" />
-                <element signature="e#5780#5791#0#Twig" expanded="false" />
-                <element signature="e#5974#5991#0#Twig" expanded="false" />
-                <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#6585#6616#0#Twig" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form_add.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/form_add.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-              <folding>
-                <element signature="e#346#394#0#HTML" expanded="true" />
-                <element signature="e#559#581#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CrudController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Controller/CrudController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-              <folding>
-                <element signature="e#1230#1243#1#PHP" expanded="true" />
-                <element signature="e#1288#1313#1#PHP" expanded="true" />
-                <element signature="e#3125#3150#1#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RouteStation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Entity/RouteStation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+            <state relative-caret-position="166">
+              <caret line="148" column="8" lean-forward="false" selection-start-line="148" selection-start-column="8" selection-end-line="158" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_base.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/admin_base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="91" column="59" lean-forward="false" selection-start-line="91" selection-start-column="59" selection-end-line="91" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Bs/AppBundle/Controller/DefaultController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="86" column="44" lean-forward="false" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
+              <folding>
+                <element signature="e#984#1005#1#PHP" expanded="true" />
+                <element signature="e#2247#2286#0#PHP" expanded="true" />
+                <element signature="e#2665#2691#1#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -191,49 +177,11 @@
       <file leaf-file-name="RouteController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Controller/RouteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="57" column="36" lean-forward="false" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Route.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Entity/Route.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="73" column="3" lean-forward="false" selection-start-line="73" selection-start-column="3" selection-end-line="83" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/add.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="map.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/map.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-93">
-              <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mapRouteView.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/mapRouteView.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="2" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="16" selection-end-column="23" />
-              <folding />
+            <state relative-caret-position="103">
+              <caret line="34" column="13" lean-forward="false" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+              <folding>
+                <element signature="e#1785#1820#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -241,13 +189,64 @@
       <file leaf-file-name="listRoutes.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/listRoutes.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listStations.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/listStations.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listLocation.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Bs/CityBundle/Resources/views/listLocation.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/default/admin_index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
               <folding>
-                <element signature="e#1126#1136#0#Twig" expanded="false" />
-                <element signature="e#1222#1232#0#Twig" expanded="false" />
-                <element signature="e#1321#1333#0#Twig" expanded="false" />
+                <element signature="e#12#34#0#Twig" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="previewTickets.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/previewTickets.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="28" column="136" lean-forward="false" selection-start-line="28" selection-start-column="136" selection-end-line="28" selection-end-column="136" />
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
+                <element signature="e#2265#2276#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adminMap.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/adminMap.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -256,36 +255,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$</find>
-      <find>liste</find>
-      <find>asset</find>
-      <find>$(</find>
-      <find>routesta</find>
-      <find>infowindows</find>
-      <find>.wrap #side-menu</find>
-      <find>g</find>
-      <find>get</find>
-      <find>getapi</find>
-      <find>acti</find>
-      <find>book/ticket/itemRoute/</find>
-      <find>preview/ticket/</find>
-      <find>previe</find>
-      <find>getS</find>
-      <find>from</find>
-      <find>to</find>
-      <find>itemRoute</find>
-      <find>book/ticket/</find>
-      <find>bookin</find>
-      <find>booking</find>
-      <find>places</find>
-      <find>new</find>
-      <find>new Ti</find>
-      <find>new</find>
-      <find>bu</find>
-      <find>new Tic</find>
-      <find>Select Price</find>
-      <find>dista</find>
-      <find>stationsLocation</find>
+      <find>trip</find>
+      <find>view/route</find>
+      <find>date(&quot;H:i&quot;)</find>
+      <find>date(&quot;:i&quot;)</find>
+      <find>date(&quot;h:i&quot;)</find>
+      <find>date&quot;h:i&quot;)</find>
+      <find>dat&quot;h:i&quot;)</find>
+      <find>da&quot;h:i&quot;)</find>
+      <find>d&quot;h:i&quot;)</find>
+      <find>&quot;h:i&quot;)</find>
+      <find>&quot;h:i&quot;)</find>
+      <find>&quot;h:i&quot;</find>
+      <find>/</find>
+      <find>/adm</find>
+      <find>/admin</find>
+      <find>h</find>
+      <find>home</find>
+      <find>home_</find>
+      <find>home_ad</find>
+      <find>home_a</find>
+      <find>a</find>
+      <find>admin</find>
+      <find>admin_</find>
+      <find>admin_h</find>
+      <find>sta</find>
+      <find>admin_homepage</find>
+      <find>re</find>
+      <find>redire</find>
+      <find>admin/view/station</find>
+      <find>admin/view/location</find>
     </findStrings>
     <replaceStrings>
       <replace>asset</replace>
@@ -325,20 +324,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Bs/CityBundle/Entity/Location.php" />
-        <option value="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/RouteStation/add.html.twig" />
-        <option value="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/RouteStation/edit.html.twig" />
-        <option value="$PROJECT_DIR$/src/Bs/BussBundle/Resources/views/add.html.twig" />
-        <option value="$PROJECT_DIR$/src/Bs/DriverBundle/Resources/views/add.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/admin_base.html.twig" />
-        <option value="$PROJECT_DIR$/src/Bs/AppBundle/Resources/views/form_searche.html.twig" />
-        <option value="$PROJECT_DIR$/web/color-box/color-style.css" />
-        <option value="$PROJECT_DIR$/web/color-box/color-js.js" />
-        <option value="$PROJECT_DIR$/web/css/style.css" />
-        <option value="$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/confirmPage.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/default/contact.html.twig" />
-        <option value="$PROJECT_DIR$/src/Bs/CityBundle/Resources/views/CRUD/add.html.twig" />
-        <option value="$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/add.html.twig" />
         <option value="$PROJECT_DIR$/src/Bs/StationBundle/Form/StationType.php" />
         <option value="$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/form_add.html.twig" />
         <option value="$PROJECT_DIR$/src/Bs/StationBundle/Entity/Station.php" />
@@ -359,23 +344,37 @@
         <option value="$PROJECT_DIR$/src/Bs/PaymentBundle/Controller/BookController.php" />
         <option value="$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/payement.html.twig" />
         <option value="$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/succesPage.hmtl.twig" />
-        <option value="$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/form_add_booking.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/src/Bs/TicketBundle/Entity/Ticket.php" />
-        <option value="$PROJECT_DIR$/src/Bs/PaymentBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/Bs/TicketBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/src/Bs/TicketBundle/Resources/views/listTickets.html.twig" />
         <option value="$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/previewTickets.html.twig" />
         <option value="$PROJECT_DIR$/src/Bs/TicketBundle/Resources/views/viewBodyTicket.html.twig" />
         <option value="$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/Price/add.html.twig" />
-        <option value="$PROJECT_DIR$/src/Bs/ItemRouteBundle/Resources/views/listItemRoutes.html.twig" />
         <option value="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/viewRoute.html.twig" />
-        <option value="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/listRoutes.html.twig" />
         <option value="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/form_add.html.twig" />
         <option value="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/mapRouteView.html.twig" />
         <option value="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/map.html.twig" />
         <option value="$PROJECT_DIR$/src/Bs/RouteBundle/Entity/RouteStation.php" />
         <option value="$PROJECT_DIR$/src/Bs/RouteBundle/Controller/CrudController.php" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml.dist" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/Bs/TicketBundle/Resources/views/email_ticket.html.twig" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/AppKernel.php" />
+        <option value="$PROJECT_DIR$/app/config/services.yml" />
+        <option value="$PROJECT_DIR$/src/Bs/TicketBundle/Resources/views/listTickets.html.twig" />
+        <option value="$PROJECT_DIR$/src/Bs/ItemRouteBundle/Resources/views/listItemRoutes.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/Bs/PaymentBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/Bs/AppBundle/Mailer/Mailer.php" />
+        <option value="$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/form_add_booking.html.twig" />
+        <option value="$PROJECT_DIR$/src/Bs/PaymentBundle/Form/BookingType.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/admin_base.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/default/admin_index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Bs/AppBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/listRoutes.html.twig" />
+        <option value="$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/listStations.html.twig" />
+        <option value="$PROJECT_DIR$/src/Bs/CityBundle/Resources/views/listLocation.html.twig" />
       </list>
     </option>
   </component>
@@ -448,12 +447,14 @@
       <path value="$PROJECT_DIR$/vendor/jms/parser-lib" />
       <path value="$PROJECT_DIR$/vendor/sensio/generator-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1604" />
+    <option name="width" value="1616" />
     <option name="height" value="876" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -533,7 +534,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -622,7 +623,133 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RouteBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PaymentBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PaymentBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -662,9 +789,27 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BUSS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -677,19 +822,19 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\BUSS\src\Bs\PaymentBundle\Resources\views\Price" />
-      <recent name="E:\BUSS\src\Bs\PaymentBundle\Form" />
-      <recent name="E:\BUSS\src\Bs\PaymentBundle\Model" />
-      <recent name="E:\BUSS\src\Bs\AppBundle\Resources\views\Default" />
-      <recent name="E:\BUSS\src\Bs\AppBundle\Form" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\BUSS\src\Bs\PaymentBundle\Entity" />
       <recent name="E:\BUSS\src\Bs\RouteBundle\Repository" />
       <recent name="E:\BUSS\src\Bs\DriverBundle\Resources\views" />
       <recent name="E:\BUSS\src\Bs\DriverBundle\Repository" />
       <recent name="E:\BUSS\src\Bs\BussBundle\Repository" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\BUSS\src\Bs\PaymentBundle\Resources\views\Price" />
+      <recent name="E:\BUSS\src\Bs\PaymentBundle\Form" />
+      <recent name="E:\BUSS\src\Bs\PaymentBundle\Model" />
+      <recent name="E:\BUSS\src\Bs\AppBundle\Resources\views\Default" />
+      <recent name="E:\BUSS\src\Bs\AppBundle\Form" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -830,7 +975,8 @@
       <workItem from="1492717151532" duration="1912000" />
       <workItem from="1492851933523" duration="155763000" />
       <workItem from="1494059438874" duration="45192000" />
-      <workItem from="1494269731032" duration="21333000" />
+      <workItem from="1494269731032" duration="21780000" />
+      <workItem from="1494786296849" duration="16425000" />
     </task>
     <task id="LOCAL-00001" summary="Book ticket">
       <created>1493240095427</created>
@@ -878,7 +1024,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="376487000" />
+    <option name="totallyTimeSpent" value="393359000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -890,20 +1036,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1604" height="876" extended-state="0" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25129533" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2525707" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970026" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32966322" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44166666" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2651413" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26379544" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2987887" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2987887" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4535666" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4064603" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1019,7 +1165,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/Bs/AppBundle/Controller/DefaultController.php</url>
-          <line>53</line>
+          <line>54</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -1034,7 +1180,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/Bs/AppBundle/Controller/DefaultController.php</url>
-          <line>48</line>
+          <line>49</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -1044,7 +1190,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/Bs/PaymentBundle/Form/BookingType.php</url>
-          <line>78</line>
+          <line>73</line>
           <option name="timeStamp" value="74" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -1109,7 +1255,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/Bs/AppBundle/Controller/DefaultController.php</url>
-          <line>30</line>
+          <line>31</line>
           <option name="timeStamp" value="109" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -1127,452 +1273,33 @@
           <line>80</line>
           <option name="timeStamp" value="113" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Bs/PaymentBundle/Controller/DefaultController.php</url>
+          <line>83</line>
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Bs/AppBundle/Mailer/Mailer.php</url>
+          <line>39</line>
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="114" />
+      <option name="time" value="120" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="app_dev.php">
+        <watch expression="$e-&gt;message" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/css/font-awesome.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2533">
-          <caret line="3" column="22011" lean-forward="false" selection-start-line="3" selection-start-column="22011" selection-end-line="3" selection-end-column="22011" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/form_add.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="33" column="34" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/adminPage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="65" column="13" lean-forward="false" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Repository/RouteStationRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/StationBundle/Entity/Station.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="167" column="0" lean-forward="false" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-          <folding>
-            <element signature="e#7#236#0#PHP" expanded="false" />
-            <element signature="e#279#354#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/AppBundle/Controller/BaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/StationBundle/Controller/CrudController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="84" column="58" lean-forward="false" selection-start-line="84" selection-start-column="58" selection-end-line="84" selection-end-column="58" />
-          <folding>
-            <element signature="e#130#173#0#PHP" expanded="true" />
-            <element signature="e#1688#1711#1#PHP" expanded="true" />
-            <element signature="e#2300#2315#1#PHP" expanded="true" />
-            <element signature="e#3856#3879#1#PHP" expanded="true" />
-            <element signature="e#5859#5882#1#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Debug/ErrorHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="640" column="0" lean-forward="false" selection-start-line="640" selection-start-column="0" selection-end-line="640" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Debug/DebugClassLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Controller/RouteStationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
-          <folding>
-            <element signature="e#883#904#1#PHP" expanded="true" />
-            <element signature="e#1447#1459#0#PHP" expanded="true" />
-            <element signature="e#1847#1875#1#PHP" expanded="true" />
-            <element signature="e#2671#2699#1#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/AppBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#43#76#0#PHP" expanded="true" />
-            <element signature="e#955#976#1#PHP" expanded="true" />
-            <element signature="e#1188#1217#1#PHP" expanded="true" />
-            <element signature="e#2150#2173#1#PHP" expanded="true" />
-            <element signature="e#2218#2257#0#PHP" expanded="true" />
-            <element signature="e#2513#2545#0#PHP" expanded="true" />
-            <element signature="e#2636#2662#1#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Repository/RouteRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Form/RouteStationType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#88#0#PHP" expanded="false" />
-            <element signature="e#123#162#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/RouteStation/add.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/RouteStation/form_add.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/RouteStation/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/RouteStation/form_edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="e#20#59#0#Twig" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/ItemRouteBundle/Resources/views/viewItemRoute.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="e#4418#4449#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/BussBundle/Entity/Buss.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/create_booking.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="45" lean-forward="false" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
-          <folding>
-            <element signature="e#12#28#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/var/cache/dev/classes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="441" column="0" lean-forward="false" selection-start-line="441" selection-start-column="0" selection-end-line="441" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/payement.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="135" column="53" lean-forward="false" selection-start-line="135" selection-start-column="53" selection-end-line="135" selection-end-column="53" />
-          <folding>
-            <element signature="e#12#28#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="411" column="0" lean-forward="false" selection-start-line="411" selection-start-column="0" selection-end-line="411" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/UserBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-663">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/ItemRouteBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="25" column="54" lean-forward="false" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/succesPage.hmtl.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/PaymentBundle/Model/Booking.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1530">
-          <caret line="38" column="19" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/PaymentBundle/Controller/BookController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="e#1510#1526#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/PaymentBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="80" column="51" lean-forward="false" selection-start-line="80" selection-start-column="51" selection-end-line="80" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/TicketBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="118" column="7" lean-forward="false" selection-start-line="118" selection-start-column="7" selection-end-line="118" selection-end-column="7" />
-          <folding>
-            <element signature="e#2182#2219#0#PHP" expanded="true" />
-            <element signature="e#3646#3665#1#PHP" expanded="true" />
-            <element signature="e#3752#3785#0#PHP" expanded="true" />
-            <element signature="e#4118#4141#1#PHP" expanded="true" />
-            <element signature="e#4186#4222#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="178" column="62" lean-forward="false" selection-start-line="178" selection-start-column="62" selection-end-line="178" selection-end-column="62" />
-          <folding>
-            <element signature="e#6082#6090#0#Twig" expanded="true" />
-            <element signature="e#7704#7711#0#Twig" expanded="true" />
-            <element signature="e#7774#7788#0#Twig" expanded="true" />
-            <element signature="e#8295#8307#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/TicketBundle/Entity/Ticket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/form_add_booking.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/TicketBundle/Resources/views/listTickets.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#12#28#0#Twig" expanded="true" />
-            <element signature="e#1365#1376#0#Twig" expanded="true" />
-            <element signature="e#1480#1498#0#HTML" expanded="false" />
-            <element signature="e#1519#1537#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/previewTickets.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="28" column="136" lean-forward="false" selection-start-line="28" selection-start-column="136" selection-end-line="28" selection-end-column="136" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-            <element signature="e#2265#2276#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/TicketBundle/Resources/views/viewBodyTicket.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding>
-            <element signature="e#800#818#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/Price/add.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/viewRouteAdmin.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/ItemRouteBundle/Resources/views/listItemRoutes.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="29" column="146" lean-forward="false" selection-start-line="29" selection-start-column="115" selection-end-line="29" selection-end-column="146" />
-          <folding>
-            <element signature="e#12#28#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Controller/RouteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="57" column="36" lean-forward="false" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/viewRoute.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="151" column="0" lean-forward="false" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
-          <folding>
-            <element signature="e#1363#1373#0#Twig" expanded="false" />
-            <element signature="e#1621#1633#0#Twig" expanded="false" />
-            <element signature="e#1919#1936#0#Twig" expanded="false" />
-            <element signature="e#2169#2186#0#Twig" expanded="false" />
-            <element signature="e#2409#2423#0#Twig" expanded="false" />
-            <element signature="e#4268#4286#0#Twig" expanded="false" />
-            <element signature="e#4437#4457#0#Twig" expanded="false" />
-            <element signature="e#5162#5174#0#Twig" expanded="false" />
-            <element signature="e#5363#5382#0#Twig" expanded="false" />
-            <element signature="e#5780#5791#0#Twig" expanded="false" />
-            <element signature="e#5974#5991#0#Twig" expanded="false" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#6585#6616#0#Twig" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/listRoutes.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#1126#1136#0#Twig" expanded="false" />
-            <element signature="e#1222#1232#0#Twig" expanded="false" />
-            <element signature="e#1321#1333#0#Twig" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Entity/RouteStation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Entity/Route.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="73" column="3" lean-forward="false" selection-start-line="73" selection-start-column="3" selection-end-line="83" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1589,17 +1316,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-          <folding>
-            <element signature="e#346#394#0#HTML" expanded="true" />
-            <element signature="e#559#581#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/map.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-93">
-          <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1614,13 +1330,484 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Controller/CrudController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
+        <state relative-caret-position="1734">
           <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
           <folding>
-            <element signature="e#1230#1243#1#PHP" expanded="true" />
-            <element signature="e#1288#1313#1#PHP" expanded="true" />
-            <element signature="e#3125#3150#1#PHP" expanded="true" />
+            <element signature="e#6#87#0#PHP" expanded="false" />
+            <element signature="e#128#171#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/TicketBundle/Resources/views/viewBodyTicket.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/PaymentBundle/Controller/BookController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="45" column="35" lean-forward="false" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Mailer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/AppBundle/Form/SearchType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/TicketBundle/Resources/views/email_ticket.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#h1#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/CityBundle/Entity/Location.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="73" column="33" lean-forward="false" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/ItemRouteBundle/Entity/ItemRoute.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="177" column="0" lean-forward="false" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/xampp/phpMyAdmin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <marker date="1480977388000" expanded="true" signature="4047:4074" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="25" column="47" lean-forward="false" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+          <folding>
+            <marker date="1494869515538" expanded="true" signature="480:1188" ph="{&quot;php&quot;: &quot;&gt;=5.5.9&quot;...}" />
+            <marker date="1494869515538" expanded="true" signature="1209:1300" ph="{&quot;sensio/generator-bundle&quot;: &quot;^3.0&quot;...}" />
+            <marker date="1494869515538" expanded="true" signature="1317:2048" ph="{...}" />
+            <marker date="1494869515538" expanded="true" signature="1346:1899" ph="[...]" />
+            <marker date="1494869515538" expanded="true" signature="1929:1971" ph="[...]" />
+            <marker date="1494869515538" expanded="true" signature="2064:2161" ph="{&quot;sort-packages&quot;: true...}" />
+            <marker date="1494869515538" expanded="true" signature="2086:2124" ph="{&quot;php&quot;: &quot;5.5.9&quot;...}" />
+            <marker date="1494869515538" expanded="true" signature="2430:2489" ph="{&quot;file&quot;: &quot;app/config/parameters.yml&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="39" column="24" lean-forward="false" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Entity/RouteStation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Repository/RouteRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/DriverBundle/Entity/Driver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/viewRouteAdmin.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="33" lean-forward="false" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/ItemRouteBundle/Resources/views/viewItemRoute.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="44" lean-forward="false" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+          <folding>
+            <element signature="e#4418#4449#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/AppBundle/Controller/SearchController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-172">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/ItemRouteBundle/Resources/views/listItemRoutes.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="26" column="89" lean-forward="false" selection-start-line="26" selection-start-column="89" selection-end-line="26" selection-end-column="89" />
+          <folding>
+            <element signature="e#12#28#0#Twig" expanded="true" />
+            <element signature="e#1294#1312#0#HTML" expanded="false" />
+            <element signature="e#1333#1351#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Entity/Route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="88" column="18" lean-forward="false" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app_dev.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/cache/dev/classes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="4184" column="0" lean-forward="false" selection-start-line="4184" selection-start-column="0" selection-end-line="4184" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Debug/ErrorHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="518" column="0" lean-forward="false" selection-start-line="518" selection-start-column="0" selection-end-line="518" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#236#0#PHP" expanded="false" />
+            <element signature="e#274#295#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/PaymentBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="107" column="5" lean-forward="false" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+          <folding>
+            <element signature="e#47#90#0#PHP" expanded="true" />
+            <element signature="e#2809#2843#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/AppBundle/Mailer/Mailer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <element signature="e#42#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/TicketBundle/Resources/views/listTickets.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="89" lean-forward="false" selection-start-line="26" selection-start-column="89" selection-end-line="26" selection-end-column="101" />
+          <folding>
+            <element signature="e#12#28#0#Twig" expanded="true" />
+            <element signature="e#1365#1376#0#Twig" expanded="true" />
+            <element signature="e#1519#1537#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/form_add_booking.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-191">
+          <caret line="64" column="5" lean-forward="false" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/PaymentBundle/Form/BookingType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/AppBundle/Controller/BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/DriverBundle/Controller/DriverController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="20" column="15" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+          <folding>
+            <element signature="e#46#89#0#PHP" expanded="false" />
+            <element signature="e#396#436#1#PHP" expanded="false" />
+            <element signature="e#737#760#1#PHP" expanded="false" />
+            <element signature="e#841#864#1#PHP" expanded="false" />
+            <element signature="e#930#963#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/cache/dev/twig/da/dadf018193695f783b2d7c34c9e629d1dda0731248467a190ea0f7a63abf95e4.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="726" column="53" lean-forward="false" selection-start-line="726" selection-start-column="39" selection-end-line="726" selection-end-column="53" />
+          <folding>
+            <marker date="1494870450999" expanded="true" signature="1434:1658" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="1441:1658" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="4501:5852" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="4603:5852" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="4714:4901" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="4973:5079" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="5152:5410" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="5487:5745" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="5828:5852" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="7287:7311" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="8777:9650" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="8807:9650" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="8835:9650" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="8872:9545" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="8911:9526" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="9582:9650" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="9619:9650" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="10282:10301" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="10338:10397" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="10766:10843" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="11637:11914" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="11676:11914" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="11716:11914" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="11855:11914" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="12098:13238" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="12146:13216" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="12498:13190" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="12557:13160" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="12759:13126" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="12824:13088" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="13259:13442" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="13316:13420" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="13496:13670" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="13551:13648" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="14303:14720" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="14399:14509" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="14434:14505" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="14576:14720" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="15604:15747" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="15634:15747" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="16214:17412" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="16244:17402" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="16279:17391" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="16447:17206" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="16483:17186" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="16528:16644" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="16689:16993" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="16801:16903" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="17038:17163" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="17249:17337" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="17269:17318" ph="..." />
+            <marker date="1494870450999" expanded="true" signature="23682:23757" ph="{...}" />
+            <marker date="1494870450999" expanded="true" signature="23729:23757" ph="{&quot;source&quot;: \&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="168" column="41" lean-forward="false" selection-start-line="168" selection-start-column="41" selection-end-line="168" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/BussBundle/Controller/CrudController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="45" column="49" lean-forward="false" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/map.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/adminMap.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/PaymentBundle/Resources/views/previewTickets.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="136" lean-forward="false" selection-start-line="28" selection-start-column="136" selection-end-line="28" selection-end-column="136" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="e#2265#2276#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/admin_index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding>
+            <element signature="e#12#34#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/admin_base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="91" column="59" lean-forward="false" selection-start-line="91" selection-start-column="59" selection-end-line="91" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/viewRoute.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="148" column="8" lean-forward="false" selection-start-line="148" selection-start-column="8" selection-end-line="158" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/AppBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="86" column="44" lean-forward="false" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
+          <folding>
+            <element signature="e#984#1005#1#PHP" expanded="true" />
+            <element signature="e#2247#2286#0#PHP" expanded="true" />
+            <element signature="e#2665#2691#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Controller/RouteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="34" column="13" lean-forward="false" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <folding>
+            <element signature="e#1785#1820#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/RouteBundle/Resources/views/listRoutes.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/StationBundle/Resources/views/listStations.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bs/CityBundle/Resources/views/listLocation.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
