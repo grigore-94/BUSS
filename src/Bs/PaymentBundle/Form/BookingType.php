@@ -25,6 +25,7 @@ class BookingType extends AbstractType
 $nrPlaces=$options['data']->getNrPlaces();
         $places=$options['data']->getPlaces();
         $builder
+            ->add('email')
             ->add('fromStation',
                 ChoiceType::class,
                 [

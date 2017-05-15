@@ -68,7 +68,15 @@ class DefaultController extends BaseController
         $itemRoute->setFreeSeats($itemRoute->getSeats() - count($allSelectedPlaces));
         $em->persist($itemRoute);
         $em->flush();
-$user= $em->getRepository("BsUserBundle:User")->find($this->getUser()->getId());
+        $email =$booking->getEmail();
+
+        if ($this->getUser()) {
+            $user= $em->getRepository("BsUserBundle:User")->find($this->getUser()->getId());
+            $email = $user->getEmail();
+}
+else {
+    $user = $em->getRepository("BsUserBundle:User")->find(1);
+}
 $ticket = new Ticket();
 
 $ticket->setUser($user);
@@ -89,7 +97,6 @@ $view = $this->renderView('@BsTicket/email_ticket.html.twig',
     array('ticket' => $ticket,
         'route'=>$itemRoute->getRoute())
 );
-
 
 
 

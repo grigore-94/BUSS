@@ -46,6 +46,24 @@ class Booking
      */
     private $price;
 
+    private $email;
+
+    /**
+     * @return mixed
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param mixed $email
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
     private $nrTickets;
     private $totalDistance;
 
