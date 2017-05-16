@@ -85,8 +85,8 @@ private $price;
 
 
 function getPrice($price) {
-  $price=$this->getTotalDistance() * $price;
-        return $price;
+  $priceRez=$this->getTotalDistance() * $price;
+        return round($priceRez, 2);
 }
 
 

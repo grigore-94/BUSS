@@ -108,7 +108,7 @@ class DefaultController extends BaseController
 
         $user = $em->getRepository('BsUserBundle:User')->find($userId);
 
-      $tickets = $user->getTickets();
+        $tickets = $user->getTickets();
 
         return $this->render('@BsTicket/listTickets.html.twig', ['tickets' => $tickets]);
 

@@ -29,7 +29,7 @@
                         <ul>
                            <li style="width:33%;">  <a href="{{ path('view_item_itemRute',{'id':itemRoute.id}) }}"><span class="fa fa-eye"></span></a></li>
                             <li style="width:34%;">
-                                <a href={{ path('command_ticket',{'id':itemRoute.id}) }}>{{ itemRoute.route.getPrice(price) }} MDL <span class="fa fa-cart-plus"></span>
+                                <a href={{ path('command_ticket',{'id':itemRoute.id}) }}>Complet price :{{ itemRoute.route.getPrice(price) }} MDL <span class="fa fa-cart-plus"></span>
                                 </a>
                             </li>
                         </ul>

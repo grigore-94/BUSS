@@ -8,7 +8,7 @@ use Bs\ItemRouteBundle\Entity\ItemRoute;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
-use AppBundle\Mailer\Mailer;
+use Bs\AppBundle\Mailer\Mailer;
 
 class DefaultController extends BaseController
 {
@@ -27,7 +27,7 @@ class DefaultController extends BaseController
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
             $em = $this->getEntityManager();
-            $day = date("N", $search->getAtDate()->getTimeStamp()) - 1;
+            $day = date("N", $search->getAtDate()->getTimeStamp());
 
             $routes = $em->getRepository('BsRouteBundle:Route')->searcheRoute($search, $day);
             $itemRoutes = [];
@@ -49,7 +49,7 @@ class DefaultController extends BaseController
             }
             $search->setF($search->getFrom()->getUniqueName());
             $search->setT($search->getTo()->getUniqueName());
-            $form = $this->createForm(SearchType::class, $search);
+           // $form = $this->createForm(SearchType::class, $search);
 
             $price=$em->getRepository('BsPaymentBundle:Price')->find(1);
             return $this->render('@BsItemRoute/listItemRoutes.html.twig',
