@@ -24,20 +24,20 @@
                     <div class="info">
                         <h2 class="title">{{ ticket.fromStation }}</h2>
                         <h2 class="title">{{ ticket.toStation }} </h2>
-                        <p class="desc"> Trip time : {{ ticket.itemRoute.route.totalTime|date('h:i') }} <span  class="fa fa-clock-o"></span>
+                        <p class="desc"> Trip time : {{ ticket.itemRoute.route.totalTime|date("H:i") }} <span  class="fa fa-clock-o"></span>
 
                         </p>
                         <ul>
                             <li style="width:33%;">  <a href="{{ path('show_ticket',{'id':ticket.id}) }}">Ticket <span class="fa fa-eye"></span></a></li>
                             <li style="width:33%;">  <a href="{{ path('view_item_itemRute',{'id':ticket.itemRoute.id}) }}">Route<span class="fa fa-eye"></span></a></li>
                             <li style="width:34%;">
-                                 <a href="#"> Price: {{ ticket.price}} MDL
+                                 <a href="#"> Price: {{ ticket.price|number_format(2, '.', ',')}} MDL
                                 </a>
                             </li>
                         </ul>
                     </div>
 
-                    <
+
 
                 </li>
 

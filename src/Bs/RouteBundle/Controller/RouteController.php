@@ -52,7 +52,7 @@ class RouteController extends BaseController
         $em = $this->getEntityManager();
         $route = $em->getRepository("BsRouteBundle:Route")->find($id);
         $routeStations = $em->getRepository('BsRouteBundle:RouteStation')->findRouteStations($route);
-       $daysOfWeek= array('Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wendnesday', 'Thursday', 'Friday');
+        $daysOfWeek= array('Sunday', 'Monday', 'Tuesday', 'Wendnesday', 'Thursday', 'Friday','Saturday');
 
        $date=date_format($route->getHourArive(), 'l');
 $stationLocations=$route->getStationsArray();

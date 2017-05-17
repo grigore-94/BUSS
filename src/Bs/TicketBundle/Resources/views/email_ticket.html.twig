@@ -1,0 +1,54 @@
+<div class="col-sm-12">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="well">
+                <h2>
+                    Booking informations:
+                </h2>
+                <h4>Route : {{ ticket.itemRoute.route.from.getUniqueName }} --- {{ ticket.itemRoute.route.to.getUniqueName }}</h4>
+                <h4>Buss : {{ route.busses[0].name }}</h4>
+                <br>
+            </div>
+        </div>
+        <div class="col-sm-4 ">
+            <div class="well">
+                <br>
+                <br>
+                <h1><img src="https://chart.googleapis.com/chart?chl={{ ticket.id }}&chs=150x150&cht=qr&chld=H%7C0" class="img-responsive" style="width: 200px; height: 200px;" alt="Image">
+                </h1>
+                <br>
+            </div>
+        </div>
+        <div class="col-sm-8 ">
+            <div class="well">
+
+                <p class="desc"> ID: {{ ticket.id }}</p>
+                <p class="desc"> Date of purchase: {{ ticket.dateBought |date("m/d/Y") }}</p>
+                <p class="date">Date : {{ ticket.itemRoute.date|date("m/d/Y") }}</p>
+                <p class="desc"> Departure : {{ ticket.itemRoute.route.hourDeparture|date('H:i') }}<i class="fa fa-clock-o" aria-hidden="true"></i></p>
+                <p class="desc"> Arive : {{ ticket.itemRoute.route.hourArive|date('H:i') }}<i class="fa fa-clock-o" aria-hidden="true"></i> </p>
+                <p>Trip time: {{ ticket.itemRoute.route.totalTime|date('H:i') }} <i class="fa fa-clock-o" aria-hidden="true"></i></p>
+                <p>Trip distance: {{ ticket.distance }}    </p>
+                <p>Nr Tikets : {{ticket.seatsNo|length  }} </p>
+                <p>Place(s) :
+                    {% for place in ticket.seatsNo  %}
+                        {{ place }}
+                    {% endfor %}
+                </p>
+                <p>Price : {{ ticket.price|number_format(2, '.', ',') }} MDL</p>
+                <p>From Station : {{ ticket.fromStation }} </p>
+                <p>To Station : {{ ticket.toStation }} </p>
+
+
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+
+        </div>
+
+
+
+
+    </div>
+</div>

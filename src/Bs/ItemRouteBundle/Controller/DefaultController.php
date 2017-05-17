@@ -26,7 +26,7 @@ class DefaultController extends BaseController
         $itemRoute = $em->getRepository('BsItemRouteBundle:ItemRoute')->find($id);
         $route = $itemRoute->getRoute();
         $routeStations = $em->getRepository('BsRouteBundle:RouteStation')->findRouteStations($route);
-        $daysOfWeek= array('Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wendnesday', 'Thursday', 'Friday');
+        $daysOfWeek= array('Sunday', 'Monday', 'Tuesday', 'Wendnesday', 'Thursday', 'Friday','Saturday');
 
         $date=date_format($route->getHourArive(), 'l');
 

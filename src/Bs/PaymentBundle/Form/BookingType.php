@@ -25,6 +25,7 @@ class BookingType extends AbstractType
 $nrPlaces=$options['data']->getNrPlaces();
         $places=$options['data']->getPlaces();
         $builder
+            ->add('email')
             ->add('fromStation',
                 ChoiceType::class,
                 [
@@ -58,12 +59,7 @@ $nrPlaces=$options['data']->getNrPlaces();
                     },
 
                     'choice_label' => function ($value, $key, $index) {
-                        if ($key == 100) {
-                            return 'x';
-                        } else
-                        if ($value == 100) {
-                            return 'x';
-                        }
+
                         return strtoupper($key);
 
                         // or if you want to translate some key

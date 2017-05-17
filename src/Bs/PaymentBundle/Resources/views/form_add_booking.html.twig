@@ -5,6 +5,13 @@
 
             <div class="col-sm-3 well">
                 <div class="well">
+                    {% if app.user %}
+
+                    {% else %}
+                    <h3>Enter your email:</h3>
+
+                    {{ form_row(form.email) }}
+                    {% endif %}
                     <h3>Select From station</h3>
 
                     {{ form_row(form.fromStation,{'attr':{'class':'form-control'}}) }}
@@ -57,6 +64,12 @@
         height: auto;
     }
 
+
+    .place-selector input[type="checkbox"]:disabled+label
+    {
+        color: #ffffff;
+        background: #d72526;
+    }
     input[type=checkbox]:checked + label {
         background: #d72526;
         color: #ffffff;

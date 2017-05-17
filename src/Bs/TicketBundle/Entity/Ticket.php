@@ -148,7 +148,7 @@ class Ticket
      */
     public function getPrice()
     {
-        return $this->price;
+        return round($this->price, 2);
     }
 
     /**

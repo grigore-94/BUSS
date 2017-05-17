@@ -32,10 +32,10 @@
                     <p>Nr Tikets : {{ booking.nrTickets }} </p>
                     <p>Place(s) :
                         {% for place in booking.places  %}
-                        {{ place }}
+                       | {{ place }} |
                             {% endfor %}
                             </p>
-                    <p>Price : {{ booking.price }} MDL</p>
+                    <p>Price : {{ booking.price|number_format(2, '.', ',') }} MDL</p>
                     <p>From Station : {{ booking.fromStation.station.name }} </p>
                     <p>To Station : {{ booking.toStation.station.name }} </p>
 

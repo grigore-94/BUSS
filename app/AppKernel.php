@@ -26,6 +26,8 @@ class AppKernel extends Kernel
             new Bs\StationBundle\BsStationBundle(),
             new Bs\CityBundle\BsCityBundle(),
             new Bs\AppBundle\BsAppBundle(),
+            new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
+
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

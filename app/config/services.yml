@@ -15,5 +15,5 @@ services:
           - {name: form.type, alias: search_route}
 
     app.mailer:
-            class: AppBundle\Mailer\Mailer
-            arguments: ['@mailer','@twig','%mailer_params%']
+            class: Bs\AppBundle\Mailer\Mailer
+            arguments: ['@mailer','@twig','%mailer_params%','@service_container']

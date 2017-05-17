@@ -23,20 +23,14 @@ class LogInController extends Controller
     public function loginAction()
     {
         $authenticationUtils = $this->get('security.authentication_utils');
-
-
         $error = $authenticationUtils->getLastAuthenticationError();
-
-
         $lastUsername = $authenticationUtils->getLastUsername();
-
         if (!$error) {
             $this->get('session')->getFlashBag()->add(
                 'success',
                 'LogIn success'
             );
         }
-
         return $this->render(
             '@BsUser/login.html.twig',
             array(

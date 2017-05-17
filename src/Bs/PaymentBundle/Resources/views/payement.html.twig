@@ -103,7 +103,7 @@
 
     <div class="jumbotron jumbotron-flat">
         <div class="center"><h2><i>BALANCE DUE:</i></h2></div>
-        <div class="paymentAmt">{{ booking.price }} MDL</div>
+        <div class="paymentAmt">{{ booking.price|number_format(2, '.', ',') }} MDL</div>
 
 
 

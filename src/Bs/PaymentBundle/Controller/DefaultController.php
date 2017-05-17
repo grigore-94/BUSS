@@ -9,6 +9,7 @@ use Bs\TicketBundle\Entity\Ticket;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends BaseController
 {
@@ -67,7 +68,15 @@ class DefaultController extends BaseController
         $itemRoute->setFreeSeats($itemRoute->getSeats() - count($allSelectedPlaces));
         $em->persist($itemRoute);
         $em->flush();
-$user= $em->getRepository("BsUserBundle:User")->find($this->getUser()->getId());
+        $email =$booking->getEmail();
+
+        if ($this->getUser()) {
+            $user= $em->getRepository("BsUserBundle:User")->find($this->getUser()->getId());
+            $email = $user->getEmail();
+}
+else {
+    $user = $em->getRepository("BsUserBundle:User")->find(1);
+}
 $ticket = new Ticket();
 
 $ticket->setUser($user);
@@ -81,6 +90,20 @@ $ticket->setBussNo($itemRoute->getBuss()->getName());
 $ticket->setDistance($booking->getTotalDistance());
 $em->persist($ticket);
 $em->flush();
+
+
+
+$view = $this->renderView('@BsTicket/email_ticket.html.twig',
+    array('ticket' => $ticket,
+        'route'=>$itemRoute->getRoute())
+);
+
+
+
+
+
+        $this->get('app.mailer')
+            ->sendTicketEmail($ticket,$itemRoute->getRoute(),'gr.brodicico@gmail.com',$view);
         return $this->render(
             '@BsPayment/succesPage.hmtl.twig',
             array(

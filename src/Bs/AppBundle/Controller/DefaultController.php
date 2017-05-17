@@ -8,6 +8,7 @@ use Bs\ItemRouteBundle\Entity\ItemRoute;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Bs\AppBundle\Mailer\Mailer;
 
 class DefaultController extends BaseController
 {
@@ -26,7 +27,7 @@ class DefaultController extends BaseController
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
             $em = $this->getEntityManager();
-            $day = date("N", $search->getAtDate()->getTimeStamp()) - 1;
+            $day = date("N", $search->getAtDate()->getTimeStamp());
 
             $routes = $em->getRepository('BsRouteBundle:Route')->searcheRoute($search, $day);
             $itemRoutes = [];
@@ -48,7 +49,7 @@ class DefaultController extends BaseController
             }
             $search->setF($search->getFrom()->getUniqueName());
             $search->setT($search->getTo()->getUniqueName());
-            $form = $this->createForm(SearchType::class, $search);
+           // $form = $this->createForm(SearchType::class, $search);
 
             $price=$em->getRepository('BsPaymentBundle:Price')->find(1);
             return $this->render('@BsItemRoute/listItemRoutes.html.twig',
@@ -79,11 +80,11 @@ class DefaultController extends BaseController
     }
 
     /**
-     * @Route("/admin", name="admin_homepage")
+     * @Route("admin", name="admin_homepage")
      */
     public function indexAdminAction()
     {
-        return $this->render('default/admin_index.html.twig');
+        return $this->redirectToRoute('view_routes');
     }
 
     /**
