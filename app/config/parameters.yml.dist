@@ -14,4 +14,4 @@ parameters:
     secret: ThisTokenIsNotSoSecretChangeIt
     mailer_params:
               from_email: lab6si.bro@gmail.com
-              from_name: User Stories
+              from_name: Buss MD
