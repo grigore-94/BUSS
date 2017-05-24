@@ -11,7 +11,6 @@ namespace Bs\UserBundle\Controller;
 
 use Bs\AppBundle\Controller\BaseController;
 use Bs\CityBundle\Entity\Location;
-
 use Bs\UserBundle\Entity\User;
 use Bs\UserBundle\Form\UserType;
 use Bs\UserBundle\Form\UserTypeEdit;

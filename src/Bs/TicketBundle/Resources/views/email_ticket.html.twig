@@ -32,7 +32,7 @@
                 <p>Nr Tikets : {{ticket.seatsNo|length  }} </p>
                 <p>Place(s) :
                     {% for place in ticket.seatsNo  %}
-                        {{ place }}
+                        |{{ place }}|
                     {% endfor %}
                 </p>
                 <p>Price : {{ ticket.price|number_format(2, '.', ',') }} MDL</p>

@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: User
- * Date: 4/4/2017
- * Time: 10:41 PM
- */
 
 namespace Bs\RouteBundle\Controller;
-
 
 use Bs\AppBundle\Controller\BaseController;
 use Bs\RouteBundle\Form\RouteType;
@@ -32,8 +25,6 @@ class CrudController extends BaseController
 
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
-
-           // value = JSON.parse(value);
             $em->persist($entity);
             $em->flush();
             $this->get('session')->getFlashBag()->add(
@@ -43,16 +34,15 @@ class CrudController extends BaseController
 
             return $this->redirectToRoute('view_routes');
         }
- $stations = $em->getRepository('BsStationBundle:Station')->findAll();
+        $stations = $em->getRepository('BsStationBundle:Station')->findAll();
         return $this->render(
             '@BsRoute/add.html.twig',
             array('form' => $form->createView(),
                 'stationsLocation' => $this->getStationsArray($stations),
-                'route'=>$entity,
+                'route' => $entity,
             )
         );
     }
-
 
     /**
      * @Route("/admin/delete/route/{id}/{filter}", name="delete_route")
@@ -62,7 +52,7 @@ class CrudController extends BaseController
      */
     public function removeRoute($id, $filter = null)
     {
-        $route=$this->getEntityManager()->getRepository('BsRouteBundle:Route')->find($id);
+        $route = $this->getEntityManager()->getRepository('BsRouteBundle:Route')->find($id);
         $em = $this->getEntityManager();
         $route->setDrivers(null);
         $route->setBusses(null);
@@ -77,7 +67,6 @@ class CrudController extends BaseController
         return $this->redirectToRoute('view_routes', ['filter' => $filter]);
     }
 
-
     /**
      * @Route("/admin/edit/route/{id}", name="edit_route")
      * @param  $id
@@ -86,7 +75,7 @@ class CrudController extends BaseController
      */
     public function editAction($id, Request $request)
     {
-        $route=$this->getEntityManager()->getRepository('BsRouteBundle:Route')->find($id);
+        $route = $this->getEntityManager()->getRepository('BsRouteBundle:Route')->find($id);
 
         $form = $this->createForm(RouteType::class, $route);
         $em = $this->getDoctrine()->getManager();
@@ -109,21 +98,23 @@ class CrudController extends BaseController
         return $this->render(
             '@BsRoute/add.html.twig',
             array('form' => $form->createView(),
-                'route'=>$route,
+                'route' => $route,
                 'stationsLocation' => $this->getStationsArray($stations),
 
             )
         );
 
     }
-    public function getStationsArray($stations){
-        $array=[];
+
+    public function getStationsArray($stations)
+    {
+        $array = [];
         /** @var RouteStation $station */
         foreach ($stations as $routeStation) {
-            $item['name']=$routeStation->getName();
-            $item['lat']=$routeStation->getLat();
-            $item['lng']=$routeStation->getLng();
-            $array[]=$item;
+            $item['name'] = $routeStation->getName();
+            $item['lat'] = $routeStation->getLat();
+            $item['lng'] = $routeStation->getLng();
+            $array[] = $item;
         }
         return json_encode($array);
     }

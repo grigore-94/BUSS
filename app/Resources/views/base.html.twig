@@ -1,13 +1,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>BUSS</title>
+    <title>BUS</title>
     <meta name="description" content="Here goes description"/>
     <meta name="author" content="Grigore Brodicico"/>
     <link rel="shortcut icon" href={{ asset('images/elements/favicon.png') }}/>
-    <!-- ====================== Mobile Specific Meta ====================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <!-- ====================== Style CSS + Google Fonts =================== -->
     <link rel="stylesheet" href="{{ asset('css/start-style.css') }}"/>
     <link rel="stylesheet" href="{{ asset('css/swipebox.css') }}"/>
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}"/>
@@ -19,7 +17,6 @@
     <link rel="stylesheet" href="{{ asset('color-box/farbtastic/farbtastic.css') }}"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
-    <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -27,64 +24,7 @@
 
 </head>
 <body class="home-page boxed" style='background-image: url("/color-box/background/back_3.jpg"); background-repeat: no-repeat; background-size: 100%;'>
-<!-- ========================= START COLOR BOX ======================== -->
-{#
-<div class="color-box">
-    <div class="color-box_settings"></div>
-    <div class="color-box_title">Style Selector</div>
-    <!--
-    <p>Choose your color skin</p>
-    <select name="site_color">
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-    </select>
-    <hr>
-    -->
-    <p>Choose your layout style</p>
-    <select name="site_layout">
-        <option value="wide">Wide</option>
-        <option value="boxed">Boxed</option>
-    </select>
-    <hr>
-    <p>Choose site primary color</p>
-    <ul id="site_color">
-        <li><span class="color_1"></span></li>
-        <li><span class="color_2"></span></li>
-        <li><span class="color_3"></span></li>
-        <li><span class="color_4"></span></li>
-        <li><span class="color_pick"></span></li>
-    </ul>
-    <hr>
-    <p>Choose site secondary color</p>
-    <ul id="site_color_2">
-        <li><span class="color_1"></span></li>
-        <li><span class="color_2"></span></li>
-        <li><span class="color_3"></span></li>
-        <li><span class="color_4"></span></li>
-        <li><span class="color_pick"></span></li>
-    </ul>
-    <hr>
-    <p>Patterns for boxed version</p>
-    <ul id="background_patterns">
-        <li><img src="{{ asset('color-box/background/square_1.png') }}" alt="patterns"></li>
-        <li><img src="{{ asset('color-box/background/square_2.png') }}" alt="patterns"></li>
-        <li><img src="{{ asset('color-box/background/square_3.png') }}" alt="patterns"></li>
-        <li><img src="{{ asset('color-box/background/square_4.png') }}" alt="patterns"></li>
-        <li><img src="{{ asset('color-box/background/square_5.png') }}" alt="patterns"></li>
-    </ul>
-    <hr>
-    <p>Images for boxed version</p>
-    <ul id="background_images">
-        <li><img src="{{ asset('color-box/background/back.jpg') }}" alt="background"></li>
-        <li><img src="{{ asset('color-box/background/back_2.jpg') }}" alt="background"></li>
-        <li><img src="{{ asset('color-box/background/back_3.jpg') }}" alt="background"></li>
-        <li><img src="{{ asset('color-box/background/back_4.jpg') }}" alt="background"></li>
-        <li><img src="{{ asset('color-box/background/back_5.jpg') }}" alt="background"></li>
-    </ul>
-</div>
-#}
 
-<!-- ========================= START HEADER ======================== -->
 <header class="main-header">
     <div class="container">
         <div class="row">
@@ -100,8 +40,8 @@
             </div>
             <div class="col-md-4">
                 <div class="logo">
-                    <a href="{{ path('homepage') }}" class="d-text-c">Buss Md
-                        <img src="{{ asset('images/photos/title-logo.png') }}" class="fa fa-plane" alt="Buss"
+                    <a href="{{ path('homepage') }}" class="d-text-c">Bus Md
+                        <img src="{{ asset('images/photos/title-logo.png') }}" class="fa fa-plane" alt="Bus"
                              height="42" width="42">
                     </a>
 
@@ -115,15 +55,12 @@
                 {% if app.user %}
                     <a href="{{ path('logout') }}" style="float: left"> <span
                                 class="glyphicon glyphicon-log-out"></span> LogOut({{ app.user.username }})</a>
-
                 {% else %}
                     <a href="{{ path('login') }}" style="float: left"> <span class="glyphicon glyphicon-log-in"></span>
                         LogIn</a>
                 {% endif %}
             </div>
             <br>
-
-
         </div>
     </div>
 </header>
@@ -167,11 +104,6 @@
                     </ul>
                 </li>
                 <li><a href="{{ path('contact') }}">Contact</a></li>
-
-{#
-                <li><a href="{{ path('admin_homepage') }}">Admin</a>
-#}
-
                 </li>
                  {% if app.user %}
 
@@ -199,77 +131,42 @@
 
 <!-- MENU -->
 <div class="header-space"></div>
-<!-- ========================= END HEADER ======================== -->
 
 
-<!-- ========================= START CONTENT ======================== -->
 <div class="content">
     <div class="container">
 
 
 
-                <!-- ========================= START ORDER TOUR ======================== -->
                 {% block body %}{% endblock %}
-                <!-- ========================= END ORDER TOUR ======================== -->
 
     </div>
 </div>
 
-<!-- ========================= START POPULAR TOURS ======================== -->
 
 </div>
-<!-- ========================= END CONTENT ======================== -->
 
 
-<!-- ========================= START FOOTER ======================== -->
 <footer>
     <div class="container">
         <div class="footer-box">
-
-            <!-- END FOOTER CUSTOM MENU -->
-
-            <!-- START NEWSLETTER FORM -->
-            <form class="newsletter-form" id="newsletter" method="post">
-                <div class="row">
-                    <div class="col-md-3">
-                        <h3>Newsletter subscribe <i class="fa fa-envelope-o"></i></h3>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" name="email" placeholder="E-mail" class="subscription-line"
-                               data-tt-subscription-required="" data-tt-subscription-type="email">
-                        <div class="result_container"></div>
-                    </div>
-                    <div class="col-md-3">
-                        <input type="submit" value="Subscribe" class="subscription-button">
-                    </div>
-                </div>
-            </form>
 
             <div class="bottom-footer">
                 <p>Creayed by Grigore Brodicico
                 </p>
             </div>
-            <!-- END BOTTOM FOOTER -->
         </div>
     </div>
 </footer>
-<!-- ========================= END FOOTER ======================== -->
 
 
-<!-- ========================= END COLOR BOX CLASS ======================== -->
 </div>
-<!-- ========================= END COLOR BOX CLASS ======================== -->
 
 
-<!-- ========================= START SCRIPTS ======================== -->
 
-<!-- ========================== END SCRIPTS ========================== -->
 </body>
 {% block javascripts %}
     <script src={{ asset('js/jquery-1.10.0.min.js') }}></script>
-    {#
-        <script src={{ asset('js/jquery-ui.min.js') }}></script>
-    #}
     <script src={{ asset('js/bootstrap.js') }}></script>
     <script src={{ asset('js/placeholder.js') }}></script>
     <script src={{ asset('js/imagesloaded.pkgd.min.js') }}></script>
