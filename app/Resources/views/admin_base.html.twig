@@ -111,6 +111,15 @@
             </a>
         </div>
         <section class="content-inner">
+            {% if app.session.flashBag.has('success') %}
+                <div class="alert alert-success">
+                    {% for msg in app.session.flashBag.get('success') %}
+                        {{ msg }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% block body %}
+            {% endblock %}
            {% block body %}
             {% endblock %}
         </section>
